@@ -1,0 +1,265 @@
+@import "nib"
+@import "vars"
+@import "mixins"
+
+.wrapper
+  margin auto
+  padding-right 15px
+  padding-left 15px
+  max-width: 1140px
+  @media (max-width: max-extra-large)
+    max-width: 960px;
+  @media (max-width: max-large)
+    max-width 720px
+  @media (max-width: max-medium)
+    max-width 540px
+  @media (max-width: max-sm)
+    max-width 100%
+
+.intro-main
+  padding: 97px 0 112px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  @media (max-width: max-large)
+    padding: 36px 0 54px;
+  @media (max-width: max-medium)
+    padding: 1px 0 25px;
+  p
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    @media (max-width: max-large)
+      font-size: 15px;
+    @media (max-width: max-medium)
+      font-size: 14px;
+      line-height: 130%;
+  &__btns
+    margin: 40px 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: max-large)
+      margin: 27px auto 12px;
+      max-width: 458px;
+    @media (max-width: max-medium)
+      margin: 27px auto 7px;
+    .btn
+      width 23%
+      @media (max-width: max-large)
+        margin-bottom: 19px;
+      @media (max-width: max-medium)
+        margin-bottom: 13px;
+      &:nth-of-type(1),
+      &:nth-of-type(2)
+        @media (max-width: max-large)
+          width: 48%;
+        @media (max-width: max-medium)
+          width: 48%;
+      &:nth-of-type(3),
+      &:nth-of-type(4)
+        @media (max-width: max-large)
+          width: 48%;
+        @media (max-width: max-medium)
+          width 100%
+  &__actions
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 1120px;
+    @media (max-width: max-extra-large)
+      max-width: 1007px;
+    @media (max-width: max-medium)
+      padding: 0 0 0 5px;
+    .slick-slider
+      &:not(.slick-dotted)
+        .slick-track
+          width: auto !important;
+
+.advantages
+  padding: 39px 0 30px;
+  background-image url("/img/common/bg-2.png")
+  background-repeat: repeat;
+  @media (max-width: max-large)
+    padding: 31px 0 30px;
+  @media (max-width: max-medium)
+    padding: 15px 0 0;
+  &__content
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: max-medium)
+      flex-direction: column;
+
+.filter-sect
+  background-color: #ECEFF1;
+  text-align: center;
+  padding: 25px 0;
+  @media (max-width: max-medium)
+    padding: 14px 0;
+  .btn
+    padding: 0 28px;
+
+.tabs-sect
+  padding-top: 30px;
+  padding-bottom: 23px;
+  @media (max-width: max-large)
+    padding-top: 17px;
+    padding-bottom: 0
+  @media (max-width: max-medium)
+    padding-top: 15px;
+    padding-bottom: 6px;
+  &__title
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20.25px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    @media (max-width: max-large)
+      font-size: 18px;
+      margin-bottom: 16px;
+    @media (max-width: max-medium)
+      font-size: 16.75px;
+      line-height: 111%;
+      margin-bottom: 13px;
+
+.our-brands
+  text-align: center;
+  padding: 9px 0 27px;
+  @media (max-width: max-extra-large)
+    padding: 9px 0 39px;
+  @media (max-width: max-medium)
+    padding: 9px 0 25px;
+  &__title
+    margin: 23px 0 12px;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 110%;
+    @media (max-width: max-extra-large)
+      font-size: 27.75px;
+      margin: 10px 0 12px;
+    @media (max-width: max-medium)
+      font-size: 25.75px;
+      line-height: 120%;
+      margin: 10px 0 11px;
+  p
+    font-size: 12.75px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #566069;
+    max-width: 930px;
+    margin: auto;
+    @media (max-width: max-medium)
+      font-size: 12px;
+      line-height: 130%;
+  &__slider
+    max-width: 1138px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: max-extra-large)
+      max-width: 1010px;
+      margin: 28px auto 0;
+    @media (max-width: max-medium)
+      margin: 28px auto 0;
+
+.last-news
+  text-align: center;
+  padding: 9px 0 41px;
+  background-image url("/img/common/bg-5.jpg")
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: max-extra-large)
+    padding: 9px 0 30px;
+  @media (max-width: max-medium)
+    padding: 9px 0 20px;
+  &__title
+    margin: 23px 0 12px;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 110%;
+    @media (max-width: max-extra-large)
+      font-size: 27.75px;
+      margin: 18px 0 31px;
+    @media (max-width: max-medium)
+      font-size: 25.75px;
+      line-height: 120%;
+      margin: 10px 0 11px;
+  &__slider
+    max-width: 1138px;
+    margin: 30px auto 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: max-extra-large)
+      max-width: 1010px;
+      margin: 28px auto 25px
+    @media (max-width: max-medium)
+      margin: 18px auto 19px;
+
+.type-centers
+  background-color #768592
+  text-align center
+  padding: 31px 0 0;
+  position relative
+  @media (max-width: max-extra-large)
+    padding: 9px 0 0;
+  @media (max-width: max-medium)
+    padding: 10px 0 0;
+  &:after
+    content ''
+    background-image url("/img/common/bg-6.png")
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90px;
+    bottom: 0;
+    z-index: 1;
+  &__title
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+    color white
+    margin-bottom: 12px;
+    position relative
+    z-index: 2;
+    @media (max-width: max-extra-large)
+      font-size: 27.75px;
+      margin: 18px 0 10px;
+    @media (max-width: max-medium)
+      font-size: 25.75px;
+      line-height: 120%;
+      margin: 10px 0 8px;
+  &__text
+    font-size: 12.75px;
+    line-height: 150%;
+    color: #F1F3F4
+    letter-spacing: 0.04em;
+    max-width: 910px;
+    margin: auto;
+    position relative
+    z-index: 2;
+    @media (max-width: max-medium)
+      font-size: 12px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+  &__btns
+    margin: auto;
+    padding: 19px 0 29px;
+    max-width: 970px;
+    position relative
+    z-index: 2;
+    @media (max-width: max-medium)
+      padding: 15px 12px;
+      display flex
+      flex-wrap wrap
+      justify-content space-between

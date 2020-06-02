@@ -1,0 +1,251 @@
+@import "nib"
+@import "vars"
+@import "mixins"
+
+.header
+  position: fixed;
+  left: 0;
+  right: 0;
+  top 0
+  z-index: 99;
+  background-color white
+  box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
+  @media (max-width: max-medium)
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  &.\--narrow
+    .header__content
+      padding-bottom: 7px;
+      @media (max-width: max-extra-large)
+        position relative
+        padding-top: 11px;
+        padding-bottom: 9px;
+      @media (max-width: max-medium)
+        padding: 0 15px;
+    .header__phone
+      width auto
+    .phone-list__main
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      @media (max-width: max-large)
+        width: calc(100% - 32px);
+      @media (max-width: max-medium)
+        width 100%
+    .phone-list__tip
+      @media (max-width: max-medium)
+        margin-left: 0;
+        font-size: 11px;
+        line-height: 130%;
+    .header__langs
+      display block
+      @media (max-width: max-medium)
+        margin-left: 9px;
+    .header__schedule
+      span
+        margin-left: 3px;
+    .header__info
+      padding-bottom 0
+  &__aside
+    position: fixed;
+    background-color: white;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
+    width: 100px;
+    display: flex;
+    flex-direction column
+    @media (max-width: max-extra-large)
+      order 4
+      box-shadow none
+      flex-direction row
+      width: 100%
+      position: static;
+      height: 52px;
+      margin: auto;
+      margin-top: 2px;
+      padding-left: 237px;
+    @media (max-width: max-large)
+      margin-top: 5px;
+    @media (max-width: max-medium)
+      padding-left: 0
+      height: 42px;
+      width: 510px;
+      margin-top: 0
+    &:before
+      content ''
+      display none
+      @media (max-width: max-extra-large)
+        display block
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        top: 64px;
+        background-color: #DFE2E9;
+        z-index: 2;
+      @media (max-width: max-medium)
+        top: 62px;
+    &-stub
+      box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
+      height: 71px;
+      margin-bottom: 84px;
+      @media (max-width: max-medium)
+        display none
+    &-btn
+      border: 1px solid #dfe2e9;
+      display: block;
+      margin-bottom: -1px;
+      text-align center
+      padding: 15px 5px 14px;
+      color accent-dark
+      text-decoration none
+      @media (max-width: max-extra-large)
+        margin-left: -1px;
+        width: calc(100% / 7 + 1px);
+        border-top: none;
+        border-bottom: none;
+        padding: 10px 5px 3px;
+        margin-bottom 0
+      &:hover
+        color accent-red
+        svg
+          fill accent-red
+          stroke accent-red
+      &.\--burger
+        display none
+        @media (max-width: max-extra-large)
+          display block
+      &.\--disabled
+        pointer-events none
+        background-color: #dfe2e9;
+        color: #ccd1dc;
+        svg
+          fill #ccd1dc;
+          stroke #ccd1dc;
+      &-icon
+        font-size 0
+        line-height 0
+        margin-bottom: 6px;
+        display block
+        svg
+          fill accent-dark
+          stroke accent-dark
+          @media (max-width: max-medium)
+            width 24px
+            height 24px
+      &-link
+        font-size: 12.75px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        display block
+        @media (max-width: max-extra-large)
+          display none
+  &__logo
+    position absolute
+    top: 0;
+    left: 40px;
+    z-index: 1;
+    @media (max-width: max-extra-large)
+      order 1
+      left: calc((100% - 990px) / 2);
+    @media (max-width: max-large)
+      left: calc((100% - 695px) / 2);
+    @media (max-width: max-medium)
+      position static
+      width 52px
+  &__content
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 6px;
+    @media (max-width: max-extra-large)
+      justify-content: flex-end;
+      padding-bottom 0
+      padding-top: 10px;
+    @media (max-width: max-medium)
+      justify-content: end;
+      padding-top: 2px;
+    @media (max-width: max-sm)
+      position: relative;
+      z-index: 1;
+  &__phone
+    width: 233px;
+    @media (max-width: max-extra-large)
+      margin-left: 218px;
+    @media (max-width: max-large)
+      order 2
+      margin-left: 237px;
+      width: calc(100% - 457px) !important
+    @media (max-width: max-medium)
+      margin-left: 0
+      width: calc(100% - 250px) !important
+    @media (max-width: 459px)
+      width: calc(100% - 189px) !important
+    @media (max-width: 399px)
+      width: calc(100% - 159px) !important
+    .phone-list__icon
+      @media (max-width: max-medium)
+        display none
+  &__links
+    text-align: center;
+    @media (max-width: max-extra-large)
+      display none
+    a
+      padding: 0 21px;
+      text-decoration none
+  &__info
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @media (max-width: max-extra-large)
+      order 3
+      flex-grow: 1;
+      justify-content: flex-end;
+      padding-bottom: 5px;
+    @media (max-width: max-medium)
+      //padding-left: 8px;
+      width: auto;
+      padding-bottom: 0
+    button
+      @media (max-width: max-extra-large)
+        height: 38px;
+      @media (max-width: max-sm)
+        font-size: 0;
+        margin-right: 0;
+        padding: 0 8px;
+        box-shadow: none !important;
+        border: none !important;
+      &:first-of-type
+        margin-right: 30px;
+        min-width: 102px;
+        @media (max-width: max-extra-large)
+          margin-right: 20px;
+        @media (max-width: max-sm)
+          min-width: 0;
+          margin-right: 0;
+  &__langs
+    margin-left: 45px;
+    @media (max-width: max-extra-large)
+      display none
+  &__schedule
+    @media (max-width: max-medium)
+      display: flex;
+      align-items: flex-end;
+    @media (max-width: 399px)
+      flex-direction: column;
+    span
+      &:first-of-type
+        @media (max-width: max-extra-large)
+          width: 100%;
+          display: block;
+        @media (max-width: max-medium)
+          width: auto
+          display: inline-block;
+        @media (max-width: 459px)
+          display none

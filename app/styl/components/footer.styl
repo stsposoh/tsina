@@ -1,0 +1,162 @@
+@import "nib"
+@import "vars"
+@import "mixins"
+
+.footer
+  text-align center
+  padding: 46px 0 0;
+  @media (max-width: max-large)
+    padding: 23px 0 0;
+  @media (max-width: max-medium)
+    padding: 31px 0 0;
+  &__title
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 110%;
+    margin-bottom: 11px;
+    @media (max-width: max-large)
+      font-size: 27.75px;
+      line-height: 110%;
+    @media (max-width: max-medium)
+      margin-bottom: 6px;
+      font-size: 25.75px;
+      line-height: 120%;
+  &__text
+    font-size: 12.75px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #566069;
+    margin: auto;
+    max-width: 920px;
+    @media (max-width: max-large)
+      font-size: 12.5px;
+      line-height: 130%;
+    @media (max-width: max-medium)
+      font-size: 12px;
+      line-height: 135%;
+      letter-spacing: 0.02em;
+  &__contacts
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 528px;
+    margin: 50px auto 0;
+    @media (max-width: max-large)
+      max-width: 460px;
+      margin: 19px auto 0;
+    @media (max-width: max-medium)
+      justify-content: center;
+      margin: 19px auto 0;
+  &__schedule
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    margin: 10px 0 20px;
+    @media (max-width: max-large)
+      font-size: 14.5px;
+      line-height: 150%;
+      margin: 7px 0 20px;
+    @media (max-width: max-medium)
+      margin: 8px 0 16px;
+      font-size: 13px;
+      line-height: 135%;
+  &__photo
+    height: 215px;
+    margin: 20px 0 0;
+    font-size: 0;
+    line-height: 0;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    @media (max-width: max-large)
+      height: 140px;
+    @media (max-width: max-medium)
+      max-height 110px
+      height: 19vw;
+      margin: 20px -10px 0;
+  &__btm
+    background-image url("/img/common/bg-4.png")
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 0 0;
+    @media (max-width: max-medium)
+      padding: 13px 0 0;
+  &__cols
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: max-medium)
+      flex-direction: column;
+  &__col
+    width: 33.33%;
+    text-align: left;
+    @media (max-width: max-medium)
+      width 100%
+      margin-bottom: 5px;
+    &-title
+      font-weight: 600;
+      font-size: 20.25px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      margin-bottom: 21px;
+      @media (max-width: max-large)
+        font-size: 17px;
+        line-height: 130%;
+        margin-bottom: 14px;
+      @media (max-width: max-medium)
+        font-size: 16.75px;
+        line-height: 111%;
+        margin-bottom: 11px;
+  &__links
+    normalize_list()
+  &__link
+    font-size: 14.5px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #566069;
+    margin-bottom: 9px;
+    @media (max-width: max-large)
+      font-size: 14px;
+    @media (max-width: max-medium)
+      font-size: 13px;
+      line-height: 135%;
+      margin-bottom: 7px;
+  &__bottom
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 34px;
+    @media (max-width: max-large)
+      align-items: baseline;
+      padding: 22px 0 34px;
+    @media (max-width: max-medium)
+      padding: 12px 0 34px;
+  &__soc
+    text-align: right;
+    @media (max-width: max-medium)
+      margin: 20px 0 0;
+  &__copy
+    font-size: 12.75px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #566069;
+    margin-top: 10px;
+    max-width: 248px;
+    @media (max-width: max-medium)
+      text-align: left;
+      margin: 9px 0 0;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 115%;
+  .btn
+    min-width: 160px;
+
+
+
+
+
+
+
+

@@ -1,0 +1,676 @@
+@import "nib"
+@import "vars"
+@import "mixins"
+
+.subtitle
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  @media (max-width: max-extra-large)
+    font-size: 15px;
+  @media (max-width: max-medium)
+    font-size: 14px;
+    line-height: 130%;
+
+.caption
+  font-size: 12.75px;
+  line-height: 150%;
+  letter-spacing: 0.08em
+  @media (max-width: max-extra-large)
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    line-height: 135%;
+  @media (max-width: max-medium)
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.02em;
+  &.\--bold
+    font-weight: 600;
+    font-size: 11.75px;
+    line-height: 135%;
+    letter-spacing: 0.04em;
+    @media (max-width: max-extra-large)
+      font-size: 11.54px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+    @media (max-width: max-medium)
+      font-size: 11px;
+      line-height: 115%;
+      letter-spacing: 0.04em;
+
+.label-1
+  font-weight: bold;
+  font-size: 14.5px;
+  line-height: 130%;
+  text-transform: uppercase;
+  @media (max-width: max-extra-large)
+    font-size: 14px;
+  @media (max-width: max-medium)
+    font-size: 13.5px;
+
+.label-2
+  font-weight: bold;
+  font-size: 12.75px;
+  line-height: 115%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  @media (max-width: max-extra-large)
+    font-size: 12.5px;
+    line-height: 130%;
+  @media (max-width: max-medium)
+    font-size: 12px;
+
+.btn
+  padding: 0 13px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px 25px 25px 3px;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  letter-spacing: 0.02em;
+  min-width: 120px;
+  height: 48px;
+  position relative
+  cursor pointer
+  -webkit-appearance: none;
+  text-decoration none
+  font-weight: bold;
+  font-size: 14.5px;
+  line-height: 130%;
+  text-transform uppercase
+  transition all .3s ease-in-out
+  @media (max-width: max-medium)
+    height: 41px;
+  &.\--icon
+    min-width: 55px;
+    @media (max-width: max-sm)
+      min-width: 0;
+  &.\--style-2
+    border-radius: 0 25px 5px 0;
+    padding: 0 30px;
+  &.\--middle
+    height: 40px;
+    @media (max-width: max-medium)
+      font-size: 13.5px;
+      line-height: 130%;
+  &.\--small
+    height 22px
+    font-size: 11.75px;
+    line-height: 135%;
+    letter-spacing: 0.04em;
+    border-radius: 10px 10px 10px 2px;
+    text-transform initial
+    min-width 80px
+    @media (max-width: max-medium)
+      font-size: 11.54px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+  &.\--red
+    background-color accent-red
+    color white
+    box-shadow: 0 2px 4px rgba(8, 35, 48, 0.24);
+    &:hover
+      box-shadow: 0 4px 8px rgba(215, 75, 72, 0.44);
+      background-color #F5564A
+    &:active
+      background-color #D74B48
+    svg
+      fill white
+    &.--disabled
+      background-color #DFE2E9
+  &.\--red-transparent
+    background-color transparent
+    color accent-red
+    border: 1.5px solid accent-red
+    &:hover
+      color #F5564A
+      border-color #F5564A
+    &:active
+      color #D74B48
+      border-color #D74B48
+    &.--disabled
+      border-color #DFE2E9
+  &.\--white
+    background-color white
+    color accent-dark
+    border: 1px solid #dfe2e9;
+    border-bottom: none;
+    box-shadow: 0 2px 4px rgba(8, 35, 48, 0.24);
+    svg
+      fill accent-dark
+    &:hover
+      color #566069
+      box-shadow: 0 4px 8px rgba(8, 35, 48, 0.24);
+      svg
+        fill #566069
+    &:active
+      color accent-dark
+      box-shadow none
+    &.--disabled
+      background-color #DFE2E9
+  &.\--black
+    background-color white
+    color #0C0033
+    border 1px solid #0C0033
+    &:hover
+      color #F5564A
+      border-color #F5564A
+    &:active
+      color #D74B48
+      border-color #D74B48
+  &.\--disabled
+    background-color transparent
+    pointer-events none
+    box-shadow none
+    color #C9CFDA
+    svg
+      fill #C9CFDA
+  &.\--circle,
+  &.\--circle-white
+    width: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: 1px solid transparent
+  &.\--circle
+    //
+  &.\--circle-white
+    color accent-red
+    background-color white
+    border-bottom: none;
+    box-shadow: 0px 4px 8px rgba(215, 75, 72, 0.44);
+    &:hover
+      box-shadow: 0px 16px 24px rgba(215, 75, 72, 0.24);
+      color #F5564A
+    &:active
+      color #D74B48
+      border-color #dfe2e9;
+      box-shadow none
+  &.\--arrow-white
+    width 40px
+    min-width 40px
+    color white
+    height 38px
+    background: rgba(255, 255, 255, 0.3);
+    border: 1.5px solid #FFFEFE;
+  &.\--arrow-left
+    border-radius: 25px 25px 3px 25px;
+  &.\--arrow-right
+    border-radius: 25px 25px 25px 3px;
+  &__counter
+    position absolute
+    background-color accent-red
+    color white
+    box-shadow: 0px 4px 8px rgba(215, 75, 72, 0.44);
+    border-radius: 10px 10px 10px 2px;
+    font-weight: 600;
+    font-size: 11.75px;
+    line-height: 135%;
+    letter-spacing: 0.02em;
+    right: -9px;
+    top: -7px;
+    padding: 3px 6px;
+    @media (max-width: max-sm)
+      right: -4px;
+      top: 2px;
+      font-size: 11px;
+      line-height: 115%;
+  svg
+    margin-right: 4px;
+
+.icon
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &-arrow
+    &-right:before { content: '\e800'; }
+    &-left:before { content: '\e801'; }
+    &-down:before { content: '\e802'; }
+    &-up:before { content: '\e803'; }
+  &-ok:before { content: '\e806'; }
+  &-th-list:before { content: '\e804'; }
+  &-th:before { content: '\e805'; }
+  &-th,
+  &-th-list
+    display inline-block
+    font-size: 25px;
+    width: 25px;
+    padding-top: 2px;
+    color accent-red
+    cursor pointer
+    transition color .3s ease-in-out
+    &:hover
+      color #F5564A
+    &:active
+      color #D74B48
+    &.\--disabled
+      pointer-events none
+      color #C9CFDA
+    &:after
+      line-height: 20px;
+      vertical-align: middle;
+  &-twitter:before { content: '\f099'; }
+  &-facebook:before { content: '\f09a'; }
+  &-gplus:before { content: '\f0d5'; }
+  &-youtube-play:before { content: '\f16a'; }
+  &-instagram:before { content: '\f16d'; }
+
+.block-logo
+  width: 221px;
+  padding: 20px 20px 14px;
+  background-color white
+  box-shadow: 0 16px 24px rgba(8, 35, 48, 0.16);
+  border-radius: 30px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0;
+  line-height: 0;
+  @media (max-width: max-large)
+    width: 220px;
+    padding: 21px 23px 17px;
+  @media (max-width: max-medium)
+    box-shadow: none;
+    border-radius: 0;
+    width: 52px;
+    padding: 11px 0;
+  &.\--style-2
+    width: auto
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    .block-logo__img
+      width: 44px;
+      @media (max-width: max-large)
+        width: 38px;
+      @media (max-width: max-medium)
+        width: 30px;
+    .block-logo__name
+      margin-left: 15px;
+      width: 165px;
+      @media (max-width: max-large)
+        margin-left: 15px;
+        width: 147px;
+      @media (max-width: max-medium)
+        display: inline-block;
+        margin-left: 9px;
+        width: 111px;
+  &.\--style-3
+    width: 231px;
+    //.block-logo__img
+    //  width: 44px;
+    @media (max-width: max-large)
+      width: 220px;
+    @media (max-width: max-medium)
+      width: 100%
+    .block-logo__name
+      margin-left: 12px;
+      width: 140px;
+      @media (max-width: max-large)
+        width: 129px;
+    .block-logo__text
+      width: 193px;
+      margin-top: 8px;
+      margin-bottom: 4px;
+  &__img
+    width: 38px;
+    @media (max-width: max-large)
+      width: 33px;
+    @media (max-width: max-medium)
+      width: 38px;
+  &__name
+    margin-left: 10px;
+    width: 131px;
+    @media (max-width: max-medium)
+      display none
+  &__text
+    width: 182px;
+    @media (max-width: max-large)
+      margin-top: 9px;
+    @media (max-width: max-medium)
+      display none
+  img
+    width: 100%;
+
+.modal-list
+  font-weight: 600;
+  text-transform uppercase
+  letter-spacing: 0.04em;
+  position relative
+  display inline-block
+  margin-right: 4px;
+  @media (max-width: max-medium)
+    font-size: 12px;
+  &:hover
+    .modal-list__modal
+      opacity: 1;
+      pointer-events all
+  &__selected
+    color accent-red
+    display: flex;
+    align-items: center;
+    &:after
+      content '\e802'
+      font-family: "fontello";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 15px;
+      font-weight: 300;
+      margin-left: 9px;
+      @media (max-width: max-medium)
+        font-size: 11px;
+        margin-left: 5px;
+  a.modal-list__selected
+    font-size: 20.25px;
+    line-height: 150%;
+    text-decoration none
+    @media (max-width: max-medium)
+      font-size: 16.75px;
+      line-height: 111%;
+  &__modal
+    opacity 0
+    pointer-events none
+    position: absolute;
+    box-shadow: 0px 24px 32px rgba(8, 35, 48, 0.24);
+    border-radius: 0px 0px 25px 2px;
+    background-color: white;
+    z-index: 1;
+    font-weight: bold;
+    padding: 5px 0;
+    top: 100%;
+    margin: 0 -10px;
+    overflow hidden
+    transition opacity .3s ease-in-out
+    &-item
+      display: block;
+      padding: 4px 10px;
+      cursor pointer
+      white-space: nowrap;
+      transition background-color .3s ease-in-out
+      &.\--active
+        background-color #768592
+        color white !important
+        .modal-list__phone:after
+          content '\e806'
+          font-size: 13px;
+          font-weight: 300;
+          margin-left: 9px;
+          font-family: "fontello";
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+      &:hover
+        color accent-red
+  &__phone
+    text-transform uppercase
+    text-decoration none
+    display: flex;
+    align-items: center;
+    transition color .3s ease-in-out
+  span.modal-list__phone
+    font-size: 14.5px;
+    line-height: 130%;
+    @media (max-width: max-medium)
+      font-size: 11.5px;
+      line-height: 120%;
+  a.modal-list__phone
+    font-size: 20.25px;
+    line-height: 120%;
+    color inherit
+    @media (max-width: max-medium)
+      font-size: 16.75px;
+      line-height: 111%;
+
+.phone-list
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  &.\--large
+    .phone-list__icon
+      width: 36px;
+      @media (max-width: max-large)
+        width: 26px;
+        padding-right: 5px;
+    .phone-list__main
+      width: calc(100% - 36px);
+      @media (max-width: max-medium)
+        width 100%
+      .modal-list
+        margin-right: 0;
+        margin-top: 3px;
+        &__selected
+          font-size: 25.5px;
+          line-height: 110%;
+          letter-spacing: 0.04em;
+          @media (max-width: max-large)
+            font-size: 21.25px;
+          @media (max-width: max-medium)
+            font-size: 16.75px;
+    .modal-list a.modal-list__phone
+      font-size: 25.5px;
+      line-height: 110%;
+      letter-spacing: 0.04em;
+      @media (max-width: max-large)
+        font-size: 21.25px;
+      @media (max-width: max-medium)
+        font-size: 16.75px;
+    .phone-list__tip
+      @media (max-width: max-large)
+        font-size: 11px;
+        transform: translateY(-5px);
+      @media (max-width: max-medium)
+        transform: translateY(0);
+  &__icon
+    padding-right: 12px;
+    svg
+      width 100%
+  &__main
+    //
+  &__tip
+    font-size: 11.75px;
+    line-height: 135%;
+    letter-spacing: 0.04em;
+    display: inline-block;
+    color: #768592;
+    @media (max-width: max-medium)
+      line-height: 105%;
+
+.icon-text
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center
+  @media (max-width: max-medium)
+    margin-bottom: 7px;
+  &__icon
+    margin-right: 13px;
+    font-size 0
+    line-height 0
+    @media (max-width: max-medium)
+      margin-right: 9px;
+    svg
+      @media (max-width: max-large)
+        width: 20px;
+      @media (max-width: max-medium)
+        width: 17px;
+  &__main
+    @media (max-width: max-large)
+      text-align left
+  &__link
+    font-weight: 600;
+    font-size: 25.5px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    color accent-red
+    @media (max-width: max-large)
+      font-size: 21.25px;
+      line-height: 110%;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 120%;
+      letter-spacing: 0.06em;
+  &__tip
+    font-size: 11.75px;
+    line-height: 135%;
+    letter-spacing: 0.04em;
+    color: #768592;
+    display block
+    @media (max-width: max-large)
+      font-size: 11.54px;
+      line-height: 130%;
+    @media (max-width: max-medium)
+      font-size: 11px;
+      line-height: 115%;
+
+.socials
+  &__item
+    font-size: 18px;
+    line-height: 0;
+    color #0C0033
+    margin-left: 13px;
+    text-decoration none
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    border: 1px solid #0C0033
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: max-large)
+      margin-left: 7px;
+    @media (max-width: max-medium)
+      margin-left: 0;
+      margin-right: 13px;
+
+.tabs
+  &__controls
+    display: flex;
+    flex-wrap: wrap;
+    &-group
+      background-color #FFF2F2
+      border-radius 30px
+      width: 50%;
+      overflow hidden
+      font-size 0
+      @media (max-width: max-medium)
+        width 100%
+      &:nth-of-type(1)
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        @media (max-width: max-medium)
+          border-top-right-radius: 30px
+          border-bottom-right-radius: 30px
+          margin-bottom: 12px;
+      &:nth-of-type(2)
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        @media (max-width: max-medium)
+          border-top-left-radius: 30px
+          border-bottom-left-radius: 30px
+    &-btn
+      width: 20%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: accent-red
+      letter-spacing: 0.01em;
+      padding: 9px 10px;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 20px 20px 2px 20px;
+      transition all .3s ease-in-out
+      @media (max-width: max-extra-large)
+        //padding: 9px 20px;
+      @media (max-width: max-large)
+        font-size: 14px;
+        line-height: 130%;
+      @media (max-width: max-medium)
+        font-size: 13.5px;
+      &.\--active,
+      &:hover
+        background: #D74B48;
+        color white
+  &__content
+    padding: 11px 0;
+    @media (max-width: max-large)
+      //padding: 7px 0;
+    @media (max-width: max-medium)
+      padding: 8px 0;
+    &-item
+      display none
+      margin: 0 -17px;
+      font-size 0
+      @media (max-width: max-extra-large)
+        margin 0
+      &.\--active
+        display block
+    &-elem
+      width 10%
+      cursor pointer
+      padding: 6px 17px;
+      display: inline-block;
+      font-size: 14.5px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      @media (max-width: max-extra-large)
+        width: 11%;
+        text-align: center;
+        padding: 6px 0
+      @media (max-width: max-large)
+        font-size: 14px;
+        line-height: 150%;
+        width: calc(100% / 7);
+        padding: 8px 0;
+      @media (max-width: max-medium)
+        font-size: 13px;
+        line-height: 135%;
+        width: 20%
+        padding: 4px 0;
+      @media (max-width: max-sm)
+        width: 33.33%;
+        text-align left
+      &:nth-of-type(3n + 2)
+        @media (max-width: max-sm)
+          text-align center
+      &:nth-of-type(3n)
+        @media (max-width: max-sm)
+          text-align right
+      &.\--checked,
+      &:hover
+        font-weight: bold;
+
+.type-center-btn
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 15px 19px;
+  margin: 10px 15px;
+  -webkit-appearance: none;
+  background-color: #fff;
+  outline: 0;
+  min-width 160px
+  border: none;
+  font-weight: bold;
+  font-size: 14.5px;
+  line-height: 130%;
+  color: #0c0033;
+  text-transform: uppercase;
+  border-radius: 25px 25px 25px 3px;
+  box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
+  @media (max-width: max-extra-large)
+    padding: 12px 19px;
+    margin: 10px 8px;
+  @media (max-width: max-medium)
+    min-width: 138px;
+    padding: 12px 7px;
+    margin: 9px 4px;
+  img
+    font-size 0
+    line-height 0
+    margin-right 7px
+
+

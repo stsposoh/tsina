@@ -1,0 +1,195 @@
+@import "nib"
+@import "vars"
+@import "mixins"
+
+*
+  box-sizing border-box
+
+html
+body
+  height 100%
+
+body
+  position: relative
+  height: 100%;
+  margin 0
+  min-width: 320px
+  padding-top 71px
+  font-family notosans
+  font-size: 14.5px;
+  line-height: 150%;
+  color accent-dark
+  overflow-x: hidden
+  overflow-y auto
+  font-smoothing antialiased
+  scroll-behavior smooth
+  background-color white
+  @media (max-width: max-extra-large)
+    font-size: 14px;
+    padding-top: 116px;
+  @media (max-width: max-medium)
+    font-size: 13px;
+    line-height: 135%;
+    padding-top 106px
+  &.narrow-header
+    padding-top: 44px;
+    @media (max-width: max-extra-large)
+      padding-top: 50px;
+    @media (max-width: max-medium)
+      padding-top 60px
+  p
+    margin-bottom: 19px;
+    margin-top: 0;
+
+img
+  max-width 100%
+  height: auto
+
+em
+  font-style italic
+
+strong
+  font-weight bold
+
+ol
+  padding: 0 0 0 18px;
+  margin: 0;
+
+svg
+  transition all .3s ease-in-out
+
+a
+  color: #566069
+  outline 0
+  text-decoration underline
+  text-decoration-color transparent
+  transition color .3s, text-decoration-color .3s ease-in-out
+  &:hover
+    color: #F5564A;
+    text-decoration-color #F5564A;
+  &:active
+    color: #D74B48
+    text-decoration-color: #D74B48
+
+main
+  min-height: 600px;
+  @media (max-width: max-medium)
+    min-height: 500px;
+
+h1
+  margin: 23px 0 16px;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 110%;
+  @media (max-width: max-extra-large)
+    font-size: 27.75px;
+  @media (max-width: max-medium)
+    font-size: 25.75px;
+    line-height: 120%;
+    margin: 18px 0 9px
+
+h2
+  margin: 20px 0;
+  font-weight: 600;
+  font-size: 25.5px;
+  line-height: 110%;
+  letter-spacing: 0.04em;
+  @media (max-width: max-extra-large)
+    font-size: 21.25px;
+  @media (max-width: max-medium)
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+
+h3
+  font-weight: 600;
+  font-size: 20.25px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  margin: 15px 0;
+  @media (max-width: max-extra-large)
+    font-size: 18px;
+  @media (max-width: max-medium)
+    font-size: 16.75px;
+    line-height: 111%;
+
+h4
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 145%;
+  letter-spacing: 0.02em;
+  margin: 15px 0;
+  @media (max-width: max-extra-large)
+    font-size: 16.5px;
+  @media (max-width: max-medium)
+    font-size: 15.5px;
+    line-height: 140%;
+
+h5
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 31px 0;
+  @media (max-width: max-extra-large)
+    font-size: 15px;
+  @media (max-width: max-medium)
+    font-size: 14px;
+    line-height: 140%;
+
+blockquote
+  position relative
+  margin: 18px 40px 6px;
+  padding: 8px 0;
+  font-weight: 500;
+  &:before
+    font-family: FontAwesome;
+    content: "\f10d";
+    position: absolute;
+    left: -20px;
+    top: 0;
+  &:after
+    font-family: FontAwesome;
+    content: "\f10e";
+    position: absolute;
+    right: -20px;
+    bottom: 8px;
+
+.code, kbd, samp
+  font-family: inherit;
+  font-size: inherit;
+
+input.error,
+textarea.error
+  border-color: #ff9e9e !important;
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: grey
+
+body input:required:valid,
+body textarea:required:valid
+  color: grey
+
+//*::placeholder
+//  color: grey-color
+//*::-webkit-input-placeholder
+//  color: grey-color
+//*:-moz-placeholder
+//  color: grey-color
+//*::-moz-placeholder
+//  color: grey-color
+//*:-ms-input-placeholder
+//  color: grey-color
+
+//&::-webkit-scrollbar-track
+//  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//  background-color: #D4D4D4
+//
+//&::-webkit-scrollbar
+//  width: 3px;
+//  background-color: #f8f8f8;
+//
+//&::-webkit-scrollbar-thumb
+//  box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+//  background-color: black;
