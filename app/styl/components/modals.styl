@@ -10,10 +10,30 @@
   left: 0;
   right: 0;
   bottom: 0;
-  //display: flex;
+  padding: 15px 0;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  &.\--open
+    display: flex;
+  &.\--style-1
+    .modal__content
+      width: 370px;
+      @media (max-width: max-medium)
+        width: 270px;
+    .modal__title
+      text-align: center;
+      font-weight: 600;
+      font-size: 20.25px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      @media (max-width: max-medium)
+        font-size: 16.75px;
+        line-height: 111%;
+    form
+      margin: 19px 0 0;
+      @media (max-width: max-medium)
+        margin: 21px 0 0;
   &.\--style-2
     .modal__content
       width: 1110px;
@@ -33,6 +53,9 @@
     box-shadow: 0px 24px 32px rgba(8, 35, 48, 0.24);
     border-radius: 60px 10px;
     padding 30px
+    @media (max-width: max-medium)
+      border-radius: 40px 5px;
+      padding: 20px 15px;
   &__close
     position: absolute;
     right: 0;
