@@ -69,10 +69,11 @@
       margin-top: 2px;
       padding-left: 237px;
     @media (max-width: max-large)
-      margin-top: 5px;
+      margin-top: 9px;
+      height: 50px;
     @media (max-width: max-medium)
       padding-left: 0
-      height: 42px;
+      height: 40px;
       width: 510px;
       margin-top: 0
     &:before
@@ -88,10 +89,10 @@
         background-color: #DFE2E9;
         z-index: 2;
       @media (max-width: max-medium)
-        top: 62px;
+        top: 59px;
     &-stub
       box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
-      height: 71px;
+      height: 65px;
       margin-bottom: 84px;
       @media (max-width: max-medium)
         display none
@@ -156,14 +157,14 @@
       left: calc((100% - 695px) / 2);
     @media (max-width: max-medium)
       position static
-      width 52px
+      width 59px
   &__content
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 12px;
-    padding-bottom: 6px;
+    padding-top: 8px;
+    padding-bottom: 7px;
     @media (max-width: max-extra-large)
       justify-content: flex-end;
       padding-bottom 0
@@ -176,6 +177,7 @@
       z-index: 1;
   &__phone
     width: 233px;
+    transform: translateY(4px);
     @media (max-width: max-extra-large)
       margin-left: 218px;
     @media (max-width: max-large)
@@ -184,6 +186,7 @@
       width: calc(100% - 457px) !important
     @media (max-width: max-medium)
       margin-left: 0
+      transform: translateY(-1px);
       width: calc(100% - 250px) !important
     @media (max-width: 459px)
       width: calc(100% - 189px) !important

@@ -108,6 +108,8 @@
       font-size: 11.54px;
       line-height: 130%;
       letter-spacing: 0.02em;
+  &.\--full-width
+    width 100%
   &.\--red
     background-color accent-red
     color white
@@ -225,38 +227,41 @@
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  &-arrow
-    &-right:before { content: '\e800'; }
-    &-left:before { content: '\e801'; }
-    &-down:before { content: '\e802'; }
-    &-up:before { content: '\e803'; }
+  &-angle-left:before { content: '\f104'; }
+  &-angle-right:before { content: '\f105'; }
+  &-angle-up:before { content: '\f106'; }
+  &-angle-down:before { content: '\f107'; }
+  &-eye:before { content: '\e801'; }
+  &-eye-off:before { content: '\e802'; }
   &-ok:before { content: '\e806'; }
-  &-th-list:before { content: '\e804'; }
-  &-th:before { content: '\e805'; }
-  &-th,
-  &-th-list
-    display inline-block
-    font-size: 25px;
-    width: 25px;
-    padding-top: 2px;
-    color accent-red
-    cursor pointer
-    transition color .3s ease-in-out
-    &:hover
-      color #F5564A
-    &:active
-      color #D74B48
-    &.\--disabled
-      pointer-events none
-      color #C9CFDA
-    &:after
-      line-height: 20px;
-      vertical-align: middle;
+  &-heart-empty:before { content: '\e807'; }
   &-twitter:before { content: '\f099'; }
   &-facebook:before { content: '\f09a'; }
   &-gplus:before { content: '\f0d5'; }
   &-youtube-play:before { content: '\f16a'; }
   &-instagram:before { content: '\f16d'; }
+  //&-th-list:before { content: '\e804'; }
+  //&-th:before { content: '\e805'; }
+  //&-th,
+  //&-th-list
+  //  display inline-block
+  //  font-size: 25px;
+  //  width: 25px;
+  //  padding-top: 2px;
+  //  color accent-red
+  //  cursor pointer
+  //  transition color .3s ease-in-out
+  //  &:hover
+  //    color #F5564A
+  //  &:active
+  //    color #D74B48
+  //  &.\--disabled
+  //    pointer-events none
+  //    color #C9CFDA
+  //  &:after
+  //    line-height: 20px;
+  //    vertical-align: middle;
+
 
 
 
@@ -287,7 +292,7 @@
     box-shadow: none;
     border-radius: 0;
     width: 52px;
-    padding: 11px 0;
+    padding: 9px 0 10px;
   &.\--style-2
     width: auto
     padding: 0;
@@ -351,7 +356,7 @@
   text-transform uppercase
   letter-spacing: 0.04em;
   position relative
-  display inline-block
+  display inline-flex
   margin-right: 4px;
   @media (max-width: max-medium)
     font-size: 12px;
@@ -359,28 +364,22 @@
     .modal-list__modal
       opacity: 1;
       pointer-events all
+  &:after
+    content '\f107'
+    font-family: "fontello";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 20px;
+    font-weight: 600;
+    color accent-red
+    margin-left: 11px;
+    @media (max-width: max-medium)
+      font-size: 11px;
+      margin-left: 5px;
   &__selected
     color accent-red
     display: flex;
     align-items: center;
-    &:after
-      content '\e802'
-      font-family: "fontello";
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      font-size: 15px;
-      font-weight: 300;
-      margin-left: 9px;
-      @media (max-width: max-medium)
-        font-size: 11px;
-        margin-left: 5px;
-  a.modal-list__selected
-    font-size: 20.25px;
-    line-height: 150%;
-    text-decoration none
-    @media (max-width: max-medium)
-      font-size: 16.75px;
-      line-height: 111%;
   &__modal
     opacity 0
     pointer-events none
@@ -396,15 +395,23 @@
     overflow hidden
     transition opacity .3s ease-in-out
     &-item
-      display: block;
       padding: 4px 10px;
       cursor pointer
       white-space: nowrap;
-      transition background-color .3s ease-in-out
+      text-transform uppercase
+      text-decoration none
+      display: flex;
+      align-items: center;
+      font-size: 14.5px;
+      line-height: 130%;
+      transition color .3s, background-color .3s ease-in-out
+      @media (max-width: max-medium)
+        font-size: 11.5px;
+        line-height: 120%;
       &.\--active
         background-color #768592
         color white !important
-        .modal-list__phone:after
+        &:after
           content '\e806'
           font-size: 13px;
           font-weight: 300;
@@ -414,77 +421,117 @@
           -moz-osx-font-smoothing: grayscale;
       &:hover
         color accent-red
-  &__phone
-    text-transform uppercase
-    text-decoration none
-    display: flex;
-    align-items: center;
-    transition color .3s ease-in-out
-  span.modal-list__phone
-    font-size: 14.5px;
-    line-height: 130%;
-    @media (max-width: max-medium)
-      font-size: 11.5px;
-      line-height: 120%;
-  a.modal-list__phone
-    font-size: 20.25px;
-    line-height: 120%;
-    color inherit
-    @media (max-width: max-medium)
-      font-size: 16.75px;
-      line-height: 111%;
 
-.phone-list
+.phone-modal
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
+  cursor pointer
   &.\--large
-    .phone-list__icon
+    .phone-modal__icon
       width: 36px;
       @media (max-width: max-large)
         width: 26px;
         padding-right: 5px;
-    .phone-list__main
+      @media (max-width: max-medium)
+        display none
+    .phone-modal__main
       width: calc(100% - 36px);
       @media (max-width: max-medium)
         width 100%
-      .modal-list
+      &-phone
         margin-right: 0;
         margin-top: 3px;
-        &__selected
-          font-size: 25.5px;
-          line-height: 110%;
-          letter-spacing: 0.04em;
-          @media (max-width: max-large)
-            font-size: 21.25px;
-          @media (max-width: max-medium)
-            font-size: 16.75px;
-    .modal-list a.modal-list__phone
-      font-size: 25.5px;
-      line-height: 110%;
-      letter-spacing: 0.04em;
-      @media (max-width: max-large)
-        font-size: 21.25px;
-      @media (max-width: max-medium)
-        font-size: 16.75px;
-    .phone-list__tip
+        font-size: 25.5px;
+        line-height: 110%;
+        font-weight: 600;
+        color accent-red
+        letter-spacing: 0.04em;
+        @media (max-width: max-large)
+          font-size: 21.25px;
+        @media (max-width: max-medium)
+          font-size: 16.75px;
+    .phone-modal__tip
       @media (max-width: max-large)
         font-size: 11px;
         transform: translateY(-5px);
       @media (max-width: max-medium)
         transform: translateY(0);
+  &:hover
+    .phone-modal__modal
+      overflow visible
+      opacity 1
+      pointer-events all
   &__icon
     padding-right: 12px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
     svg
       width 100%
+  &__main
+    position: relative;
+    z-index 1
+    &-phone
+      position relative
+      z-index 2
+      &:after
+        content '\f107'
+        font-family: "fontello";
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 20px;
+        font-weight: 600;
+        color accent-red
+        position: absolute;
+        right: -23px;
+        top: 0;
+        @media (max-width: max-large)
+          right: -20px;
+          top: 2px;
+        @media (max-width: max-medium)
+          font-size: 14px;
+          right: -14px;
   &__tip
     font-size: 11.75px;
     line-height: 135%;
     letter-spacing: 0.04em;
     display: inline-block;
+    position: relative;
+    z-index: 2;
     color: #768592;
+    transform: translateY(-5px);
     @media (max-width: max-medium)
-      line-height: 105%;
+      line-height: 120%;
+  &__modal
+    overflow hidden
+    opacity 0
+    pointer-events none
+    display: block;
+    padding: 73px 29px 24px;
+    position: absolute;
+    z-index: 1;
+    top: -11px;
+    left: -65px;
+    right: -6px;
+    border-radius: 60px 10px;
+    background-color: #fff;
+    box-shadow: 0px 24px 32px rgba(8,35,48,0.24);
+    transition opacity .3s ease-in-out
+    &-item
+      display block
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      margin-bottom: 11px;
+      margin-left: 32px;
+    &-icon
+      margin-right: 6px;
+    &-tel
+      color: #0C0033;
+    &-btn
+      display: block;
+      padding: 7px 0 0;
 
 .icon-text
   display: flex;
