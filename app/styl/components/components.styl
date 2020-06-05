@@ -390,7 +390,7 @@
     z-index: 1;
     font-weight: bold;
     padding: 5px 0;
-    top: 100%;
+    top: -7px
     margin: 0 -10px;
     overflow hidden
     transition opacity .3s ease-in-out
@@ -424,12 +424,13 @@
 
 .phone-modal
   display: flex;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   align-items: flex-start;
   cursor pointer
   &.\--large
     .phone-modal__icon
       width: 36px;
+      margin-top: 10px;
       @media (max-width: max-large)
         width: 26px;
         padding-right: 5px;
@@ -451,30 +452,49 @@
           font-size: 21.25px;
         @media (max-width: max-medium)
           font-size: 16.75px;
+          margin-right: 14px
     .phone-modal__tip
+      transform: translateY(-8px);
+      margin-left 0
       @media (max-width: max-large)
         font-size: 11px;
-        transform: translateY(-5px);
       @media (max-width: max-medium)
-        transform: translateY(0);
+        transform: translateY(2px);
   &:hover
     .phone-modal__modal
       overflow visible
       opacity 1
       pointer-events all
+      transform: translateY(0);
   &__icon
     padding-right: 12px;
-    margin-top: 10px;
-    position: relative;
-    z-index: 2;
+    display: inline-block;
+    width: 32px;
+    margin-top: 1px;
+    @media (max-width: max-large)
+      width: 48px;
+      margin-top: 11px;
+    @media (max-width: max-medium)
+      display none
     svg
       width 100%
   &__main
     position: relative;
     z-index 1
     &-phone
+      font-weight: 600;
+      font-size: 20.25px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      transform: translateY(-5px);
+      color accent-red
+      display inline-block
       position relative
       z-index 2
+      @media (max-width: max-medium)
+        font-size: 16.75px;
+        line-height: 111%;
+        transform: translateY(4px);
       &:after
         content '\f107'
         font-family: "fontello";
@@ -488,7 +508,7 @@
         top: 0;
         @media (max-width: max-large)
           right: -20px;
-          top: 2px;
+          top: 0
         @media (max-width: max-medium)
           font-size: 14px;
           right: -14px;
@@ -500,24 +520,35 @@
     position: relative;
     z-index: 2;
     color: #768592;
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    margin-left: 39px;
+    @media (max-width: max-large)
+      margin-left: 0
     @media (max-width: max-medium)
       line-height: 120%;
+      transform: translateY(4px);
   &__modal
     overflow hidden
     opacity 0
     pointer-events none
     display: block;
-    padding: 73px 29px 24px;
+    padding: 10px 25px 24px 29px;
     position: absolute;
     z-index: 1;
-    top: -11px;
-    left: -65px;
-    right: -6px;
+    top: -9px;
+    left: -28px;
+    width: 269px;
     border-radius: 60px 10px;
     background-color: #fff;
+    transform: translateY(45px);
     box-shadow: 0px 24px 32px rgba(8,35,48,0.24);
-    transition opacity .3s ease-in-out
+    transition opacity .3s, transform .3s ease-in-out
+    @media (max-width: max-medium)
+      top: 0
+      left: -12px;
+      width: 220px;
+      border-radius: 40px 5px;
+      padding: 5px 22px 24px;
     &-item
       display block
       font-size: 16px;
@@ -525,13 +556,53 @@
       letter-spacing: 0.02em;
       margin-bottom: 11px;
       margin-left: 32px;
+      @media (max-width: max-medium)
+        font-size: 14px;
+        line-height: 130%;
+        margin-bottom: 4px;
+        margin-left: 25px
     &-icon
       margin-right: 6px;
+      @media (max-width: max-medium)
+        margin-right: 3px;
     &-tel
       color: #0C0033;
     &-btn
       display: block;
       padding: 7px 0 0;
+      @media (max-width: max-medium)
+        padding: 16px 0 0;
+    .phone-modal__icon
+      margin-top: 17px;
+      width: 32px;
+      padding-right: 9px;
+      @media (max-width: max-medium)
+        display inline-block !important
+        margin-top: 11px;
+        margin-left: 4px;
+        padding-right: 5px;
+        width: 25px !important;
+    .phone-modal__main-phone
+      font-size: 24.5px !important
+      transform: translateY(-2px);
+      @media (max-width: max-medium)
+        font-size: 20px !important
+        line-height: 120% !important
+        margin-right: 0 !important
+      &:after
+        display none
+    .phone-modal__tip
+      margin-left: 36px !important
+      transform: translateY(-13px);
+      @media (max-width: max-medium)
+        margin-left: 0 !important
+        transform: translateY(-3px);
+        margin-bottom: 10px;
+
+
+
+
+
 
 .icon-text
   display: flex;
