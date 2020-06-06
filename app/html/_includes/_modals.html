@@ -12,7 +12,7 @@
         <label class="field__label">Пароль</label>
         <a href="#" class="field__link">Забыли пароль?</a>
         <input type="password" class="field__input" placeholder="Пароль">
-        <i class="field__eye --close"></i>
+        <i class="field__eye js-toggle-pass"></i>
       </div>
       <div class="auth-form__footer">
         <button type="submit" class="btn --red --middle">вход</button>
@@ -45,6 +45,7 @@
         <div class="field">
           <label class="field__label">Выберите тему звонка</label>
           <select class="js-sumo-select">
+            <option selected disabled value="">Выберите</option>
             <option value="Тема звонка 1">Тема звонка 1</option>
             <option value="Тема звонка 2">Тема звонка 2</option>
             <option value="Тема звонка 3">Тема звонка 3</option>
@@ -63,6 +64,77 @@
         <button class="btn --red --wide --disabled">Отправить</button>
       </div>
     </form>
+  </div>
+</div>
+
+<div class="modal --style-1" id="order-call-success">
+  <div class="modal__hider js-close-modal"></div>
+  <div class="modal__content">
+    <span class="modal__close js-close-modal">&times;</span>
+    <div class="modal__title">Заявка на обратный звонок</div>
+    <div class="modal__icon-text">
+      <div class="modal__icon-text-icon"></div>
+      <div class="modal__icon-text-text">Ваша заявка принята. В ближайшее время мы Вам перезвоним!</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal --style-4 --open" id="all-brands">
+  <div class="modal__hider js-close-modal"></div>
+  <div class="modal__content">
+    <span class="modal__close js-close-modal">&times;</span>
+    <div class="modal__title">Наши бренды</div>
+    <div class="brands-tabs js-tabs">
+      <div class="brands-tabs__controls">
+        <span class="brands-tabs__controls-btn" data-tab="tab-premium">Премиум <span>сегмент</span></span>
+        <span class="brands-tabs__controls-btn  --active" data-tab="tab-standard">Эконом <span>сегмент</span></span>
+        <span class="brands-tabs__controls-btn" data-tab="tab-comfort">Комфорт <span>сегмент</span></span>
+      </div>
+      <div class="brands-tabs__content">
+        <div class="brands-tabs__content-item" data-tab-content="tab-comfort">
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-1.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-2.png" alt="">
+          </span>
+        </div>
+        <div class="brands-tabs__content-item  --active" data-tab-content="tab-premium">
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-1.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-2.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-3.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-4.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-5.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-6.png" alt="">
+          </span>
+        </div>
+        <div class="brands-tabs__content-item" data-tab-content="tab-standard">
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-1.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-2.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-3.png" alt="">
+          </span>
+          <span class="brands-tabs__content-elem">
+            <img src="./img/common/brand-4.png" alt="">
+          </span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

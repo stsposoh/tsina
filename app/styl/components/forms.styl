@@ -71,8 +71,7 @@ input[type="submit"]
     line-height: 135%;
     letter-spacing: 0.04em;
     margin-bottom: 1px;
-    display: block;
-    width: 100%;
+    display: inline-block
     @media (max-width: max-medium)
       font-size: 11px;
       line-height: 115%;
@@ -141,14 +140,22 @@ input[type="submit"]
     display inline-block
     width: 24px;
     height: 24px;
-    background-image: url(/img/svg/svg-sprite.svg#eye-close);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 16px;
     cursor: pointer;
     position: absolute;
     right: 8px;
-    bottom: 7px;
+    bottom: 5px;
+    color: #B0BAC9;
+    font-size: 14.5px;
+    line-height: 150%;
+    font-family: "fontello";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    &.\--open
+      &:before
+        content: '\e801'
+    &:before
+      content: '\e802'
 
 
 .SumoSelect
@@ -162,7 +169,15 @@ input[type="submit"]
     padding: 11px 8px 8px;
     line-height: 1.4;
     box-shadow: none !important
-
+    & > span.placeholder
+      font-size: 14.5px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      color: #B0BAC9;
+      font-style: normal;
+      @media (max-width: max-medium)
+        font-size: 13px;
+        line-height: 135%;
 
 
 .auth-form

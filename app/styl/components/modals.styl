@@ -27,7 +27,6 @@
       font-weight: 600;
       font-size: 20.25px;
       line-height: 150%;
-      letter-spacing: 0.04em;
       @media (max-width: max-medium)
         font-size: 16.75px;
         line-height: 111%;
@@ -49,6 +48,11 @@
         padding: 20px 15px;
     .form-sect
       margin-bottom 0
+  &.\--style-4
+    .modal__content
+      width: 730px;
+      @media (max-width: max-medium)
+        width: 290px;
   &__hider
     position: fixed;
     z-index: 1;
@@ -89,7 +93,6 @@
     font-size: 20.25px;
     line-height: 150%;
     text-align: center;
-    letter-spacing: 0.04em;
     margin: 5px 0 6px;
     @media (max-width: max-medium)
       font-size: 18px;
@@ -117,3 +120,28 @@
     width: 100%;
     text-align: center;
     margin: 8px 0 0;
+  &__icon-text
+    display flex
+    flex-wrap wrap
+    margin-top: 17px;
+    align-items: baseline;
+    &-icon
+      font-family: "fontello";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      width 20px
+      height 20px
+      text-align: center;
+      color: white;
+      border-radius: 50%;
+      font-size: 13px;
+      background-color accent-green
+      &:before
+        content: '\e806';
+    &-text
+      font-size: 14.5px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      width: calc(100% - 20px);
+      padding-left: 10px;
+

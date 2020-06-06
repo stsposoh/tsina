@@ -770,6 +770,58 @@
       &:hover
         font-weight: bold;
 
+.brands-tabs
+  margin: 19px 0 0;
+  &__controls
+    display: flex;
+    flex-wrap: wrap;
+    background-color #FFF2F2
+    border-radius 30px
+    width 100%
+    overflow hidden
+    font-size 0
+    &-btn
+      width: 33.33%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: accent-red
+      letter-spacing: 0.01em;
+      padding: 9px 10px;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 20px 20px 2px 20px;
+      transition all .3s ease-in-out
+      @media (max-width: max-large)
+        font-size: 14px;
+        line-height: 130%;
+      @media (max-width: max-medium)
+        font-size: 13.5px;
+      span
+        @media (max-width: max-medium)
+          display none
+      &.\--active,
+      &:hover
+        background: #D74B48;
+        color white
+  &__content
+    padding: 24px 0 0;
+    @media (max-width: max-medium)
+      padding: 8px 0 0
+    &-item
+      display none
+      font-size 0
+      &.\--active
+        display block
+    &-elem
+      width 25%
+      padding: 6px 17px;
+      display: inline-block;
+      @media (max-width: max-medium)
+        width: 50%;
+        padding: 0;
+
 .type-center-btn
   display: inline-flex;
   flex-wrap: wrap;

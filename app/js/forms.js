@@ -6,3 +6,11 @@ $(document).ready(function () {
 
   $('.js-sumo-select').SumoSelect();
 });
+
+$('.js-toggle-pass').on('click', function () {
+  let input = $(this).prev('input');
+  let inputType = input.attr('type');
+  inputType = (inputType === 'password') ? 'text' : 'password';
+  $(this).toggleClass('--open');
+  input.attr('type', inputType);
+});
