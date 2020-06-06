@@ -13,10 +13,12 @@
     "detect-it": "^3.0.5",
     "es7-array.prototype.includes": "^3.0.0",
     "event-propagation-path": "^1.0.5",
+    "inputmask": "^5.0.3",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "nouislider": "^14.5.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sumoselect": "^3.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

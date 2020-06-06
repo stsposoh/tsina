@@ -95,6 +95,8 @@ export const libs = () => {
     //'node_modules/detect-it/lib/index.js',
     'node_modules/event-propagation-path/propagationPath.js',
     'node_modules/es7-array.prototype.includes/index.js',
+    'node_modules/inputmask/dist/jquery.inputmask.min.js',
+    'node_modules/sumoselect/jquery.sumoselect.min.js',
   ])
     .pipe(plumber({
       errorHandler: notify.onError(err => ({

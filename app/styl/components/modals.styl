@@ -10,10 +10,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 15px 0;
+  padding: 35px 0;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  overflow auto
   &.\--open
     display: flex;
   &.\--style-1
@@ -37,8 +38,19 @@
   &.\--style-2
     .modal__content
       width: 1110px;
+  &.\--style-3
+    .modal__content
+      width: 571px;
+      @media (max-width: max-medium)
+        width: 370px;
+        padding: 20px 30px;
+      @media (max-width: max-sm)
+        width: 270px;
+        padding: 20px 15px;
+    .form-sect
+      margin-bottom 0
   &__hider
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
@@ -72,3 +84,36 @@
     transition color .3s ease-in-out
     &:hover
       color accent-red
+  &__title
+    font-weight: 600;
+    font-size: 20.25px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    margin: 5px 0 6px;
+    @media (max-width: max-medium)
+      font-size: 18px;
+      margin: 5px 0 8px;
+    @media (max-width: max-sm)
+      font-size: 16.75px;
+      line-height: 111%;
+      margin: 5px 0 10px;
+  &__text
+    font-size: 12.75px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #566069;
+    margin-bottom: 10px;
+    @media (max-width: max-medium)
+      font-size: 12.5px;
+      line-height: 135%;
+      margin-bottom: 14px;
+    @media (max-width: max-sm)
+      font-size: 12px;
+      line-height: 130%;
+      margin-bottom: 14px;
+  &__btn
+    width: 100%;
+    text-align: center;
+    margin: 8px 0 0;

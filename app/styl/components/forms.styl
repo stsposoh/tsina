@@ -71,11 +71,16 @@ input[type="submit"]
     line-height: 135%;
     letter-spacing: 0.04em;
     margin-bottom: 1px;
-    display: inline-block;
+    display: block;
+    width: 100%;
     @media (max-width: max-medium)
       font-size: 11px;
       line-height: 115%;
       margin-bottom: 4px;
+  &__textarea
+    height: 80px;
+    outline: 0;
+  &__textarea,
   &__input
     width: 100%;
     border: 1px solid #DFE2E9;
@@ -145,6 +150,21 @@ input[type="submit"]
     right: 8px;
     bottom: 7px;
 
+
+.SumoSelect
+  width: 100%;
+  & > .CaptionCont
+    width: 100%;
+    border: 1px solid #DFE2E9 !important
+    outline 0 !important
+    background-color: white;
+    border-radius: 4px;
+    padding: 11px 8px 8px;
+    line-height: 1.4;
+    box-shadow: none !important
+
+
+
 .auth-form
   &__footer
     display: flex;
@@ -166,7 +186,32 @@ input[type="submit"]
         font-size: 12px;
         line-height: 130%;
 
-
+.form-sect
+  padding: 10px 0 0;
+  margin-bottom: 33px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (max-width: max-large)
+    margin-bottom: 31px;
+  @media (max-width: max-medium)
+    margin-bottom 21px
+  &__title
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    color accent-color-6
+    text-align left
+    width: 100%;
+    margin-bottom: 18px;
+    @media (max-width: max-medium)
+      margin-bottom: 4px;
+  &__col-1
+    width: 100%;
+  &__col-6
+    width: 48%;
+    @media (max-width: max-medium)
+      width 100%
 
 
 
