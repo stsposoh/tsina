@@ -48,6 +48,9 @@
     .header__info
       padding-bottom 0
   &__aside
+    overflow-x: hidden;
+    overflow-y: auto;
+    //overflow: auto;
     position: fixed;
     background-color: white;
     left: 0;
@@ -69,7 +72,7 @@
       margin-top: 2px;
       padding-left: 237px;
     @media (max-width: max-large)
-      margin-top: 9px;
+      margin-top: 6px;
       height: 50px;
     @media (max-width: max-medium)
       padding-left: 0
@@ -94,39 +97,53 @@
       box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
       height: 65px;
       margin-bottom: 84px;
-      @media (max-width: max-medium)
+      @media (max-width: max-extra-large)
         display none
     &-btn
       border: 1px solid #dfe2e9;
       display: block;
       margin-bottom: -1px;
       text-align center
-      padding: 15px 5px 14px;
-      color accent-dark
-      text-decoration none
+      position relative
       @media (max-width: max-extra-large)
         margin-left: -1px;
         width: calc(100% / 7 + 1px);
         border-top: none;
         border-bottom: none;
-        padding: 10px 5px 3px;
         margin-bottom 0
-      &:hover
-        color accent-red
-        svg
-          fill accent-red
-          stroke accent-red
       &.\--burger
+        height: 100%;
+        overflow: hidden;
+        padding: 9px 8px;
         display none
+        transition background-color .3s ease-in-out
         @media (max-width: max-extra-large)
-          display block
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      &.\--active
+        @media (max-width: max-extra-large)
+          background-color accent-red
+          svg
+            fill white
+            stroke white
+          .header__aside-sub-menu
+            opacity 1
+            visibility visible
+            pointer-events all
       &.\--disabled
-        pointer-events none
-        background-color: #dfe2e9;
-        color: #ccd1dc;
+        .header__aside-link
+          pointer-events none
+          background-color: #dfe2e9;
+          color: #ccd1dc;
         svg
           fill #ccd1dc;
           stroke #ccd1dc;
+      &:hover
+        .header__aside-sub-menu
+          opacity 1
+          visibility visible
+          pointer-events all
       &-icon
         font-size 0
         line-height 0
@@ -138,13 +155,103 @@
           @media (max-width: max-medium)
             width 24px
             height 24px
-      &-link
+      &-text
         font-size: 12.75px;
         line-height: 150%;
         letter-spacing: 0.04em;
         display block
         @media (max-width: max-extra-large)
           display none
+    &-link
+      height 100%
+      text-decoration none
+      display block
+      cursor pointer
+      color accent-dark
+      transition background-color .3s, color .3s ease-in-out
+      padding: 15px 5px 14px;
+      @media (max-width: max-extra-large)
+        padding: 8px 5px 0
+      &:hover
+        color white
+        background-color accent-red
+        svg
+          fill white
+          stroke white
+    &-sub-menu
+      opacity 0
+      visibility hidden
+      pointer-events none
+      background-color white
+      box-shadow: 0px 24px 32px rgba(8, 35, 48, 0.24);
+      border-radius: 60px 10px;
+      position: fixed;
+      left: 100px;
+      top: 60%;
+      transform: translateY(-50%);
+      display: block;
+      width: 371px;
+      //height: 706px;
+      max-height: 70%;
+      overflow: auto;
+      z-index: 1;
+      padding: 13px 30px;
+      text-align: left;
+      transition opacity .3s ease-in-out
+      @media (min-width: max-extra-large)
+        &::-webkit-scrollbar-track
+          background-color: transparent
+        &::-webkit-scrollbar
+          width 6px
+          border-radius 30px
+          background-color: transparent
+        &::-webkit-scrollbar-thumb
+          background-color: accent-red
+          width 6px
+          border-radius 30px
+      @media (max-width: max-extra-large)
+        padding: 0 14px 10px;
+        transform: none;
+        max-height: calc(100% - 120px);
+        left: auto;
+        right: calc((100% - 928px) / 2);
+        top: 118px;
+        width: 365px;
+        border-radius: 0px 0px 40px 5px;
+        box-shadow: 0px 24px 32px rgba(8, 35, 48, 0.24);
+      @media (max-width: max-large)
+        right: calc((100% - 688px) / 2);
+        top: 116px;
+      @media (max-width: max-medium)
+        top: 100px;
+        width: 289px;
+        right: calc((100% - 510px) / 2);
+      @media (max-width: max-sm)
+        right 15px
+      &-title
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 145%;
+        display block
+        margin: 20px 0 12px;
+        @media (max-width: max-extra-large)
+          font-size: 15.5px;
+          line-height: 140%;
+          letter-spacing: 0.02em;
+      &-link
+        display block
+        margin-bottom: 12px;
+        a
+          font-size: 14.5px;
+          line-height: 150%;
+          letter-spacing: 0.02em;
+          color: #566069
+          text-decoration none
+          @media (max-width: max-extra-large)
+            font-size: 13px;
+            line-height: 135%;
+          &:hover
+            color accent-red
   &__logo
     position absolute
     top: 0;

@@ -1,3 +1,118 @@
 @import "nib"
 @import "vars"
 @import "mixins"
+
+.burger
+  display block
+  width: 31px;
+  @media (max-width: max-medium)
+    width: 24px;
+  &.\--open
+    .burger__bars
+      &:nth-of-type(1)
+        background-color white
+        transform: translate(0px, 13px) rotate(45deg);
+        @media (max-width: max-medium)
+          transform: translate(0px, 9px) rotate(45deg);
+      &:nth-of-type(2)
+        opacity: 0;
+        width: 0;
+        transform: translate(0px, -50px);
+      &:nth-of-type(3)
+        opacity: 0;
+        width: 0;
+        transform: translate(0px, 50px);
+      &:nth-of-type(4)
+        background-color white
+        transform: translate(0px, -10px) rotate(-45deg);
+        @media (max-width: max-medium)
+          transform: translate(0px, -6px) rotate(-45deg);
+  &__bars
+    display block
+    width: 31px;
+    height: 2px;
+    margin: 6px 0;
+    background-color: accent-dark
+    transition: all .1s, transform .5s ease-out;
+    border-radius: 3px;
+    @media (max-width: max-medium)
+      width: 24px;
+      margin: 3px 0;
+
+.mob-menu
+  opacity 0
+  visibility hidden
+  pointer-events none
+  overflow: auto;
+  max-height: calc(100% - 120px);
+  display none
+  background-color white
+  position: fixed;
+  padding-bottom: 20px;
+  z-index: 99;
+  transition opacity .5s, visibility .5s ease-in-out
+  @media (max-width: max-extra-large)
+    display block
+    left: calc((100% - 928px) / 2);
+    top: 118px;
+    width: 365px;
+    border-radius: 0px 0px 40px 5px;
+    box-shadow: 0px 24px 32px rgba(8, 35, 48, 0.24);
+  @media (max-width: max-large)
+    left: calc((100% - 688px) / 2);
+    top: 116px;
+  @media (max-width: max-medium)
+    top: 100px;
+    width: 289px;
+    left: calc((100% - 510px) / 2);
+  @media (max-width: max-sm)
+    left 15px
+  &.\--open
+    opacity 1
+    visibility visible
+    pointer-events all
+  &__header
+    padding: 6px 14px 9px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  &__lang-btn
+    display inline-block
+    padding: 5px 15px;
+    border: 1px solid transparent
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 130%;
+    text-transform: uppercase;
+    border-radius: 15px 15px 15px 2px;
+    &.\--active
+      color accent-red
+      border-color accent-red
+  &__btns
+    margin-bottom: 11px;
+  &__btn
+    background-color: #ECEFF1;
+    padding: 7px 15px;
+    border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+    &-icon
+      font-size: 0;
+      line-height: 0;
+      margin-right: 12px;
+      svg
+        fill accent-dark
+        stroke accent-dark
+    &-text
+      font-size: 13px;
+      line-height: 135%;
+      letter-spacing: 0.02em;
+  &__link
+    a
+      font-size: 13px;
+      line-height: 135%;
+      letter-spacing: 0.02em;
+      color: #566069;
+      text-decoration none
+      display inline-block
+      padding: 4px 21px;

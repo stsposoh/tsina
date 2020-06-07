@@ -46,47 +46,101 @@
   <div class="header__content wrapper">
     <div class="header__aside">
       <div class="header__aside-stub"></div>
-      <div class="header__aside-btn --burger">
-        <span class="header__aside-btn-icon">
-          <svg viewBox="0 0 36 36" width="36" stroke="black"><use xlink:href="./img/svg/svg-sprite.svg#burger"></use></svg>
+      <div class="header__aside-btn --burger js-toggle-mob-menu">
+        <span class="burger">
+          <span class="burger__bars"></span>
+          <span class="burger__bars"></span>
+          <span class="burger__bars"></span>
+          <span class="burger__bars"></span>
         </span>
       </div>
-      <a href="/types.html" class="header__aside-btn --disabled">
-        <span class="header__aside-btn-icon">
-          <svg viewBox="0 0 36 35" width="36" stroke="black"><use xlink:href="./img/svg/svg-sprite.svg#type"></use></svg>
+      <div class="header__aside-btn --disabled">
+        <a href="/types.html" class="header__aside-link">
+          <span class="header__aside-btn-icon">
+            <svg viewBox="0 0 36 35" width="36" stroke="black"><use xlink:href="./img/svg/svg-sprite.svg#type"></use></svg>
+          </span>
+          <span class="header__aside-btn-text">Шины</span>
+        </a>
+      </div>
+      <div class="header__aside-btn">
+        <a href="#" class="header__aside-link">
+          <span class="header__aside-btn-icon">
+            <svg viewBox="0 0 36 35" width="36" stroke="none"><use xlink:href="./img/svg/svg-sprite.svg#disc"></use></svg>
+          </span>
+          <span class="header__aside-btn-text">Диски</span>
+        </a>
+      </div>
+      <div class="header__aside-btn">
+        <a href="#" class="header__aside-link">
+          <span class="header__aside-btn-icon">
+            <svg viewBox="0 0 29 35" width="29"><use xlink:href="./img/svg/svg-sprite.svg#location"></use></svg>
+          </span>
+          <span class="header__aside-btn-text">Шинные центры</span>
+        </a>
+      </div>
+      <div class="header__aside-btn">
+        <a href="#" class="header__aside-link">
+          <span class="header__aside-btn-icon">
+            <svg viewBox="0 0 36 35" width="36"><use xlink:href="./img/svg/svg-sprite.svg#service"></use></svg>
+          </span>
+          <span class="header__aside-btn-text">Запись на сервис</span>
+        </a>
+      </div>
+      <div class="header__aside-btn js-help-links">
+        <span class="header__aside-link">
+          <span class="header__aside-btn-icon">
+            <svg viewBox="0 0 36 35" width="36"><use xlink:href="./img/svg/svg-sprite.svg#question"></use></svg>
+          </span>
+          <span class="header__aside-btn-text">Помощи и советы</span>
         </span>
-        <span class="header__aside-btn-link">Шины</span>
-      </a>
-      <a href="#" class="header__aside-btn">
-        <span class="header__aside-btn-icon">
-          <svg viewBox="0 0 36 35" width="36" stroke="none"><use xlink:href="./img/svg/svg-sprite.svg#disc"></use></svg>
+        <span class="header__aside-sub-menu">
+          <span class="header__aside-sub-menu-title">Помощь в выборе шин и дисков</span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Калькулятор шин</a>
+          </span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Как выбрать шины и диски</a>
+          </span>
+          <span class="header__aside-sub-menu-title">Информация о сервисе</span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Ремонт шин и дисков</a>
+          </span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Бесплатная программа проверки шин и дисков</a>
+          </span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Услуга сезонного хранения шин</a>
+          </span>
+          <span class="header__aside-sub-menu-title">Техническая информация</span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Все, что нужно знать о давлении в шинах</a>
+          </span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Как расшифровать маркировку шины</a>
+          </span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Индексы скорости и нагрузки автомобильных шин</a>
+          </span>
+          <span class="header__aside-sub-menu-title">Общая информация</span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Сезонное хранение шин и дисков</a>
+          </span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Срок годности шины: все, что нужно знать водителю</a>
+          </span>
+          <span class="header__aside-sub-menu-link">
+            <a href="#">Что скрывается за словами «аквапланирование» и «слэшпленинг»</a>
+          </span>
         </span>
-        <span class="header__aside-btn-link">Диски</span>
-      </a>
-      <a href="#" class="header__aside-btn">
-        <span class="header__aside-btn-icon">
-          <svg viewBox="0 0 29 35" width="29"><use xlink:href="./img/svg/svg-sprite.svg#location"></use></svg>
-        </span>
-        <span class="header__aside-btn-link">Шинные центры</span>
-      </a>
-      <a href="#" class="header__aside-btn">
-        <span class="header__aside-btn-icon">
-          <svg viewBox="0 0 36 35" width="36"><use xlink:href="./img/svg/svg-sprite.svg#service"></use></svg>
-        </span>
-        <span class="header__aside-btn-link">Запись на сервис</span>
-      </a>
-      <a href="#" class="header__aside-btn">
-        <span class="header__aside-btn-icon">
-          <svg viewBox="0 0 36 35" width="36"><use xlink:href="./img/svg/svg-sprite.svg#question"></use></svg>
-        </span>
-        <span class="header__aside-btn-link">Помощи и советы</span>
-      </a>
-      <a href="#" class="header__aside-btn">
-        <span class="header__aside-btn-icon">
-          <svg viewBox="0 0 36 35" width="36"><use xlink:href="./img/svg/svg-sprite.svg#truck"></use></svg>
-        </span>
-        <span class="header__aside-btn-link">Грузовой сервис</span>
-      </a>
+      </div>
+      <div class="header__aside-btn">
+        <a href="#" class="header__aside-link">
+          <span class="header__aside-btn-icon">
+            <svg viewBox="0 0 36 35" width="36"><use xlink:href="./img/svg/svg-sprite.svg#truck"></use></svg>
+          </span>
+          <span class="header__aside-btn-text">Грузовой сервис</span>
+        </a>
+      </div>
     </div>
 
     <div class="header__logo">
