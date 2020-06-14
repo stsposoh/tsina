@@ -857,4 +857,126 @@
     line-height 0
     margin-right 7px
 
+.filter-btn
+  position fixed
+  bottom: 26%;
+  left: 100px;
+  z-index: 1;
+  @media (max-width: max-extra-large)
+    left: 0;
+    min-width: 0;
+    font-size: 0;
+    padding: 0 17px !important
+
+.bread-crumbs
+  font-size: 11.75px;
+  line-height: 135%;
+  letter-spacing: 0.04em;
+  margin: 30px 0 10px;
+  @media (max-width: max-extra-large)
+    font-size: 11.54px;
+    line-height: 130%;
+    margin: 23px 0 4px;
+  @media (max-width: max-medium)
+    font-size: 11px;
+    white-space: nowrap;
+    overflow-y: auto;
+    margin-top 19px
+    margin-bottom 3px
+    margin-right: -15px;
+    padding-right: 10px;
+  a.bread-crumbs__item
+    color: #5E6366;
+    position: relative;
+    text-decoration none
+    &:hover
+      color accent-red
+    &:after
+      content: '\f105';
+      font-family: "fontello";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin: 0 8px;
+      font-size: 13px;
+      @media (max-width: max-extra-large)
+        margin: 0 4px;
+        font-size: 12px;
+      @media (max-width: max-medium)
+        margin: 0 4px;
+        font-size: 11px;
+  span.bread-crumbs__item
+    color: #B0BAC9
+
+.shop-header
+  margin: 10px 0 26px;
+  @media (max-width: max-extra-large)
+    margin: 4px 0 14px;
+  @media (max-width: max-medium)
+    margin: 3px 0 15px;
+  span
+    color accent-red
+
+.type-icon
+  display inline-block
+  text-align: center;
+  padding: 3px 5px;
+  min-width 31px
+  font-weight: 600;
+  text-transform uppercase
+  font-size: 14.5px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  border-radius: 5px;
+  border: 2px solid #ECEFF1;
+  margin-right: 2px;
+  height: 31px;
+
+.type-icons
+  display inline-block
+  background-color #ECEFF1
+  border 2px solid #ECEFF1
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  text-transform uppercase
+  height: 31px;
+  &__item
+    display: inline-flex;
+    align-items: center;
+    border-right: 2px solid white;
+    padding-top: 4px
+    padding-bottom: 4px;
+    padding-left: 3px;
+    padding-right: 5px;
+    max-height: 100%;
+    &:first-of-type
+      padding-left: 4px;
+    &:last-of-type
+      border-right none
+      padding-left: 0;
+    img
+      max-width: 24px;
+      margin-right: 2px;
+
+.toggle-view
+  display inline-block
+  text-align right
+  font-size 0
+  line-height 0
+  &__btn
+    cursor pointer
+    -webkit-appearance: none;
+    text-decoration none
+    border none
+    outline 0
+    padding: 0;
+    margin-left: 15px;
+    &.\--active,
+    &:hover
+      svg
+        fill accent-red
+    svg
+      fill #C9CFDA
 
