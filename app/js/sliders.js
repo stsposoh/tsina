@@ -90,3 +90,16 @@ $('.js-slider-reviews').slick({
     settings: { slidesToShow: 1 }
   }]
 });
+
+//product slider
+$('.js-product-slider').slick({
+  //infinite        : true,
+  slidesToShow    : 1,
+  slidesToScroll  : 1,
+  mobileFirst     : true
+});
+
+$('.js-product-slider').slickLightbox({
+  itemSelector        : 'a',
+  navigateByKeyboard  : true
+});

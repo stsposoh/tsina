@@ -265,17 +265,6 @@
   //    vertical-align: middle;
 
 
-
-
-
-
-
-
-
-
-
-
-
 .block-logo
   width: 221px;
   padding: 20px 20px 14px;
@@ -618,10 +607,6 @@
         margin-left: 0 !important
         transform: translateY(-3px);
         margin-bottom: 10px;
-
-
-
-
 
 
 .icon-text
@@ -998,3 +983,31 @@
     svg
       fill #C9CFDA
 
+.rating
+  display: inline-block;
+  font-size 0
+  line-height 0
+  &.\--clickable
+    .rating__star
+      cursor pointer
+      &:not(.--filled)
+        &:hover
+          svg
+            stroke dark-grey
+  &__star
+    display inline-block
+    width: 18px;
+    text-align: center
+    &.\--filled
+      svg
+        fill #FAE187
+        stroke #FAE187
+    svg
+      width: 17px;
+      height: 17px;
+      stroke #DCDCDC
+      fill none
+      transition all .3s ease-in-out
+      @media (max-width: max-width-desktop)
+        width: 15px;
+        height: 15px;

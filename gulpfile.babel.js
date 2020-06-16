@@ -91,6 +91,7 @@ export const libs = () => {
     //empty.js it heeds if you dont use any libs
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/slick-carousel/slick/slick.js',
+    'node_modules/slick-lightbox/dist/slick-lightbox.min.js',
     'node_modules/nouislider/distribute/nouislider.min.js',
     //'node_modules/detect-it/lib/index.js',
     'node_modules/event-propagation-path/propagationPath.js',

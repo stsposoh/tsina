@@ -32,3 +32,16 @@ $('.toggle-view__btn').on('click', function () {
     listing.removeClass('--horizontal-cards');
   }
 });
+
+//toggle stars in rating
+$('.js-rating').on('click', '.rating__star', function () {
+  var selectedRatingNum = $(this).find('input[type=radio]').val();
+
+  $(this).parents('.rating').find('.rating__star').removeClass('--filled');
+
+  $(this).parents('.rating').find('.rating__star').each(function (i) {
+    $(this).addClass('--filled');
+
+    if(++i >= parseInt(selectedRatingNum)) return false;
+  })
+});

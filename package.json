@@ -18,6 +18,7 @@
     "normalize.css": "^8.0.1",
     "nouislider": "^14.5.0",
     "slick-carousel": "^1.8.1",
+    "slick-lightbox": "^0.2.12",
     "sumoselect": "^3.0.5"
   },
   "devDependencies": {
