@@ -69,14 +69,15 @@
     justify-content: center;
     margin: auto;
     max-width: 1120px;
+    visibility: hidden
     @media (max-width: max-extra-large)
       max-width: 1007px;
-    @media (max-width: max-medium)
-      padding: 0 0 0 5px;
     .slick-slider
       &:not(.slick-dotted)
         .slick-track
           width: auto !important;
+    &.slick-initialized
+      visibility: visible;
 
 .advantages
   padding: 39px 0 30px;
@@ -111,6 +112,29 @@
       .advantage__text
         @media (max-width: max-large)
           display none
+  &.\--on-product
+    border: 1px solid #F1F3F4;
+    border-radius: 35px 5px;
+    padding: 18px 0 10px
+    @media (max-width: max-extra-large)
+      padding: 10px
+    @media (max-width: max-medium)
+      border: none;
+      border-radius: 0;
+      padding: 18px 15px;
+      margin: 0 -15px 0;
+    .advantage
+      @media (max-width: max-medium)
+        margin-bottom: 0;
+        width: 18%;
+    .advantage__img
+      height: 63px;
+    .advantages__content
+      @media (max-width: max-medium)
+        flex-direction: row;
+    .advantage__img
+      @media (max-width: max-medium)
+        height: auto;
   &__content
     display: flex;
     flex-wrap: wrap;
@@ -186,11 +210,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    visibility hidden
     @media (max-width: max-extra-large)
       max-width: 1010px;
       margin: 28px auto 0;
     @media (max-width: max-medium)
       margin: 28px auto 0;
+    &.slick-initialized
+      visibility: visible;
 
 .last-news
   text-align: center;
@@ -222,11 +249,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    visibility hidden
     @media (max-width: max-extra-large)
       max-width: 1010px;
       margin: 28px auto 25px
     @media (max-width: max-medium)
       margin: 18px auto 19px;
+    &.slick-initialized
+      visibility: visible;
 
 .type-centers
   background-color #768592

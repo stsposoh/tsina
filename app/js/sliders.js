@@ -93,13 +93,31 @@ $('.js-slider-reviews').slick({
 
 //product slider
 $('.js-product-slider').slick({
-  //infinite        : true,
   slidesToShow    : 1,
   slidesToScroll  : 1,
-  mobileFirst     : true
+  dots: false,
+  arrows: false,
+  //mobileFirst     : true,
 });
 
 $('.js-product-slider').slickLightbox({
   itemSelector        : 'a',
   navigateByKeyboard  : true
+});
+
+$('.js-products-slider').slick({
+  slidesToShow: 4,
+  prevArrow: '.js-products-slider-prev',
+  nextArrow: '.js-products-slider-next',
+  dots: true,
+  infinite: true,
+  variableWidth: true,
+});
+
+$('.js-recently-viewed-slider').slick({
+  slidesToShow: 6,
+  dots: true,
+  arrows: false,
+  infinite: true,
+  variableWidth: true,
 });

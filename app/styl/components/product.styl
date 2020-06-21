@@ -1,0 +1,476 @@
+.product
+  padding: 13px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (max-width: max-extra-large)
+    padding: 19px 0 0;
+  @media (max-width: max-medium)
+    padding: 4px 0 0;
+  &__left
+    width: 33%;
+    @media (max-width: max-extra-large)
+      width: 31%;
+    @media (max-width: max-medium)
+      width 100%
+  &__right
+    width: 66%;
+    @media (max-width: max-extra-large)
+      width: 67%;
+    @media (max-width: max-medium)
+      width 100%
+  &__brand
+    font-size: 0;
+    line-height: 0;
+  &__imgs
+    position relative
+    &-label
+      position: absolute;
+      z-index: 1;
+      top: 23px;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      margin-left: 16px;
+      @media (max-width: max-extra-large)
+        top 11px
+        margin-left: 0
+      @media (max-width: max-medium)
+        top 23px
+      &.\--sun
+        background-image: url(/img/svg/sun.svg)
+  &__slider
+    visibility hidden
+    &.slick-initialized
+      visibility: visible;
+    &-item
+      height: 467px;
+      @media (max-width: max-extra-large)
+        height: 291px;
+      @media (max-width: max-medium)
+        height: 334px;
+      img
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+  &__icon-links
+    display: flex;
+    flex-wrap wrap
+    align-items: center;
+    margin: 14px 0;
+    @media (max-width: max-extra-large)
+      margin: 14px 0;
+    @media (max-width: max-medium)
+      margin: 9px 0;
+  &__with-table
+    padding: 7px 0 0;
+    @media (max-width: max-extra-large)
+      padding: 0;
+    @media (max-width: max-medium)
+      padding: 13px 0 0;
+
+
+.characteristics
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 13px;
+  max-width: 500px;
+  @media (max-width: max-extra-large)
+    margin-bottom 21px
+  @media (max-width: max-medium)
+    margin-bottom: 22px;
+  &__item
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 2px;
+    width: 50%;
+    @media (max-width: max-extra-large)
+      margin-bottom 0
+    @media (max-width: max-medium)
+      margin-bottom: 4px;
+    @media (max-width: max-sm)
+      width: 100%;
+    &-label
+      font-size: 11.75px;
+      line-height: 135%;
+      letter-spacing: 0.04em;
+      color: #666666;
+      width: 95px;
+      @media (max-width: max-medium)
+        font-size: 11px;
+        line-height: 130%;
+        width: 90px;
+    &-value
+      font-weight: 600;
+      font-size: 12.75px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      @media (max-width: max-medium)
+        font-size: 12px;
+
+.product-table
+  margin-bottom: 32px;
+  @media (max-width: max-extra-large)
+    margin-bottom: 27px;
+  @media (max-width: max-medium)
+    margin-bottom: 20px;
+  &__header,
+  &__body
+    border: 4px solid #DFE2E9;
+    @media (max-width: max-extra-large)
+      border-width 3px
+    @media (max-width: max-medium)
+      border-width 2px
+  &__header
+    background-color: #DFE2E9;
+    border-radius: 40px 5px 0px 0px;
+    border-top: none;
+    border-bottom: none;
+    &-col
+      font-weight: 600;
+      color: #566069;
+      font-size: 11.75px;
+      line-height: 135%;
+      border-right 1px solid white
+      padding: 16px 8px;
+      @media (max-width: max-extra-large)
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 11.54px;
+        padding: 16px 4px;
+        line-height: 130%;
+      @media (max-width: max-medium)
+        font-size: 11px;
+        line-height: 115%;
+        padding: 15px 5px;
+      &:nth-of-type(6),
+      &:nth-of-type(7)
+        @media (max-width: max-medium)
+          display none
+      &:nth-of-type(7)
+        @media (max-width: max-extra-large)
+          display none
+  &__body
+    border-top: none;
+    background-color white
+    border-radius: 0px 0px 40px 5px;
+    @media (max-width: max-medium)
+      border-radius: 0px 0px 35px 3px;
+  &__header,
+  &__row
+    display: flex;
+    flex-wrap: wrap;
+    .product-table__header-col,
+    .product-table__col
+      letter-spacing: 0.04em;
+      text-align center
+      &:nth-of-type(1)
+        width: 11%;
+        @media (max-width: max-medium)
+          width: 18%;
+          border-bottom 1px solid #DFE2E9
+      &:nth-of-type(2)
+        width 13%
+        @media (max-width: max-extra-large)
+          width 14%
+        @media (max-width: max-medium)
+          width: 20%;
+          border-bottom 1px solid #DFE2E9
+      &:nth-of-type(3)
+        width 7%
+        @media (max-width: max-extra-large)
+          width 8%
+        @media (max-width: max-medium)
+          width: 16%;
+          border-bottom 1px solid #DFE2E9
+      &:nth-of-type(4)
+        width 11%
+        @media (max-width: max-extra-large)
+          width 16%
+        @media (max-width: max-medium)
+          width: 27%;
+          border-bottom 1px solid #DFE2E9
+      &:nth-of-type(5)
+        width 12%
+        @media (max-width: max-medium)
+          width: 19%;
+          border-right none
+          border-bottom 1px solid #DFE2E9
+      &:nth-of-type(6)
+        width 26%
+        @media (max-width: max-extra-large)
+          width 39%
+          border-right none
+        @media (max-width: max-medium)
+          width 100%
+          justify-content: flex-end;
+          padding: 7px 9px;
+          border-bottom 1px solid #DFE2E9
+      &:nth-of-type(7)
+        width 20%
+        border-right none
+        @media (max-width: max-extra-large)
+          width 100%
+          padding: 10px;
+          background-color #ECEFF1
+        @media (max-width: max-medium)
+          border-bottom: none;
+          padding: 7px 10px;
+  &__row
+    border-bottom 1px solid #DFE2E9
+    &:last-of-type
+      border-bottom none
+      .product-table__col
+        &:nth-of-type(7)
+          @media (max-width: max-extra-large)
+            border-radius: 0px 0px 34px 1px;
+  &__col
+    border-right 1px solid #DFE2E9
+    color: #0C0033;
+    display: flex;
+    flex-wrap wrap
+    align-items: center;
+    justify-content: center;
+    padding: 14px 7px;
+    font-size: 12.75px;
+    line-height: 150%;
+    @media (max-width: max-extra-large)
+      padding: 11px 2px;
+    @media (max-width: max-medium)
+      font-size: 12px;
+      line-height: 130%;
+      padding: 17px 5px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    &:nth-of-type(7)
+      justify-content: flex-end;
+    &-price
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 1
+      color accent-red
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: end;
+      margin-bottom: 5px;
+      @media (max-width: max-extra-large)
+        font-size: 20px
+        margin-right: 20px;
+        margin-bottom 0
+      @media (max-width: max-medium)
+        font-size: 16px;
+        line-height: 150%;
+        margin-right: 14px;
+      span
+        font-weight normal
+        font-size: 11.75px;
+        line-height: 135%;
+        letter-spacing: 0.04em;
+        @media (max-width: max-extra-large)
+          font-size: 12.5px;
+        @media (max-width: max-medium)
+          font-size: 10px;
+          line-height: 130%;
+  .type-icon
+    width 48%
+    line-height: 1;
+    height: auto;
+    @media (max-width: max-extra-large)
+      margin-bottom: 3px;
+    @media (max-width: max-medium)
+      padding: 7.5px 5px;
+      margin-bottom: 0
+      width auto
+      i
+        @media (max-width: max-medium)
+          display none
+  .btn
+    @media (max-width: max-extra-large)
+      height: 34px;
+      font-size: 12px;
+      line-height: 130%;
+      min-width: 113px;
+
+.brand-block
+  height: 150px;
+  border-radius: 60px 5px;
+  margin: 41px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  @media (max-width: max-extra-large)
+    margin: 25px 0;
+    height: 175px;
+  @media (max-width: max-medium)
+    height: 200px;
+    border-radius: 25px 5px;
+    margin: 8px 0;
+  &__label
+    position: absolute;
+    bottom: 43px;
+    left: 29px;
+    @media (max-width: max-extra-large)
+      bottom: 67px;
+      left: 26px;
+    @media (max-width: max-medium)
+      bottom: auto;
+      left: 20px;
+      top: 30px;
+      width: 149px;
+
+.specification
+  padding-top 19px
+  @media (max-width: max-extra-large)
+    padding-top 4px
+  @media (max-width: max-medium)
+    padding-top 19px
+  &__title
+    font-weight: 600;
+    font-size: 25.5px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    margin-bottom: 39px;
+    @media (max-width: max-extra-large)
+      font-size: 21.25px;
+      margin-bottom 34px
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 20px;
+  &__content
+    display flex
+    flex-wrap wrap
+  &__item
+    display flex
+    flex-wrap wrap
+    width 50%
+    align-items: center;
+    margin-bottom: 17px;
+    padding-right: 20px;
+    @media (max-width: max-extra-large)
+      margin-bottom: 12px;
+    @media (max-width: max-medium)
+      width 100%
+      margin-bottom: 15px;
+  &__icon
+    width 45px
+    height 45px
+    margin-right: 24px;
+    @media (max-width: max-medium)
+      width: 41px;
+      height: 41px;
+      margin-right: 18px;
+  &__text
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    width: calc(100% - 70px);
+    @media (max-width: max-medium)
+      font-size: 14px;
+      line-height: 130%;
+      width: calc(100% - 60px);
+  &__btn
+    text-align: center;
+    margin: 25px 0 60px;
+    @media (max-width: max-extra-large)
+      margin: 22px 0 31px;
+    @media (max-width: max-medium)
+      margin: 2px 0 30px;
+
+.small-type-card
+  width: 160px;
+  box-shadow: 0px 4px 8px rgba(8, 35, 48, 0.24);
+  background-color white
+  border-radius: 25px 5px;
+  margin 0 14px 16px;
+  @media (max-width: max-extra-large)
+    margin: 0 9px 16px;
+    width: 171px;
+  @media (max-width: max-large)
+    width: 160px;
+  @media (max-width: max-medium)
+    margin 0 10px 10px;
+  &__img
+    height 85px
+    font-size 0
+    line-height 0
+    display: block;
+    border-bottom: 2px solid #dfe2e9;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    img
+      width 100%
+      height 100%
+      object-fit contain
+  &__labels
+    padding: 10px 0 0 10px;
+    display: flex;
+    flex-direction: column;
+  &__label
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    &.\--sun
+      background-image: url(/img/svg/sun.svg)
+  &__main
+    padding: 5px 10px;
+    height: 134px;
+    @media (max-width: max-medium)
+      padding: 9px 10px;
+      height: 125px;
+  &__title
+    font-weight: 600;
+    font-size: 14.5px;
+    letter-spacing: 0.02em;
+    color accent-dark
+    line-height: 21px;
+    height: calc(21px * 3);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    @media (max-width: max-medium)
+      font-size: 13px;
+      line-height: 19px;
+      height: calc(19px * 3);
+  &__info
+    font-weight: 600;
+    font-size: 11.75px;
+    line-height: 135%;
+    letter-spacing: 0.04em;
+    color: #566069;
+    margin: 5px 0 10px;
+    @media (max-width: max-medium)
+      font-size: 11px;
+      line-height: 115%;
+      margin: 3px 0 10px;
+  &__price
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 1
+    color accent-red
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    padding-right: 8px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 110%;
+      padding-right: 5px;
+    span
+      font-size: 11.75px;
+      line-height: 135%;
+      letter-spacing: 0.04em;
+      font-weight normal
+      @media (max-width: max-medium)
+        font-size: 11.54px;
+        line-height: 135%;

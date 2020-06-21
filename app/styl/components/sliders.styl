@@ -2,21 +2,21 @@
 @import "vars"
 @import "mixins"
 
-
 .slick-dots
   normalize_list()
   display: flex;
   margin: 7px 0 0;
   justify-content: center;
-  @media (max-width: max-medium)
+  @media (max-width: max-large)
     margin: 9px 0 0;
   li
     font-size: 0;
     line-height: 0;
     display: inline-block;
     margin: 0 3px;
-    @media (max-width: max-medium)
+    @media (max-width: max-large)
       margin: 0 2px;
+      width: 12px;
     &.slick-active button
       background-color accent-red
       border-color accent-red
@@ -32,7 +32,7 @@
       font-size: 0;
       background-color: transparent;
       line-height: 0;
-      @media (max-width: max-medium)
+      @media (max-width: max-large)
         width: 9px;
         height: 9px;
 
@@ -46,6 +46,9 @@
   &__main
     font-size: 0;
     line-height: 0;
+    visibility hidden
+    &.slick-initialized
+      visibility: visible;
   &__item
     height 400px
     background-position: center;
@@ -91,6 +94,123 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    visibility hidden
     @media (max-width: max-extra-large)
       max-width: 1010px;
+    &.slick-initialized
+      visibility: visible;
 
+.products-slider
+  border-top: 1px solid #ECEFF1;
+  padding: 29px 0 32px;
+  overflow-x: hidden;
+  @media (max-width: max-extra-large)
+    padding: 20px 0 32px
+  @media (max-width: max-medium)
+    padding: 20px 0 14px;
+  &__title
+    font-weight: 600;
+    font-size: 25.5px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    margin-bottom: 30px;
+    @media (max-width: max-extra-large)
+      font-size: 21.25px;
+      line-height: 110%;
+      margin-bottom: 22px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 14px;
+  &__cards
+    margin: 0 -15px;
+    @media (max-width: max-extra-large)
+      margin: 0 -9px;
+    @media (max-width: max-sm)
+      padding-left: 7px;
+      margin: 0 -15px;
+  &__main
+    visibility hidden
+    @media (max-width: max-extra-large)
+      margin-bottom: 9px;
+    @media (max-width: max-large)
+      width 200%
+    @media (max-width: max-sm)
+      width 100%
+    &.slick-initialized
+      visibility: visible;
+  &__item
+    padding: 10px 0;
+  .type-card
+    &:hover
+      border-radius: 25px 5px;
+      .type-card__main-controls
+        border-radius: 0 0 25px 5px;
+      .type-card__main-sect-btm
+        display none
+  &__arrows
+    position relative
+    z-index: 3;
+    @media (max-width: max-extra-large)
+      display none
+    .btn
+      position: absolute;
+      bottom: 258px;
+      z-index: 2;
+      &.\--arrow-left
+        left -40px
+      &.\--arrow-right
+        right -40px
+  .slick-dots
+    @media (max-width: max-large)
+      max-width: 720px;
+    @media (max-width: max-medium)
+      max-width: 540px;
+
+.recently-viewed
+  background-color #ECEFF1
+  padding: 31px 0;
+  margin-bottom: 18px;
+  overflow-x hidden
+  @media (max-width: max-extra-large)
+    padding: 20px 0 25px;
+    margin-bottom: 6px;
+  @media (max-width: max-medium)
+    padding: 16px 0 1px;
+    margin-bottom: 0;
+  &__title
+    font-weight: 600;
+    font-size: 25.5px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+    @media (max-width: max-extra-large)
+      font-size: 21.25px;
+      line-height: 110%;
+      margin-bottom: 30px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 22px;
+  &__slider
+    margin: 0 -10px;
+    @media (max-width: max-extra-large)
+      margin: 0 -7px;
+    @media (max-width: max-large)
+      margin: 0
+    @media (max-width: max-medium)
+      padding-left: 6px;
+      margin: 0 -15px;
+    &-main
+      visibility hidden
+      @media (max-width: max-large)
+        width 200%
+      @media (max-width: max-sm)
+        width 100%
+      &.slick-initialized
+        visibility: visible;
+  .slick-dots
+    @media (max-width: max-large)
+      max-width: 720px;
+    @media (max-width: max-medium)
+      max-width: 540px;
