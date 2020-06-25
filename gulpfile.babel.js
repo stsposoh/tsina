@@ -65,6 +65,7 @@ export const stylesLibs = () => {
 
 export const styles = () => {
   return src('app/styl/bundle.styl')
+    //.pipe(notify("Found in file: <%= file.relative %>!"))
     .pipe(plumber({
       errorHandler: notify.onError(err => ({
         title: 'Styles',
