@@ -121,6 +121,8 @@
       padding: 0;
     @media (max-width: max-medium)
       padding: 13px 0 0;
+  &__with-tabs
+    margin: 5px 0 0;
 
 
 .characteristics
@@ -196,11 +198,11 @@
         font-size: 11px;
         line-height: 115%;
         padding: 15px 5px;
-      &:nth-of-type(6),
-      &:nth-of-type(7)
+      &.\--indices,
+      &.\--price
         @media (max-width: max-medium)
           display none
-      &:nth-of-type(7)
+      &.\--price
         @media (max-width: max-extra-large)
           display none
   &__body
@@ -217,39 +219,39 @@
     .product-table__col
       letter-spacing: 0.04em;
       text-align center
-      &:nth-of-type(1)
+      &.\--article
         width: 11%;
         @media (max-width: max-medium)
           width: 18%;
           border-bottom 1px solid #DFE2E9
-      &:nth-of-type(2)
+      &.\--country
         width 13%
         @media (max-width: max-extra-large)
           width 14%
         @media (max-width: max-medium)
           width: 20%;
           border-bottom 1px solid #DFE2E9
-      &:nth-of-type(3)
+      &.\--year
         width 7%
         @media (max-width: max-extra-large)
           width 8%
         @media (max-width: max-medium)
           width: 16%;
           border-bottom 1px solid #DFE2E9
-      &:nth-of-type(4)
+      &.\--spikes
         width 11%
         @media (max-width: max-extra-large)
           width 16%
         @media (max-width: max-medium)
           width: 27%;
           border-bottom 1px solid #DFE2E9
-      &:nth-of-type(5)
+      &.\--gain
         width 12%
         @media (max-width: max-medium)
           width: 19%;
           border-right none
           border-bottom 1px solid #DFE2E9
-      &:nth-of-type(6)
+      &.\--indices
         width 26%
         @media (max-width: max-extra-large)
           width 39%
@@ -259,7 +261,7 @@
           justify-content: flex-end;
           padding: 7px 9px;
           border-bottom 1px solid #DFE2E9
-      &:nth-of-type(7)
+      &.\--price
         width 20%
         border-right none
         @media (max-width: max-extra-large)
@@ -269,12 +271,16 @@
         @media (max-width: max-medium)
           border-bottom: none;
           padding: 7px 10px;
+      &.\--size
+        width: 14%;
+      &.\--amount
+        width: 9%;
   &__row
     border-bottom 1px solid #DFE2E9
     &:last-of-type
       border-bottom none
       .product-table__col
-        &:nth-of-type(7)
+        &:last-of-type
           @media (max-width: max-extra-large)
             border-radius: 0px 0px 34px 1px;
   &__col
@@ -295,7 +301,10 @@
       padding: 17px 5px;
       text-overflow: ellipsis;
       overflow: hidden;
-    &:nth-of-type(7)
+    &.\--size
+      font-weight: 600;
+      color accent-red
+    &:last-of-type
       justify-content: flex-end;
     &-price
       font-weight: bold;
@@ -524,3 +533,76 @@
       @media (max-width: max-medium)
         font-size: 11.54px;
         line-height: 135%;
+
+
+.product-tabs
+  margin: 22px 0 0;
+  &__title
+    font-weight: bold;
+    font-size: 12.75px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #566069;
+    margin-bottom: 10px;
+  &__controls
+    display: flex;
+    flex-wrap: wrap;
+    background-color #FFF2F2
+    border-radius 30px
+    width 100%
+    justify-content: space-between;
+    overflow hidden
+    &-btn
+      text-align: center;
+      flex-grow: 1;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: accent-red
+      letter-spacing: 0.01em;
+      padding: 6px 10px;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 20px 20px 2px 20px;
+      transition all .3s ease-in-out
+      @media (max-width: max-large)
+        font-size: 14px;
+        line-height: 130%;
+      @media (max-width: max-medium)
+        font-size: 13.5px;
+      &.\--active,
+      &:hover
+        background: #D74B48;
+        color white
+  &__content
+    padding: 17px 0 0;
+    @media (max-width: max-medium)
+      //padding: 8px 0 0
+    &-item
+      display none
+      &.\--active
+        display block
+
+.label-success
+  font-weight: 600;
+  font-size: 12.75px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #00CC9B;
+  background-color #E2FDE5
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: end;
+  padding: 5px 17px;
+  .icon
+    background-color accent-green
+    display block
+    width: 18px;
+    height: 18px;
+    border-radius 50%
+    color white
+    margin-right: 6px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: 300;
