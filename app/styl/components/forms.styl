@@ -178,6 +178,15 @@ input[type="submit"]
       @media (max-width: max-medium)
         font-size: 13px;
         line-height: 135%;
+  & > .optWrapper
+    & > .options
+      li
+        &.opt
+          transition color .3s, background-color .3s ease-in-out
+          &.selected,
+          &:hover
+            background-color: #768592;
+            color: #fff
 
 
 .auth-form

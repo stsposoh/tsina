@@ -398,6 +398,26 @@
         height: 347px;
       @media (max-width: max-medium)
         height: 330px;
+  &.\--model
+    .type-card__main-controls
+      margin-top: 12px;
+      @media (max-width: max-medium)
+        margin-top: 3px;
+        padding: 0 10px 8px;
+    .type-card__main-controls-block
+      @media (max-width: max-extra-large)
+        padding-top: 3px;
+      @media (max-width: max-medium)
+        padding-top: 0
+      &:first-of-type
+        padding-top: 0;
+        align-items: flex-start;
+        .type-card__price
+          margin-bottom: 3px
+    .type-card__price-tip
+      @media (max-width: max-medium)
+        font-size: 11px;
+        line-height: 130%;
   &__img
     display block
     border-bottom: 2px solid #DFE2E9;
@@ -624,6 +644,11 @@
       letter-spacing: 0.04em;
       color accent-dark
       width: 48%;
+  &__price-tip
+    font-size: 12.75px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #566069;
   &__price
     font-weight: bold;
     font-size: 22px;
