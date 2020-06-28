@@ -194,1146 +194,696 @@
 </div>
 
 
-<div class="modal --style-2" id="disc-filter" style="display: flex;">
+<div class="modal --style-2" id="tire-filter" style="display: flex;">
   <div class="modal__hider"></div>
   <div class="modal__content">
     <span class="modal__close">&times;</span>
     <div class="filter-container js-filter-container">
-
-
       <div class="filter-container__title" id="j-filter-container--title">
         Подбор шин
         <span class="js-header-params">по параметрам</span>
         <span class="js-header-auto is-hidden">по автомобилю</span>
       </div>
 
-
-      <div class="filter-container__header--cta">
-        <button class="btn --red-transparent js-header-cta">
+      <div class="filter-container__header-cta">
+        <button class="btn --red-transparent --full-width js-header-cta --middle">
           <span class="header-cta--auto">Подобрать по автомобилю</span>
           <span class="header-cta--params">Подобрать по параметрам</span>
         </button>
       </div>
 
-
-      <div class="filter-container__header--drop-filters">
+      <div class="filter-container__drop-filters">
         <span class="js-reset-filter">Сбросить фильтры</span>
       </div>
 
+      <div class="filter-container__body-params js-filter-by-params">
+        <div class="main-size">
+          <div class="fillter-wrapper">
+            <div class="fillter-wrapper__cols --col-3">
+              <div class="custom-select-wrapper js-init-custom-select">
+                <select groups="false" name="width" required="">
+                  <option hidden=""></option>
+                  <option value="123">135</option>
+                  <option value="456">145</option>
+                  <option disabled="" value="654">155</option>
+                  <option value="789">165</option>
+                  <option value="987">175</option>
+                  <option value="1123">135</option>
+                  <option value="1456">145</option>
+                  <option disabled="" value="1654">155</option>
+                  <option value="1789">165</option>
+                  <option value="1987">175</option>
+                  <option value="2123">135</option>
+                  <option value="2456">145</option>
+                  <option disabled="" value="2654">155</option>
+                  <option value="2789">165</option>
+                  <option value="2987">175</option>
+                </select>
+                <label class="fillter-title">Ширина</label>
+                <div class="select-overlay js-select-overlay">
+                  <div class="select-button">
+                    <span class="select-button--arrow"></span>
+                    <span class="select-button--result js-select-button-result">Выбрать</span>
+                    <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                  </div>
+                  <div class="select-popup">
+                    <div class="select-popup-overlay"></div>
+                    <div class="select-dropdown__mobile-center">
+                      <div class="select-dropdown js-select-dropdown">
+                        <div class="select-close-button-mobile js-close-button-mobile">
+                          <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                               xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                              fill="#FFF"></path>
+                          </svg>
+                        </div>
+                        <div class="select-label-mobile">выберите ширину</div>
+                        <input class="select-button--search select-button--search-mobile js-search-button-input"
+                               placeholder=" Поиск..." type="search">
+                        <div class="select-dropdown--content">
+                          <div class="select-dropdown--search-label">Найдено:</div>
+                          <div
+                            class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                          <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
+            <div class="fillter-wrapper__cols --col-3">
+              <div class="custom-select-wrapper custom-select-wrapper__height js-init-custom-select">
+                <select groups="false" name="height" required="">
+                  <option hidden=""></option>
+                  <option value="456">- полнопрофильная</option>
+                  <option value="456">12</option>
+                  <option disabled="" value="654">23</option>
+                  <option value="789">34</option>
+                  <option value="987">45</option>
+                  <option value="4562">56</option>
+                  <option disabled="" value="6543">67</option>
+                  <option value="7894">78</option>
+                  <option value="9875">89</option>
+                  <option value="456">45</option>
+                  <option disabled="" value="654">33</option>
+                  <option value="789">34</option>
+                  <option value="987">45</option>
+                  <option value="4562">56</option>
+                  <option disabled="" value="6543">67</option>
+                  <option value="7894">78</option>
+                  <option value="9875">89</option>
+                </select>
+                <label class="fillter-title">Высота</label>
+                <div class="select-overlay js-select-overlay">
+                  <div class="select-button">
+                    <span class="select-button--arrow"></span>
+                    <span class="select-button--result js-select-button-result">Выбрать</span>
+                    <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                  </div>
+                  <div class="select-popup">
+                    <div class="select-popup-overlay"></div>
+                    <div class="select-dropdown__mobile-center">
+                      <div class="select-dropdown js-select-dropdown">
+                        <div class="select-close-button-mobile js-close-button-mobile">
+                          <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                               xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                              fill="#FFF"></path>
+                          </svg>
+                        </div>
+                        <div class="select-label-mobile">выберите высоту</div>
+                        <input class="select-button--search select-button--search-mobile js-search-button-input"
+                               placeholder=" Поиск..." type="search">
+                        <div class="select-dropdown--content">
+                          <div class="select-dropdown--search-label">Найдено:</div>
+                          <div
+                            class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                          <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <hr>
+            <div class="fillter-wrapper__cols --col-3">
+              <div class="custom-select-wrapper js-init-custom-select">
+                <select groups="false" name="diameter" required="">
+                  <option hidden=""></option>
+                  <option value="123">d123</option>
+                  <option value="456">d234</option>
+                  <option disabled="" value="654">d343100</option>
+                  <option value="789">d3436575</option>
+                  <option value="987">d34333</option>
+                </select>
+                <label class="fillter-title">Диаметр</label>
+                <div class="select-overlay js-select-overlay">
+                  <div class="select-button">
+                    <span class="select-button--arrow"></span>
+                    <span class="select-button--result js-select-button-result">Выбрать</span>
+                    <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                  </div>
+                  <div class="select-popup">
+                    <div class="select-popup-overlay"></div>
+                    <div class="select-dropdown__mobile-center">
+                      <div class="select-dropdown js-select-dropdown">
+                        <div class="select-close-button-mobile js-close-button-mobile">
+                          <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                               xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                              fill="#FFF"></path>
+                          </svg>
+                        </div>
+                        <div class="select-label-mobile">выберите диаметр</div>
+                        <input class="select-button--search select-button--search-mobile js-search-button-input"
+                               placeholder=" Поиск..." type="search">
+                        <div class="select-dropdown--content">
+                          <div class="select-dropdown--search-label">Найдено:</div>
+                          <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                          <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="filter-container__header">
-<!--        <div class="filter-container__title" id="j-filter-container&#45;&#45;title">-->
-<!--          Подбор шин-->
-<!--          <span class="js-header-params">по параметрам</span>-->
-<!--          <span class="js-header-auto is-hidden">по автомобилю</span>-->
-<!--        </div>-->
-<!--        <div class="filter-container__header&#45;&#45;cta">-->
-<!--          <button class="btn &#45;&#45;red-transparent js-header-cta">-->
-<!--            <span class="header-cta&#45;&#45;auto">Подобрать по автомобилю</span>-->
-<!--            <span class="header-cta&#45;&#45;params">Подобрать по параметрам</span>-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-container__header&#45;&#45;drop-filters">-->
-<!--          <span class="js-reset-filter">Сбросить фильтры</span>-->
-<!--        </div>-->
+        <div class="main-params">
+          <div class="season-wrapper">
+            <div class="fillter-title">Сезонность</div>
+            <div class="checkbox-wrapper">
+              <label class="container container--season">
+                <input type="checkbox" value="">
+                <span class="checkmark"></span>
+                <img alt="big-sun" src="./img/svg/sun.svg">
+              </label>
+              <label class="container container--season">
+                <input type="checkbox" value="">
+                <span class="checkmark container--season"></span>
+                <img alt="snowflakes" src="./img/svg/snowflake.svg">
+              </label>
+              <label class="container container--season">
+                <input type="checkbox" value="">
+                <span class="checkmark"></span>
+                <img alt="vsesezon" src="./img/svg/vsesezon.svg">
+              </label>
+            </div>
+          </div>
+
+          <div class="brand-wrapper">
+            <div class="fillter-wrapper__cols --col-1">
+              <div class="custom-select-wrapper custom-select-wrapper__brand js-init-custom-select">
+                <select groups="true" multiple="" name="brand" required="">
+                  <option hidden=""></option>
+                  <option group="premium" value="123">Bridgesbritone p (20)</option>
+                  <option group="premium" value="234">Continental p (16)</option>
+                  <option group="premium" value="345">Dunlop p (8)</option>
+                  <option group="premium" value="456">Goodyear p (18)</option>
+                  <option group="premium" value="567">Michelin p (0)</option>
+                  <option group="premium" value="678">Nokian p (8)</option>
+                  <option group="comfort" value="1123213">Bridgesbritone c (20)</option>
+                  <option group="comfort" value="1234">Continental c (16)</option>
+                  <option group="comfort" value="1345">Dunlop c (8)</option>
+                  <option group="comfort" value="1456">Goodyear c (18)</option>
+                  <option disabled="" group="comfort" value="1567">Michelin c (0)</option>
+                  <option group="comfort" value="1678">Nokian c (8)</option>
+                  <option group="standart" value="2123">Bridgesbritone s (20)</option>
+                  <option group="standart" value="2234">Continental s (16)</option>
+                  <option group="standart" value="2345">Dunlop s (8)</option>
+                  <option group="standart" value="2456">Goodyear s (18)</option>
+                  <option disabled="" group="standart" value="2567">Michelin s (0)</option>
+                  <option group="standart" value="2678">Nokian s (8)</option>
+                  <option group="premium" value="3123">Bridgesbritone p (20)</option>
+                  <option group="premium" value="3234">Continental p (16)</option>
+                  <option group="premium" value="3345">Dunlop p (8)</option>
+                  <option group="premium" value="3456">Goodyear p (18)</option>
+                  <option group="premium" value="3567">Michelin p (0)</option>
+                  <option group="premium" value="3678">Nokian p (8)</option>
+                  <option group="comfort" value="1123">Bridgesbritone c (20)</option>
+                  <option group="comfort" value="31234">Continental c (16)</option>
+                  <option group="comfort" value="31345">Dunlop c (8)</option>
+                  <option group="comfort" value="31456">Goodyear c (18)</option>
+                  <option disabled="" group="comfort" value="31567">Michelin c (0)</option>
+                  <option group="comfort" value="31678">Nokian c (8)</option>
+                  <option group="standart" value="32123">Bridgesbritone s (20)</option>
+                  <option group="standart" value="32234">Continental s (16)</option>
+                  <option group="standart" value="32345">Dunlop s (8)</option>
+                  <option group="standart" value="32456">Goodyear s (18)</option>
+                  <option disabled="" group="standart" value="32567">Michelin s (0)</option>
+                  <option group="standart" value="122678">Nokian s (8)</option>
+                </select>
+                <label class="fillter-title">Бренд</label>
+                <div class="select-overlay js-select-overlay">
+                  <div class="select-button">
+                    <span class="select-button--arrow"></span>
+                    <span class="select-button--result js-select-button-result">Выбрать</span>
+                    <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                  </div>
+                  <div class="select-popup">
+                    <div class="select-popup-overlay"></div>
+                    <div class="select-dropdown__mobile-center">
+                      <div class="select-dropdown js-select-dropdown select-dropdown__checkbox">
+                        <div class="select-close-button-mobile js-close-button-mobile">
+                          <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                               xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                              fill="#FFF"></path>
+                          </svg>
+                        </div>
+                        <div class="select-label-mobile">выберите бренд</div>
+                        <input class="select-button--search select-button--search-mobile js-search-button-input"
+                               placeholder=" Поиск..." type="search">
+                        <div class="select-dropdown--content">
+                          <div class="select-dropdown--search-label">Найдено:</div>
+                          <div
+                            class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                          <div class="select-dropdown--items select-dropdown--items__groups js-dropdown-groups">
+                            <div class="select-dropdown__group js-select-group" data-group-id="premium">ПРЕМИУМ
+                              СЕГМЕНТ
+                            </div>
+                            <div class="select-dropdown__group js-select-group" data-group-id="comfort">КОМФОРТ
+                              СЕГМЕНТ
+                            </div>
+                            <div class="select-dropdown__group js-select-group" data-group-id="standart">СТАНДАРТ
+                              СЕГМЕНТ
+                            </div>
+                          </div>
+                          <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all">
+                            <div class="select-dropdown__group-items js-select-group-cont" data-group-id="premium"
+                                 data-group-label="ПРЕМИУМ СЕГМЕНТ"></div>
+                            <div class="select-dropdown__group-items js-select-group-cont" data-group-id="comfort"
+                                 data-group-label="КОМФОРТ СЕГМЕНТ"></div>
+                            <div class="select-dropdown__group-items js-select-group-cont"
+                                 data-group-id="standart" data-group-label="СТАНДАРТ СЕГМЕНТ"></div>
+                          </div>
+                        </div>
+                        <div class="select-multiple-button is-disabled">Выбрать</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-container__body--cta">
+            <button class="btn --red --middle --full-width --disabled js-get-result">Подобрать шины</button>
+          </div>
+        </div>
+
+        <div class="additional-params">
+          <div class="additional-params__wrapper js-additional-params is-hidden">
+
+            <div class="slider-wrapper">
+              <label class="price-input-wrapper">
+                <span class="fillter-title">Цена от:</span>
+                <input class="input-price-slider-low input-price-slider js-input-price-slider-low-params" min="200" type="text">
+              </label>
+              <div class="price-slider js-price-slider-params"></div>
+              <label class="price-input-wrapper">
+                <span class="fillter-title">Цена до:</span>
+                <input class="input-price-slider-high input-price-slider js-input-price-slider-high-params" max="30000" type="text">
+              </label>
+            </div>
+
+            <div class="spike-wrapper">
+              <div class="fillter-title">Тип ошиповки</div>
+              <div class="checkbox-wrapper">
+                <label class="container">
+                  <input type="checkbox" value="">
+                  <span class="checkmark"></span>
+                  Шип
+                </label>
+                <label class="container">
+                  <input type="checkbox" value="">
+                  <span class="checkmark"></span>
+                  Под&nbsp;шип
+                </label>
+                <label class="container">
+                  <input type="checkbox" value="">
+                  <span class="checkmark"></span>
+                  Не&nbsp;шип
+                </label>
+              </div>
+            </div>
+
+            <div class="index-fillter-wrapper">
+              <div class="fillter-wrapper__cols --col-2">
+                <div class="custom-select-wrapper custom-select-wrapper__speed js-init-custom-select">
+                  <select groups="false" multiple="" name="speed" required="">
+                    <option hidden=""></option>
+                    <option value="123">J (100 км/ч)</option>
+                    <option value="234">K (110 км/ч)</option>
+                    <option value="345123123">L (120 км/ч)</option>
+                    <option value="4563123">N (140 км/ч)</option>
+                    <option disabled="" value="56731">P (150 км/ч)</option>
+                    <option value="671238">Q (160 км/ч)</option>
+                    <option value="671239">S (180 км/ч)</option>
+                    <option value="681230">T (190 км/ч)</option>
+                    <option value="68123211">U (200 км/ч)</option>
+                    <option value="681232">V (210 км/ч)</option>
+                    <option value="123683">VR (110 км/ч)</option>
+                    <option value="3452121">L (120 км/ч)</option>
+                    <option value="456">N (140 км/ч)</option>
+                    <option disabled="" value="1567">P (150 км/ч)</option>
+                    <option value="1678">Q (160 км/ч)</option>
+                    <option value="1679">S (180 км/ч)</option>
+                    <option value="1680">T (190 км/ч)</option>
+                    <option value="1681">U (200 км/ч)</option>
+                  </select>
+                  <label class="fillter-title">Индекс скорости</label>
+                  <div class="select-overlay js-select-overlay">
+                    <div class="select-button">
+                      <span class="select-button--arrow"></span>
+                      <span class="select-button--result js-select-button-result">Выбрать</span>
+                      <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                    </div>
+                    <div class="select-popup">
+                      <div class="select-popup-overlay"></div>
+                      <div class="select-dropdown__mobile-center">
+                        <div class="select-dropdown js-select-dropdown select-dropdown__checkbox">
+                          <div class="select-close-button-mobile js-close-button-mobile">
+                            <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                                fill="#FFF"></path>
+                            </svg>
+                          </div>
+                          <div class="select-label-mobile">выберите индекс скорости</div>
+                          <input class="select-button--search select-button--search-mobile js-search-button-input"
+                                 placeholder=" Поиск..." type="search">
+                          <div class="select-dropdown--content">
+                            <div class="select-dropdown--search-label">Найдено:</div>
+                            <div
+                              class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                            <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
+                          </div>
+                          <div class="select-multiple-button is-disabled">Выбрать</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fillter-wrapper__cols --col-2">
+                <div class="custom-select-wrapper custom-select-wrapper__load js-init-custom-select">
+                  <select groups="false" multiple="" name="load" required="">
+                    <option hidden=""></option>
+                    <option value="123">106 (265кг)</option>
+                    <option value="234">106 (265кг)</option>
+                    <option value="345123123">106 (265кг)</option>
+                    <option value="4563123">106 (265кг)</option>
+                    <option disabled="" value="56731">106 (265кг)</option>
+                    <option value="671238">106 (265кг)</option>
+                    <option value="671239">106 (265кг)</option>
+                    <option value="681230">106 (265кг)</option>
+                    <option value="68123211">106 (265кг)</option>
+                    <option value="681232">106 (265кг)</option>
+                    <option value="123683">106 (265кг)</option>
+                    <option value="3452121">106 (265кг)</option>
+                    <option value="456">106 (265кг)</option>
+                    <option disabled="" value="1567">106 (265кг)</option>
+                    <option value="1678">106 (265кг)</option>
+                    <option value="1679">106 (265кг)</option>
+                    <option value="1680">106 (265кг)</option>
+                    <option value="1681">106 (265кг)</option>
+                  </select>
+                  <label class="fillter-title">Индекс нагрузки</label>
+                  <div class="select-overlay js-select-overlay">
+                    <div class="select-button">
+                      <span class="select-button--arrow"></span>
+                      <span class="select-button--result js-select-button-result">Выбрать</span>
+                      <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                    </div>
+                    <div class="select-popup">
+                      <div class="select-popup-overlay"></div>
+                      <div class="select-dropdown__mobile-center">
+                        <div class="select-dropdown js-select-dropdown select-dropdown__checkbox">
+                          <div class="select-close-button-mobile js-close-button-mobile">
+                            <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                                fill="#FFF"></path>
+                            </svg>
+                          </div>
+                          <div class="select-label-mobile">выберите индекс нагрузки</div>
+                          <input class="select-button--search select-button--search-mobile js-search-button-input"
+                                 placeholder=" Поиск..." type="search">
+                          <div class="select-dropdown--content">
+                            <div class="select-dropdown--search-label">Найдено:</div>
+                            <div
+                              class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                            <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
+                          </div>
+                          <div class="select-multiple-button is-disabled">Выбрать</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="spike-wrapper spike-wrapper--gain-type">
+              <div class="fillter-title">Тип усиления</div>
+              <div class="checkbox-wrapper">
+
+                  <label class="container">
+                    <input type="checkbox" value="">
+                    <span class="checkmark"></span>
+                    <span>RFT</span>
+                  </label>
+
+                  <label class="container">
+                    <input type="checkbox" value="">
+                    <span class="checkmark"></span>
+                    <span>XL</span>
+                  </label>
+
+              </div>
+            </div>
+          </div>
+
+          <button class="toggle-btn js-toggle-params-filter">
+            <span class="add-button">дополнительные параметры</span>
+            <span class="remove-button additional-params-margin-top">скрыть ДОПОЛНИТЕЛЬНЫЕ ПАРАМЕТРЫ</span>
+          </button>
+        </div>
       </div>
 
-      <div class="filter-container__body">
-        <div class="filter-container__body--params js-filter-by-params">
-          <div class="fc-selectors">
-            <div class="fc-selectors__aside--top is-hidden js-front-axis-caption">
-              <div class="aside__sub-title">передняя ось</div>
-            </div>
-            <div class="fc-selectors__aside--left">
-              <div class="main-size">
-                <div class="fillter-wrapper">
-                  <div>
-                    <div class="custom-select-wrapper js-init-custom-select">
-                      <select groups="false" name="width" required="">
-                        <option hidden=""></option>
-                        <option value="123">135</option>
-                        <option value="456">145</option>
-                        <option disabled="" value="654">155</option>
-                        <option value="789">165</option>
-                        <option value="987">175</option>
-                        <option value="1123">135</option>
-                        <option value="1456">145</option>
-                        <option disabled="" value="1654">155</option>
-                        <option value="1789">165</option>
-                        <option value="1987">175</option>
-                        <option value="2123">135</option>
-                        <option value="2456">145</option>
-                        <option disabled="" value="2654">155</option>
-                        <option value="2789">165</option>
-                        <option value="2987">175</option>
-                      </select>
-                      <label>Ширина</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6" viewBox="0 0 8 6" width="8" xmlns="http://www.w3.org/2000/svg">
-                              <g clip-path="url(#clip0)">
-                                  <path
-                                    d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                    fill="black"></path>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0">
-                                    <rect fill="white" height="5.042" width="8"></rect>
-                                </clipPath>
-                              </defs>
+      <!-- Подбор шин по автомобилю -->
+      <div class="filter-container__body-auto is-hidden js-filter-by-auto">
+        <div class="fc-selectors fc-selectors--auto">
+          <div class="auto-size">
+            <div class="fillter-wrapper">
+              <div class="fillter-wrapper__cols --col-4">
+                <div class="custom-select-wrapper custom-select-wrapper__auto-set custom-select-wrapper__auto-brand js-init-custom-select">
+                  <select groups="false" name="auto-brand" required="">
+                    <option hidden=""></option>
+                    <option value="123">Alfa Romeo</option>
+                    <option value="456">Acura</option>
+                    <option disabled="" value="654">Aston Martin</option>
+                    <option value="789">Audi</option>
+                    <option value="7892">Bullet</option>
+                    <option value="789222">Finch</option>
+                    <option value="78922212">Ford</option>
+                    <option value="789222">Cheetah</option>
+                    <option value="7892224324">Mitsubishi</option>
+                    <option value="78922232323">Nissan</option>
+                  </select>
+                  <label class="fillter-title">Марка</label>
+                  <div class="select-overlay js-select-overlay">
+                    <div class="select-button">
+                      <span class="select-button--arrow"></span>
+                      <span class="select-button--result js-select-button-result">Выбрать</span>
+                      <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                    </div>
+                    <div class="select-popup">
+                      <div class="select-popup-overlay"></div>
+                      <div class="select-dropdown__mobile-center">
+                        <div class="select-dropdown js-select-dropdown" style="left: 0px;">
+                          <div class="select-close-button-mobile js-close-button-mobile">
+                            <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                                fill="#FFF"></path>
                             </svg>
+                          </div>
+                          <div class="select-label-mobile">выберите марку</div>
+                          <input class="select-button--search select-button--search-mobile js-search-button-input" placeholder=" Поиск..." type="search">
+                          <span class="select-dropdown__clear-search js-clear-search">
+                            <img alt="questions" src="./img/clear-search-ico.svg">
                           </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..."
-                                 type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите ширину</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                     placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div
-                                  class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
+                          <div class="select-keyboard js-select-keyboard" data-is-keyboard="true"></div>
+                          <div class="select-dropdown--content">
+                            <div class="select-dropdown--search-label">Найдено:</div>
+                            <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                            <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
 
-                  <div>
-                    <div class="custom-select-wrapper custom-select-wrapper__height js-init-custom-select">
-                      <select groups="false" name="height" required="">
-                        <option hidden=""></option>
-                        <option value="456">- полнопрофильная</option>
-                        <option value="456">12</option>
-                        <option disabled="" value="654">23</option>
-                        <option value="789">34</option>
-                        <option value="987">45</option>
-                        <option value="4562">56</option>
-                        <option disabled="" value="6543">67</option>
-                        <option value="7894">78</option>
-                        <option value="9875">89</option>
-                        <option value="456">45</option>
-                        <option disabled="" value="654">33</option>
-                        <option value="789">34</option>
-                        <option value="987">45</option>
-                        <option value="4562">56</option>
-                        <option disabled="" value="6543">67</option>
-                        <option value="7894">78</option>
-                        <option value="9875">89</option>
-                      </select>
-                      <label>Высота</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6" viewBox="0 0 8 6" width="8" xmlns="http://www.w3.org/2000/svg">
-                              <g clip-path="url(#clip0)">
-                                <path
-                                  d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                  fill="black"></path>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0">
-                                  <rect fill="white" height="5.042" width="8"></rect>
-                                </clipPath>
-                              </defs>
+              <div class="fillter-wrapper__cols --col-4">
+                <div class="custom-select-wrapper custom-select-wrapper__auto-set custom-select-wrapper__auto-model js-init-custom-select">
+                  <select groups="false" name="auto-model" required="">
+                    <option hidden=""></option>
+                    <option value="123">135</option>
+                    <option value="456">145</option>
+                    <option disabled="" value="654">155</option>
+                    <option value="789">165</option>
+                    <option value="987">175</option>
+                    <option value="9872">1753</option>
+                  </select>
+                  <label class="fillter-title">Модель</label>
+                  <div class="select-overlay js-select-overlay">
+                    <div class="select-button">
+                      <span class="select-button--arrow"></span>
+                      <span class="select-button--result js-select-button-result">Выбрать</span>
+                      <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                    </div>
+                    <div class="select-popup">
+                      <div class="select-popup-overlay"></div>
+                      <div class="select-dropdown__mobile-center">
+                        <div class="select-dropdown js-select-dropdown" style="left: 0px;">
+                          <div class="select-close-button-mobile js-close-button-mobile">
+                            <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                                fill="#FFF"></path>
                             </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..."
-                                 type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите высоту</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                     placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div
-                                  class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
+                          </div>
+                          <div class="select-label-mobile">выберите модель</div>
+                          <input class="select-button--search select-button--search-mobile js-search-button-input"
+                                 placeholder=" Поиск..." type="search">
+                          <div class="select-dropdown--content">
+                            <div class="select-dropdown--search-label">Найдено:</div>
+                            <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                            <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
 
-                  <div>
-                    <div class="custom-select-wrapper js-init-custom-select">
-                      <select groups="false" name="diameter" required="">
-                        <option hidden=""></option>
-                        <option value="123">d123</option>
-                        <option value="456">d234</option>
-                        <option disabled="" value="654">d343100</option>
-                        <option value="789">d3436575</option>
-                        <option value="987">d34333</option>
-                      </select>
-                      <label>Диаметр</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6" viewBox="0 0 8 6" width="8" xmlns="http://www.w3.org/2000/svg">
-                              <g clip-path="url(#clip0)">
-                                  <path
-                                    d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                    fill="black"></path>
-                              </g>
-                              <defs>
-                                <clipPath id="clip0">
-                                    <rect fill="white" height="5.042" width="8"></rect>
-                                </clipPath>
-                              </defs>
+              <div class="fillter-wrapper__cols --col-4">
+                <div class="custom-select-wrapper custom-select-wrapper__auto-set custom-select-wrapper__auto-year js-init-custom-select">
+                  <select groups="false" name="auto-year" required="">
+                    <option hidden=""></option>
+                    <option value="123">135</option>
+                    <option value="456">145</option>
+                    <option disabled="" value="654">155</option>
+                    <option value="789">165</option>
+                    <option value="987">175</option>
+                    <option value="9872">1753</option>
+                  </select>
+                  <label class="fillter-title">Год</label>
+                  <div class="select-overlay js-select-overlay">
+                    <div class="select-button">
+                      <span class="select-button--arrow"></span>
+                      <span class="select-button--result js-select-button-result">Выбрать</span>
+                      <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                    </div>
+                    <div class="select-popup">
+                      <div class="select-popup-overlay"></div>
+                      <div class="select-dropdown__mobile-center">
+                        <div class="select-dropdown js-select-dropdown">
+                          <div class="select-close-button-mobile js-close-button-mobile">
+                            <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                                fill="#FFF"></path>
                             </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                          </div>
+                          <div class="select-label-mobile">выберите год</div>
+                          <input class="select-button--search select-button--search-mobile js-search-button-input" placeholder=" Поиск..." type="search">
+                          <div class="select-dropdown--content">
+                            <div class="select-dropdown--search-label">Найдено:</div>
+                            <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                            <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
+                          </div>
                         </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите диаметр</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                     placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="fillter-wrapper__cols --col-4">
+                <div class="custom-select-wrapper custom-select-wrapper__auto-set custom-select-wrapper__auto-mod js-init-custom-select">
+                  <select groups="false" name="auto-mod" required="">
+                    <option hidden=""></option>
+                    <option value="123">135</option>
+                    <option value="456">145</option>
+                    <option disabled="" value="654">155</option>
+                    <option value="789">165</option>
+                    <option value="987">175</option>
+                    <option value="9872">1753</option>
+                  </select>
+                  <label class="fillter-title">Модификация</label>
+                  <div class="select-overlay js-select-overlay">
+                    <div class="select-button">
+                      <span class="select-button--arrow"></span>
+                      <span class="select-button--result js-select-button-result">Выбрать</span>
+                      <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
+                    </div>
+                    <div class="select-popup">
+                      <div class="select-popup-overlay"></div>
+                      <div class="select-dropdown__mobile-center">
+                        <div class="select-dropdown js-select-dropdown">
+                          <div class="select-close-button-mobile js-close-button-mobile">
+                            <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
+                                 xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
+                                fill="#FFF"></path>
+                            </svg>
+                          </div>
+                          <div class="select-label-mobile">выберите модификацию</div>
+                          <input class="select-button--search select-button--search-mobile js-search-button-input" placeholder=" Поиск..." type="search">
+                          <div class="select-dropdown--content">
+                            <div class="select-dropdown--search-label">Найдено:</div>
+                            <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
+                            <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <span class="fc-btn-wrapper">
-                  <div class="aside__sub-title is-hidden js-back-axis-caption">задняя ось</div>
-                  <button class="toggle-btn toggle-btn--size js-toggle-size-filter">
-                    <span class="add-button">
-                      <img alt="plus" src="./img/add-button.svg">&nbsp;
-                      <span class="text-underline">Разные размеры колес спереди и сзади?</span>
-                    </span>
-                    <span class="remove-button">
-                      <img alt="minus" src="./img/remove-button.svg">&nbsp;
-                      <span class="text-underline">Одинаковые размеры колес?</span>
-                    </span>
-                  </button>
-                </span>
-              </div>
-
-              <div class="additional-size js-additional-size is-hidden">
-                <div class="fillter-wrapper">
-                  <div>
-                    <div class="custom-select-wrapper js-init-custom-select">
-                      <select groups="false" name="width" required="">
-                        <option hidden=""></option>
-                        <option value="123">135</option>
-                        <option value="456">145</option>
-                        <option disabled="" value="654">155</option>
-                        <option value="789">165</option>
-                        <option value="987">175</option>
-                        <option value="1123">135</option>
-                        <option value="1456">145</option>
-                        <option disabled="" value="1654">155</option>
-                        <option value="1789">165</option>
-                        <option value="1987">175</option>
-                        <option value="2123">135</option>
-                        <option value="2456">145</option>
-                        <option disabled="" value="2654">155</option>
-                        <option value="2789">165</option>
-                        <option value="2987">175</option>
-                      </select>
-                      <label>Ширина</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6"
-                             viewBox="0 0 8 6" width="8"
-                             xmlns="http://www.w3.org/2000/svg">
-                              <g clip-path="url(#clip0)">
-                                  <path
-                                    d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                    fill="black"></path>
-                              </g>
-                              <defs>
-                                  <clipPath id="clip0">
-                                      <rect fill="white" height="5.042" width="8"></rect>
-                                  </clipPath>
-                              </defs>
-                            </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите ширину</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                     placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="custom-select-wrapper custom-select-wrapper__height js-init-custom-select">
-                      <select groups="false" name="height" required="">
-                        <option hidden=""></option>
-                        <option value="456">- полнопрофильная</option>
-                        <option value="456">12</option>
-                        <option disabled="" value="654">23</option>
-                        <option value="789">34</option>
-                        <option value="987">45</option>
-                        <option value="4562">56</option>
-                        <option disabled="" value="6543">67</option>
-                        <option value="7894">78</option>
-                        <option value="9875">89</option>
-                        <option value="456">45</option>
-                        <option disabled="" value="654">33</option>
-                        <option value="789">34</option>
-                        <option value="987">45</option>
-                        <option value="4562">56</option>
-                        <option disabled="" value="6543">67</option>
-                        <option value="7894">78</option>
-                        <option value="9875">89</option>
-                      </select>
-                      <label>Высота</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6"
-                                                                                           viewBox="0 0 8 6" width="8"
-                                                                                           xmlns="http://www.w3.org/2000/svg">
-                              <g clip-path="url(#clip0)">
-                                  <path
-                                    d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                    fill="black"></path>
-                              </g>
-                              <defs>
-                                  <clipPath id="clip0">
-                                      <rect fill="white" height="5.042" width="8"></rect>
-                                  </clipPath>
-                              </defs>
-                            </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input
-                          class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите высоту</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                     placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div
-                                  class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div class="custom-select-wrapper js-init-custom-select">
-                      <select groups="false" name="diameter" required="">
-                        <option hidden=""></option>
-                        <option value="123">d123</option>
-                        <option value="456">d234</option>
-                        <option disabled="" value="654">d343100</option>
-                        <option value="789">d3436575</option>
-                        <option value="987">d34333</option>
-                      </select>
-                      <label>Диаметр</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6"
-                                                                                           viewBox="0 0 8 6" width="8"
-                                                                                             xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                      d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                      fill="black"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect fill="white" height="5.042" width="8"></rect>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите диаметр</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                     placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div
-                                  class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <button class="toggle-btn toggle-btn--size toggle-btn--mobile js-toggle-size-filter">
-                <span class="add-button">
-                  <img alt="plus" src="./img/add-button.svg">&nbsp;
-                  <span class="text-underline">Разные размеры колес спереди и сзади?</span>
-                </span>
-                <span class="remove-button">
-                  <img alt="minus" src="./img/remove-button.svg">&nbsp;
-                  <span class="text-underline">Одинаковые размеры колес?</span>
-                </span>
-              </button>
-            </div>
-
-            <div class="fc-selectors__aside--right">
-              <div class="main-params">
-                <div class="season-wrapper">
-                  <div class="fillter-title">Сезонность</div>
-                  <div class="checkbox-wrapper">
-                    <label class="container container--season">
-                      <input type="checkbox" value="">
-                      <span class="checkmark"></span>
-                      <img alt="big-sun" src="./img/big-sun.svg">
-                    </label>
-                    <label class="container container--season">
-                      <input type="checkbox" value="">
-                      <span class="checkmark container--season"></span>
-                      <img alt="snowflakes" src="./img/snowflakes.svg">
-                    </label>
-                    <label class="container container--season">
-                      <input type="checkbox" value="">
-                      <span class="checkmark"></span>
-                      <img alt="vsesezon" src="./img/vsesezon.svg">
-                    </label>
-                  </div>
-                </div>
-
-                <div class="brand-wrapper">
-                  <div>
-                    <div class="custom-select-wrapper custom-select-wrapper__brand js-init-custom-select">
-                      <select groups="true" multiple="" name="brand" required="">
-                        <option hidden=""></option>
-                        <option group="premium" value="123">Bridgesbritone p (20)</option>
-                        <option group="premium" value="234">Continental p (16)</option>
-                        <option group="premium" value="345">Dunlop p (8)</option>
-                        <option group="premium" value="456">Goodyear p (18)</option>
-                        <option group="premium" value="567">Michelin p (0)</option>
-                        <option group="premium" value="678">Nokian p (8)</option>
-                        <option group="comfort" value="1123213">Bridgesbritone c (20)</option>
-                        <option group="comfort" value="1234">Continental c (16)</option>
-                        <option group="comfort" value="1345">Dunlop c (8)</option>
-                        <option group="comfort" value="1456">Goodyear c (18)</option>
-                        <option disabled="" group="comfort" value="1567">Michelin c (0)</option>
-                        <option group="comfort" value="1678">Nokian c (8)</option>
-                        <option group="standart" value="2123">Bridgesbritone s (20)</option>
-                        <option group="standart" value="2234">Continental s (16)</option>
-                        <option group="standart" value="2345">Dunlop s (8)</option>
-                        <option group="standart" value="2456">Goodyear s (18)</option>
-                        <option disabled="" group="standart" value="2567">Michelin s (0)</option>
-                        <option group="standart" value="2678">Nokian s (8)</option>
-                        <option group="premium" value="3123">Bridgesbritone p (20)</option>
-                        <option group="premium" value="3234">Continental p (16)</option>
-                        <option group="premium" value="3345">Dunlop p (8)</option>
-                        <option group="premium" value="3456">Goodyear p (18)</option>
-                        <option group="premium" value="3567">Michelin p (0)</option>
-                        <option group="premium" value="3678">Nokian p (8)</option>
-                        <option group="comfort" value="1123">Bridgesbritone c (20)</option>
-                        <option group="comfort" value="31234">Continental c (16)</option>
-                        <option group="comfort" value="31345">Dunlop c (8)</option>
-                        <option group="comfort" value="31456">Goodyear c (18)</option>
-                        <option disabled="" group="comfort" value="31567">Michelin c (0)</option>
-                        <option group="comfort" value="31678">Nokian c (8)</option>
-                        <option group="standart" value="32123">Bridgesbritone s (20)</option>
-                        <option group="standart" value="32234">Continental s (16)</option>
-                        <option group="standart" value="32345">Dunlop s (8)</option>
-                        <option group="standart" value="32456">Goodyear s (18)</option>
-                        <option disabled="" group="standart" value="32567">Michelin s (0)</option>
-                        <option group="standart" value="122678">Nokian s (8)</option>
-                      </select>
-                      <label>Бренд</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6"
-                                                                                           viewBox="0 0 8 6" width="8"
-                                                                                           xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                      d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                      fill="black"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect fill="white" height="5.042" width="8"></rect>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown select-dropdown__checkbox">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите бренд</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                     placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div
-                                  class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__groups js-dropdown-groups">
-                                  <div class="select-dropdown__group js-select-group" data-group-id="premium">ПРЕМИУМ
-                                    СЕГМЕНТ
-                                  </div>
-                                  <div class="select-dropdown__group js-select-group" data-group-id="comfort">КОМФОРТ
-                                    СЕГМЕНТ
-                                  </div>
-                                  <div class="select-dropdown__group js-select-group" data-group-id="standart">СТАНДАРТ
-                                    СЕГМЕНТ
-                                  </div>
-                                </div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all">
-                                  <div class="select-dropdown__group-items js-select-group-cont" data-group-id="premium"
-                                       data-group-label="ПРЕМИУМ СЕГМЕНТ"></div>
-                                  <div class="select-dropdown__group-items js-select-group-cont" data-group-id="comfort"
-                                       data-group-label="КОМФОРТ СЕГМЕНТ"></div>
-                                  <div class="select-dropdown__group-items js-select-group-cont"
-                                       data-group-id="standart" data-group-label="СТАНДАРТ СЕГМЕНТ"></div>
-                                </div>
-                              </div>
-                              <div class="select-multiple-button is-disabled">Выбрать</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="slider-wrapper">
-                  <label class="price-input-wrapper">Цена от:
-                    <input class="input-price-slider-low input-price-slider js-input-price-slider-low-params" min="200" type="text">
-                  </label>
-                  <div class="price-slider js-price-slider-params"></div>
-                  <label class="price-input-wrapper">Цена до:
-                    <input class="input-price-slider-high input-price-slider js-input-price-slider-high-params" max="30000" type="text">
-                  </label>
-                </div>
-              </div>
-
-              <div class="additional-params">
-                <div class="additional-params__wrapper js-additional-params is-hidden">
-                  <div class="spike-wrapper">
-                    <div class="fillter-title">Тип ошиповки</div>
-                    <div class="checkbox-wrapper">
-                      <label class="container">
-                        <input type="checkbox" value="">
-                        <span class="checkmark"></span>
-                        Шип
-                      </label>
-                      <label class="container">
-                        <input type="checkbox" value="">
-                        <span class="checkmark"></span>
-                        Под&nbsp;шип
-                      </label>
-                      <label class="container">
-                        <input type="checkbox" value="">
-                        <span class="checkmark"></span>
-                        Не&nbsp;шип
-                      </label>
-                    </div>
-                  </div>
-                  <div class="index-fillter-wrapper">
-                    <div>
-                      <div class="custom-select-wrapper custom-select-wrapper__speed js-init-custom-select">
-                        <select groups="false" multiple="" name="speed" required="">
-                          <option hidden=""></option>
-                          <option value="123">J (100 км/ч)</option>
-                          <option value="234">K (110 км/ч)</option>
-                          <option value="345123123">L (120 км/ч)</option>
-                          <option value="4563123">N (140 км/ч)</option>
-                          <option disabled="" value="56731">P (150 км/ч)</option>
-                          <option value="671238">Q (160 км/ч)</option>
-                          <option value="671239">S (180 км/ч)</option>
-                          <option value="681230">T (190 км/ч)</option>
-                          <option value="68123211">U (200 км/ч)</option>
-                          <option value="681232">V (210 км/ч)</option>
-                          <option value="123683">VR (110 км/ч)</option>
-                          <option value="3452121">L (120 км/ч)</option>
-                          <option value="456">N (140 км/ч)</option>
-                          <option disabled="" value="1567">P (150 км/ч)</option>
-                          <option value="1678">Q (160 км/ч)</option>
-                          <option value="1679">S (180 км/ч)</option>
-                          <option value="1680">T (190 км/ч)</option>
-                          <option value="1681">U (200 км/ч)</option>
-                        </select>
-                        <label>Индекс скорости</label>
-                        <div class="select-overlay js-select-overlay">
-                          <div class="select-button select-button__background"></div>
-                          <div class="select-button">
-                            <span class="select-button--arrow">
-                              <svg fill="none" height="6"
-                                                                                             viewBox="0 0 8 6"
-                                                                                             width="8"
-                                                                                             xmlns="http://www.w3.org/2000/svg">
-                                  <g clip-path="url(#clip0)">
-                                      <path
-                                        d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                        fill="black"></path>
-                                  </g>
-                                  <defs>
-                                      <clipPath id="clip0">
-                                          <rect fill="white" height="5.042" width="8"></rect>
-                                      </clipPath>
-                                  </defs>
-                              </svg>
-                            </span>
-                            <span class="select-button--result js-select-button-result">Выбрать</span>
-                            <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                          </div>
-                          <div class="select-popup">
-                            <div class="select-popup-overlay"></div>
-                            <div class="select-dropdown__mobile-center">
-                              <div class="select-dropdown js-select-dropdown select-dropdown__checkbox">
-                                <div class="select-close-button-mobile js-close-button-mobile">
-                                  <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                      fill="#FFF"></path>
-                                  </svg>
-                                </div>
-                                <div class="select-label-mobile">выберите индекс скорости</div>
-                                <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                       placeholder=" Поиск..." type="search">
-                                <div class="select-dropdown--content">
-                                  <div class="select-dropdown--search-label">Найдено:</div>
-                                  <div
-                                    class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                  <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                                </div>
-                                <div class="select-multiple-button is-disabled">Выбрать</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div class="custom-select-wrapper custom-select-wrapper__load js-init-custom-select">
-                        <select groups="false" multiple="" name="load" required="">
-                          <option hidden=""></option>
-                          <option value="123">106 (265кг)</option>
-                          <option value="234">106 (265кг)</option>
-                          <option value="345123123">106 (265кг)</option>
-                          <option value="4563123">106 (265кг)</option>
-                          <option disabled="" value="56731">106 (265кг)</option>
-                          <option value="671238">106 (265кг)</option>
-                          <option value="671239">106 (265кг)</option>
-                          <option value="681230">106 (265кг)</option>
-                          <option value="68123211">106 (265кг)</option>
-                          <option value="681232">106 (265кг)</option>
-                          <option value="123683">106 (265кг)</option>
-                          <option value="3452121">106 (265кг)</option>
-                          <option value="456">106 (265кг)</option>
-                          <option disabled="" value="1567">106 (265кг)</option>
-                          <option value="1678">106 (265кг)</option>
-                          <option value="1679">106 (265кг)</option>
-                          <option value="1680">106 (265кг)</option>
-                          <option value="1681">106 (265кг)</option>
-                        </select>
-                        <label>Индекс нагрузки</label>
-                        <div class="select-overlay js-select-overlay">
-                          <div class="select-button select-button__background"></div>
-                          <div class="select-button">
-                            <span class="select-button--arrow">
-                              <svg fill="none" height="6"
-                                                                                             viewBox="0 0 8 6"
-                                                                                             width="8"
-                                                                                             xmlns="http://www.w3.org/2000/svg">
-                                  <g clip-path="url(#clip0)">
-                                      <path
-                                        d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                        fill="black"></path>
-                                  </g>
-                                  <defs>
-                                      <clipPath id="clip0">
-                                          <rect fill="white" height="5.042" width="8"></rect>
-                                      </clipPath>
-                                  </defs>
-                              </svg>
-                            </span>
-                            <span class="select-button--result js-select-button-result">Выбрать</span>
-                            <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                          </div>
-                          <div class="select-popup">
-                            <div class="select-popup-overlay"></div>
-                            <div class="select-dropdown__mobile-center">
-                              <div class="select-dropdown js-select-dropdown select-dropdown__checkbox">
-                                <div class="select-close-button-mobile js-close-button-mobile">
-                                  <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                      fill="#FFF"></path>
-                                  </svg>
-                                </div>
-                                <div class="select-label-mobile">выберите индекс нагрузки</div>
-                                <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                       placeholder=" Поиск..." type="search">
-                                <div class="select-dropdown--content">
-                                  <div class="select-dropdown--search-label">Найдено:</div>
-                                  <div
-                                    class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                  <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                                </div>
-                                <div class="select-multiple-button is-disabled">Выбрать</div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="spike-wrapper spike-wrapper--gain-type">
-                    <div class="fillter-title">Тип усиления</div>
-                    <div class="checkbox-wrapper">
-                      <div class="label-wrapper">
-                        <label class="container">
-                          <input type="checkbox" value="">
-                          <span class="checkmark"></span>
-                          <span>RFT</span>&nbsp;&nbsp;
-                        </label>
-                        <img alt="questions" src="./img/questions.svg">
-                      </div>
-                      <div class="label-wrapper">
-                        <label class="container">
-                          <input type="checkbox" value="">
-                          <span class="checkmark"></span>
-                          <span>XL</span>&nbsp;&nbsp;
-                        </label>
-                        <img alt="questions" src="./img/questions.svg">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="divider"></div>
-
-                <button class="toggle-btn js-toggle-params-filter">
-                  <span class="add-button text-underline">Открыть дополнительные параметры</span>
-                  <span class="remove-button additional-params-margin-top text-underline">
-                    Скрыть
-                    <span class="mobile-only">&nbsp;дополнительные параметры</span>
-                  </span>
-                </button>
-
               </div>
             </div>
-          </div>
-
-          <div class="filter-container__body--cta">
-            <button class="inactive-cta js-get-result">Подобрать шины</button>
           </div>
         </div>
 
-
-        <div class="filter-container__body--auto is-hidden js-filter-by-auto">
-          <div class="fc-selectors fc-selectors--auto">
-            <div class="fc-selectors__aside--left">
-              <div class="auto-size">
-                <div class="fillter-wrapper">
-                  <div>
-                    <div
-                      class="custom-select-wrapper custom-select-wrapper__auto-set custom-select-wrapper__auto-brand js-init-custom-select">
-                      <select groups="false" name="auto-brand" required="">
-                        <option hidden=""></option>
-                        <option value="123">Alfa Romeo</option>
-                        <option value="456">Acura</option>
-                        <option disabled="" value="654">Aston Martin</option>
-                        <option value="789">Audi</option>
-                        <option value="7892">Bullet</option>
-                        <option value="789222">Finch</option>
-                        <option value="78922212">Ford</option>
-                        <option value="789222">Cheetah</option>
-                        <option value="7892224324">Mitsubishi</option>
-                        <option value="78922232323">Nissan</option>
-                      </select><label>Марка</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6"
-                                                                                           viewBox="0 0 8 6" width="8"
-                                                                                           xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                      d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                      fill="black"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect fill="white" height="5.042" width="8"></rect>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown" style="left: 0px;">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите марку</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input" placeholder=" Поиск..." type="search">
-                              <span class="select-dropdown__clear-search js-clear-search">
-                                <img alt="questions" src="./img/clear-search-ico.svg">
-                              </span>
-                              <div class="select-keyboard js-select-keyboard" data-is-keyboard="true"></div>
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div
-                      class="custom-select-wrapper custom-select-wrapper__auto-set custom-select-wrapper__auto-model js-init-custom-select">
-                      <select groups="false" name="auto-model" required="">
-                        <option hidden=""></option>
-                        <option value="123">135</option>
-                        <option value="456">145</option>
-                        <option disabled="" value="654">155</option>
-                        <option value="789">165</option>
-                        <option value="987">175</option>
-                        <option value="9872">1753</option>
-                      </select>
-                      <label>Модель</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6"
-                                                                                           viewBox="0 0 8 6" width="8"
-                                                                                           xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                      d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                      fill="black"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect fill="white" height="5.042" width="8"></rect>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown" style="left: 0px;">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите модель</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input"
-                                     placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div
-                      class="custom-select-wrapper custom-select-wrapper__auto-set custom-select-wrapper__auto-year js-init-custom-select">
-                      <select groups="false" name="auto-year" required="">
-                        <option hidden=""></option>
-                        <option value="123">135</option>
-                        <option value="456">145</option>
-                        <option disabled="" value="654">155</option>
-                        <option value="789">165</option>
-                        <option value="987">175</option>
-                        <option value="9872">1753</option>
-                      </select>
-                      <label>Год</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6"
-                                                                                           viewBox="0 0 8 6" width="8"
-                                                                                           xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                    <path
-                                      d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                      fill="black"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0">
-                                        <rect fill="white" height="5.042" width="8"></rect>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите год</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input" placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div
-                      class="custom-select-wrapper custom-select-wrapper__auto-set custom-select-wrapper__auto-mod js-init-custom-select">
-                      <select groups="false" name="auto-mod" required="">
-                        <option hidden=""></option>
-                        <option value="123">135</option>
-                        <option value="456">145</option>
-                        <option disabled="" value="654">155</option>
-                        <option value="789">165</option>
-                        <option value="987">175</option>
-                        <option value="9872">1753</option>
-                      </select>
-                      <label>Модификация</label>
-                      <div class="select-overlay js-select-overlay">
-                        <div class="select-button select-button__background"></div>
-                        <div class="select-button">
-                          <span class="select-button--arrow">
-                            <svg fill="none" height="6"
-                                                                                           viewBox="0 0 8 6" width="8"
-                                                                                           xmlns="http://www.w3.org/2000/svg">
-                              <g clip-path="url(#clip0)">
-                                  <path
-                                    d="M7.81009 0.573956L7.42509 0.188954C7.36356 0.128139 7.29064 0.0800544 7.21051 0.0474519C7.13037 0.0148494 7.0446 -0.001633 6.95809 -0.00104815C6.87219 -0.0026097 6.78687 0.0134466 6.70742 0.0461244C6.62796 0.0788022 6.55604 0.127411 6.49609 0.188954L4.00009 2.68596L1.50009 0.185956C1.44014 0.124413 1.36822 0.0758038 1.28876 0.043126C1.2093 0.0104483 1.12399 -0.00560805 1.03809 -0.0040465C0.951576 -0.00463135 0.8658 0.0118511 0.785667 0.0444536C0.705533 0.0770561 0.632615 0.125141 0.571086 0.185956L0.200086 0.573956C0.136496 0.633913 0.0859236 0.706315 0.0515163 0.786656C0.0171089 0.866997 -0.000397457 0.953554 8.6268e-05 1.04095C-0.00137371 1.12776 0.0157125 1.21387 0.0502027 1.29355C0.0846929 1.37322 0.135793 1.44461 0.200086 1.50295L3.54309 4.84595C3.60143 4.91025 3.67282 4.96135 3.75249 4.99584C3.83216 5.03033 3.91828 5.04742 4.00509 5.04596C4.09248 5.04644 4.17905 5.02893 4.25939 4.99453C4.33973 4.96012 4.41213 4.90954 4.47209 4.84595L7.81009 1.50496C7.87175 1.44489 7.92044 1.3728 7.95312 1.29316C7.9858 1.21352 8.00179 1.12802 8.00009 1.04195C8.0008 0.955274 7.98439 0.869313 7.95178 0.788999C7.91917 0.708684 7.87102 0.635605 7.81009 0.573956Z"
-                                    fill="black"></path>
-                              </g>
-                              <defs>
-                                  <clipPath id="clip0">
-                                      <rect fill="white" height="5.042" width="8"></rect>
-                                  </clipPath>
-                              </defs>
-                            </svg>
-                          </span>
-                          <span class="select-button--result js-select-button-result">Выбрать</span>
-                          <input class="select-button--search js-search-button-input" placeholder=" Поиск..." type="search">
-                        </div>
-                        <div class="select-popup">
-                          <div class="select-popup-overlay"></div>
-                          <div class="select-dropdown__mobile-center">
-                            <div class="select-dropdown js-select-dropdown">
-                              <div class="select-close-button-mobile js-close-button-mobile">
-                                <svg fill="none" height="10" viewBox="0 0 10 10" width="10"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M0.339074 8.03122L3.36907 5.00222L0.339074 1.97222C0.231784 1.86506 0.14665 1.73782 0.0885353 1.59776C0.0304203 1.4577 0.000460625 1.30757 0.000368118 1.15593C0.000275612 1.00429 0.0300512 0.854117 0.0879946 0.713986C0.145938 0.573855 0.230915 0.44651 0.338074 0.33922C0.445232 0.23193 0.572474 0.146797 0.712534 0.0886822C0.852593 0.0305672 1.00273 0.000607491 1.15437 0.000514984C1.306 0.000422478 1.45618 0.0301971 1.59631 0.0881405C1.73644 0.146084 1.86378 0.231062 1.97107 0.338221L5.00107 3.36922L8.03107 0.33922C8.24914 0.13159 8.53972 0.0174131 8.8408 0.0210562C9.14188 0.0246992 9.42961 0.145875 9.64259 0.358721C9.85556 0.571567 9.97691 0.859224 9.98074 1.1603C9.98457 1.46138 9.87057 1.75203 9.66307 1.97022L6.63307 5.00222L9.66307 8.03122C9.867 8.24997 9.97804 8.53934 9.9728 8.83835C9.96756 9.13736 9.84644 9.42266 9.63498 9.63413C9.42351 9.84559 9.13821 9.96671 8.8392 9.97195C8.54019 9.97719 8.25082 9.86615 8.03207 9.66222L5.00107 6.63222L1.97107 9.66222C1.75301 9.86985 1.46243 9.98403 1.16135 9.98038C0.860271 9.97674 0.572538 9.85557 0.359562 9.64272C0.146585 9.42987 0.0252342 9.14222 0.0214062 8.84114C0.0175781 8.54006 0.131577 8.24941 0.339074 8.03122Z"
-                                    fill="#FFF"></path>
-                                </svg>
-                              </div>
-                              <div class="select-label-mobile">выберите модификацию</div>
-                              <input class="select-button--search select-button--search-mobile js-search-button-input" placeholder=" Поиск..." type="search">
-                              <div class="select-dropdown--content">
-                                <div class="select-dropdown--search-label">Найдено:</div>
-                                <div class="select-dropdown--items select-dropdown--items__search-result js-dropdown-search"></div>
-                                <div class="select-dropdown--items select-dropdown--items__all js-dropdown-all"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-<!--            <div class="fc-selectors__aside&#45;&#45;right">-->
-<!--              <div class="slider-wrapper">-->
-<!--                <label class="price-input-wrapper">-->
-<!--                  Цена от:-->
-<!--                  <input class="input-price-slider-low input-price-slider js-input-price-slider-low-auto" min="200" type="text">-->
-<!--                </label>-->
-<!--                <div class="price-slider js-price-slider-auto"></div>-->
-<!--                <label class="price-input-wrapper">-->
-<!--                  Цена до:-->
-<!--                  <input class="input-price-slider-high input-price-slider js-input-price-slider-high-auto" max="30000" type="text">-->
-<!--                </label>-->
-<!--              </div>-->
-<!--            </div>-->
-          </div>
-
-          <div class="filter-container__body--cta">
-            <button class="inactive-cta js-get-result">Подобрать шины</button>
-          </div>
+        <div class="filter-container__body--cta">
+          <button class="btn --red --middle --full-width --disabled js-get-result">Подобрать шины</button>
         </div>
+      </div>
+
+      <div class="filter-container__body--cta--mob">
+        <button class="btn --red --full-width --disabled js-get-result">Подобрать шины</button>
       </div>
     </div>
   </div>

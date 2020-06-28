@@ -377,12 +377,12 @@ function initSelects() {
 function initFormActions() {
 
   // toggle additional size
-  $('.js-toggle-size-filter').on('click', function () {
-    $('.js-front-axis-caption').toggleClass('is-hidden');
-    $('.js-back-axis-caption').toggleClass('is-hidden');
-    $('.js-additional-size').toggleClass('is-hidden');
-    $('.js-toggle-size-filter').toggleClass('is-open');
-  });
+  //$('.js-toggle-size-filter').on('click', function () {
+    //$('.js-front-axis-caption').toggleClass('is-hidden');
+    //$('.js-back-axis-caption').toggleClass('is-hidden');
+    //$('.js-additional-size').toggleClass('is-hidden');
+    //$('.js-toggle-size-filter').toggleClass('is-open');
+  //});
 
   // toggle additional params
   $('.js-toggle-params-filter').on('click', function () {
@@ -411,7 +411,7 @@ function initFormActions() {
   });
 
   // toggle reset button
-  $('.js-reset-filter').parent().hide();
+  $('.js-reset-filter').parent().removeClass('--visible');
   $('.js-reset-filter').on('click', function () {
 
     $('.js-filter-container')
@@ -427,24 +427,24 @@ function initFormActions() {
       $(this).trigger('change')
     });
 
-    $('.js-get-result').removeClass('is-active');
-    $('.js-reset-filter').parent().hide();
+    $('.js-get-result').addClass('--disabled');
+    $('.js-reset-filter').parent().removeClass('--visible');
   });
 
   $('.js-filter-container').find('select').on('change', function () {
-    $('.js-reset-filter').parent().show();
-    $('.js-get-result').addClass('is-active');
+    $('.js-reset-filter').parent().addClass('--visible');
+    $('.js-get-result').removeClass('--disabled');
   });
 
   $('.js-filter-container').find('input').on('change', function () {
-    $('.js-reset-filter').parent().show();
-    $('.js-get-result').addClass('is-active');
+    $('.js-reset-filter').parent().addClass('--visible');
+    $('.js-get-result').removeClass('--disabled');
   });
 
   $('.price-slider').each(function (i, el) {
     el.noUiSlider && el.noUiSlider.on('change', function () {
-      $('.js-reset-filter').parent().show();
-      $('.js-get-result').addClass('is-active');
+      $('.js-reset-filter').parent().addClass('--visible');
+      $('.js-get-result').removeClass('--disabled');
     });
   });
 }
