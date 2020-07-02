@@ -241,7 +241,7 @@ class BaseSelect {
   toggleButton() {
     const value = this.domLinks.$selectEl.val();
     const noSelection = (!value || !value.length);
-    this.domLinks.$button.toggleClass('is-disabled', noSelection);
+    this.domLinks.$button.toggleClass('--disabled', noSelection);
   }
 
   changePlaceholder() {
