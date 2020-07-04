@@ -202,6 +202,14 @@
         .select-dropdown--item
           width auto
           margin-right 15px
+  &__auto-brand
+    .select-overlay
+      .select-dropdown--search-label
+        display block !important
+  &__auto-set
+    .select-dropdown--item
+      @media (max-width: max-medium)
+        width: 100%;
   select
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -586,6 +594,24 @@
         padding 0
     &__clear-search
       display: none;
+      @media (max-width: 1139px)
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: rgba(163,163,163,0.5);
+        right: 21px;
+        top: 52px;
+        font-size: 23px;
+        line-height: 17px;
+        text-align: center;
+      @media (max-width: max-medium)
+        line-height: 18px;
+        top: 54px;
+      &.is-visible
+        @media (max-width: 1139px)
+          display: block;
     &__mobile-center
       @media (max-width: 1139px)
         position: absolute;
@@ -619,18 +645,73 @@
       text-transform: uppercase;
       display: inline-block;
       transition background-color .3s, color .3s ease-in-out
+      @media (max-width: 1139px)
+        width: 38.6px;
+        margin-bottom: 7px;
+      @media (max-width: max-medium)
+        width: 38px;
+        margin-bottom: 6px;
+        line-height: 30px;
+      @media (max-width: max-sm)
+        width: 37px;
       &:first-of-type:before
-        border-radius: 20px 0 0 20px;
+        border-radius: 20px 0 0 20px !important
+      &:nth-of-type(7n)
+        @media (max-width: max-sm)
+          border-radius: 20px
+        &:before
+          @media (max-width: max-sm)
+            border-radius: 0 20px 20px 0 !important;
+      &:nth-of-type(7n+1)
+        &:before
+          @media (max-width: max-sm)
+            border-radius: 20px 0 0 20px;
+      &:nth-of-type(9n)
+        @media (max-width: max-medium)
+          border-radius: 20px
+        @media (max-width: max-sm)
+          border-radius: 25px 25px 3px 25px;
+        &:before
+          @media (max-width: max-medium)
+            border-radius: 0 20px 20px 0;
+          @media (max-width: max-sm)
+            border-radius: 0
+      &:nth-of-type(9n+1)
+        &:before
+          @media (max-width: max-medium)
+            border-radius: 20px 0 0 20px;
+          @media (max-width: max-sm)
+            border-radius: 0
+      &:nth-of-type(16n)
+        &:before
+          @media (max-width: max-medium)
+            border-radius: 0
+      &:nth-of-type(16n+1)
+        &:before
+          @media (max-width: max-medium)
+            border-radius: 20px 0 0 20px;
+          @media (max-width: max-sm)
+            border-radius: 0
       &:nth-of-type(17)
         border-radius: 20px
+        @media (max-width: max-medium)
+          border-radius: 25px 25px 3px 25px;
       &:nth-of-type(17):before
         border-radius: 0 20px 20px 0;
+        @media (max-width: max-medium)
+          border-radius: 0
       &:nth-of-type(18):before
         border-radius: 20px 0 0 20px;
+        @media (max-width: max-medium)
+          border-radius: 0 20px 20px 0;
+        @media (max-width: max-sm)
+          border-radius: 0
       &:last-of-type
         border-radius: 20px
       &:last-of-type:before
         border-radius: 0 20px 20px 0;
+        @media (max-width: max-medium)
+          border-radius: 0 20px 20px 0;
       &:before
         content ''
         background-color: #fff2f2;
@@ -822,29 +903,30 @@
   //  width: 6px;
   //  height: 6px;
   //  right: 5px; }
-  .custom-select-wrapper .select-button .select-button--arrow svg {
-    width: 100%;
-    height: 100%; }
+  //.custom-select-wrapper .select-button .select-button--arrow svg {
+  //  width: 100%;
+  //  height: 100%; }
   //.custom-select-wrapper .select-button .select-button--result {
   //  line-height: 28px;
   //  padding: 0 15px 0 5px; }
 
-  .custom-select-wrapper .select-dropdown__clear-search {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: #a3a3a38a;
-    right: 15px;
-    top: 58px;
-    text-align: center;
+  //.custom-select-wrapper .select-dropdown__clear-search {
+  //  position: absolute;
+  //  width: 20px;
+  //  height: 20px;
+  //  border-radius: 50%;
+  //  overflow: hidden;
+  //  background: #a3a3a38a;
+  //  right: 15px;
+  //  top: 58px;
+  //  text-align: center;
     /*img {
         display: inline-block;
         margin: -5px 0 0 0;
-      }*/ }
-  .custom-select-wrapper .select-dropdown__clear-search.is-visible {
-    display: block; } }
+      }*/
+//}
+
+}
 
 @media screen and (max-width: 767px) {
   //.custom-select-wrapper .select-button > * {
@@ -865,23 +947,24 @@
     margin: 10px auto; }
   .custom-select-wrapper .select-label-mobile {
      }
-  .custom-select-wrapper .select-keyboard {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row;
-    flex-flow: row;
-    margin: 15px;
-    overflow-x: auto;
-    width: calc(100% - 30px);
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-    padding: 0; }
-  .custom-select-wrapper .select-dropdown__clear-search {
-    right: 16px;
-    top: 46px; } }
+  //.custom-select-wrapper .select-keyboard {
+  //  -webkit-box-orient: horizontal;
+  //  -webkit-box-direction: normal;
+  //  -ms-flex-flow: row;
+  //  flex-flow: row;
+  //  margin: 15px;
+  //  overflow-x: auto;
+  //  width: calc(100% - 30px);
+  //  -webkit-box-sizing: border-box;
+  //  box-sizing: border-box;
+  //  -webkit-box-pack: end;
+  //  -ms-flex-pack: end;
+  //  justify-content: end;
+  //  padding: 0; }
+  //.custom-select-wrapper .select-dropdown__clear-search {
+  //  right: 16px;
+  //  top: 46px; }
+}
 
 //.custom-select-wrapper__brand .select-button {
 //  width: 186px; }
@@ -896,8 +979,8 @@
 //.custom-select-wrapper__auto-brand .select-button {
 //  width: 126px; }
 
-.custom-select-wrapper__auto-brand .select-overlay .select-dropdown--search-label {
-  display: block; }
+//.custom-select-wrapper__auto-brand .select-overlay .select-dropdown--search-label {
+//  display: block; }
 
 //.custom-select-wrapper__auto-model .select-button {
 //  width: 170px; }
@@ -997,9 +1080,8 @@
   .custom-select-wrapper__speed .select-button,
   .custom-select-wrapper__load .select-button {
     width: 100%; }
-  .custom-select-wrapper__auto-set .select-dropdown--item {
-    width: 100%;
-    margin-left: 0; } }
+
+}
 
 
 
