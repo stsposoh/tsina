@@ -8,7 +8,7 @@
     line-height: 150%;
     letter-spacing: 0.04em;
     width: 37%;
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       width: 58%;
       font-size: 18px;
       order 1
@@ -21,7 +21,7 @@
   &__header
     &-cta
       width 25%
-      @media (max-width: max-extra-large)
+      @media (max-width: 1139px)
         width 42%
         order 2
       @media (max-width: max-medium)
@@ -55,7 +55,7 @@
     text-transform: uppercase;
     font-weight: bold;
     transition opacity .3s ease-in-out
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       order 5
       width: 65%;
       text-align: left;
@@ -76,7 +76,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 14px 0 0;
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       order 3
       margin: 14px 0 0
     @media (max-width: max-medium)
@@ -87,23 +87,23 @@
   &__body--cta
     display: flex;
     align-items: flex-end;
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       display none
   &__body--cta--mob
-      display none
-      @media (max-width: max-extra-large)
-        display block
-        order 6
-        width: 35%;
-      @media (max-width: max-medium)
-        width: 100%;
-        margin: 10px 0 5px;
+    display none
+    @media (max-width: 1139px)
+      display block
+      order 6
+      width: 35%;
+    @media (max-width: max-medium)
+      width: 100%;
+      margin: 10px 0 5px;
   &__body-auto
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin: 14px 0 29px
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       order 4
       margin: 14px 0 17px;
     @media (max-width: max-medium)
@@ -114,7 +114,7 @@
 
 .main-size
   width: 35%;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     width: 63%;
   @media (max-width: max-medium)
     width 100%
@@ -125,7 +125,7 @@
   display: flex;
   flex-wrap: wrap;
   padding-left: 25px;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     width: 37%;
     padding-left 32px
   @media (max-width: max-medium)
@@ -133,7 +133,7 @@
     padding-left 0
   .season-wrapper
     width: 35%;
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       width 100%
     @media (max-width: max-medium)
       margin-bottom 8px
@@ -179,6 +179,29 @@
   &.is-disabled
     pointer-events: none;
     opacity: 0.3;
+  &__brand
+    .select-dropdown--items__all
+      display: grid !important
+      grid-template-columns: 1fr 1fr 1fr;
+      @media (max-width: max-medium)
+        grid-template-columns: 1fr;
+    .select-dropdown__group-items
+      @media (max-width: max-medium)
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 15px;
+      &:last-of-type
+        @media (max-width: max-medium)
+          margin-bottom: 0
+    .select-dropdown--item
+      width 100%
+    .select-overlay
+      .select-dropdown--search-label
+        display: block !important
+      .select-dropdown--items__search-result
+        .select-dropdown--item
+          width auto
+          margin-right 15px
   select
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -283,7 +306,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   .select-button--search-mobile
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       width: calc(100% - 30px);
       margin: 10px auto;
       height: 40px;
@@ -320,11 +343,18 @@
       height: auto;
       opacity: 1;
       margin: 0 3px 5px
+      white-space: nowrap;
+      text-transform uppercase
+      font-size: 12px;
+      letter-spacing: 0.02em;
+      font-weight: bold;
+      color: accent-dark
     &.is-searching .select-dropdown--items__search-result
       height: auto;
       overflow: hidden;
       opacity: 1;
       margin-bottom: 8px;
+      justify-content: flex-start;
     .select-dropdown--search-label
       font-size: 12px;
       font-weight: bold;
@@ -345,14 +375,15 @@
     visibility: hidden;
     z-index: -1;
     opacity: 0;
+    //padding: 12px;
     transform: translateY(-30px) scale(0.7);
     transform-origin: 0 0;
-    @media (max-width: max-large)
+    @media (max-width: 1139px)
       display: inline-block;
       position: static;
       width: 690px !important;
       left: 0 !important;
-      padding: 12px;
+      padding: 0
       border-radius: 40px 5px 5px;
     @media (max-width: max-medium)
       width: 370px !important;
@@ -364,7 +395,7 @@
       overflow-y: auto;
       padding: 13px;
       overflow-x: hidden;
-      @media (max-width: max-large)
+      @media (max-width: 1139px)
         max-height: 400px;
       @media (max-width: max-medium)
         max-height: 330px;
@@ -381,7 +412,7 @@
     &--items
       display flex
       flex-wrap: wrap;
-      justify-content: end
+      justify-content: space-between
       @media (max-width: max-medium)
         justify-content: space-evenly;
         padding: 10px 5px;
@@ -391,9 +422,7 @@
         padding: 0;
         opacity: 0;
       &__all
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding-top: 0;
+        padding: 0;
         .select-dropdown__group-items
           @media (max-width: max-medium)
             padding: 22px 0 0 0;
@@ -402,13 +431,15 @@
             @media (max-width: max-medium)
               content: attr(data-group-label);
               display: block;
-              white-space: nowrap;
               position: absolute;
-              top: 7px;
+              top: -5px;
               left: 0;
-              font-size: 11px;
+              white-space: nowrap;
+              text-transform uppercase
+              font-size: 12px;
+              letter-spacing: 0.02em;
               font-weight: bold;
-              color: grey
+              color: accent-dark
     &--item
       font-size: 14.5px;
       line-height: 150%;
@@ -490,7 +521,7 @@
             height: 18px;
             width: 18px;
         &.is-active
-          font-weight normal
+          color black
           &:before
             background-color accent-red
             border-color accent-red
@@ -551,10 +582,12 @@
       border-radius: 0px 0px 4px 25px;
       text-align: center;
       padding: 14px 0
+      @media (max-width: max-medium)
+        padding 0
     &__clear-search
       display: none;
     &__mobile-center
-      @media (max-width: max-large)
+      @media (max-width: 1139px)
         position: absolute;
         top: 50%;
         left: 50%;
@@ -628,10 +661,10 @@
   .select-label-mobile,
   .select-button--search-mobile
     display: none;
-    @media (max-width: max-large)
+    @media (max-width: 1139px)
       display: block
   .select-close-button-mobile
-    @media (max-width: max-large)
+    @media (max-width: 1139px)
       position: absolute;
       right: 0;
       top: -30px;
@@ -644,11 +677,11 @@
       line-height: 30px;
       text-align: center;
   .is-open .select-popup
-    @media (max-width: max-large)
+    @media (max-width: 1139px)
       z-index: 3000;
       display: block;
   .select-popup
-    @media (max-width: max-large)
+    @media (max-width: 1139px)
       position: fixed;
       top: 0;
       left: 0;
@@ -657,7 +690,7 @@
       z-index: -1;
       display: none;
     .select-popup-overlay
-      @media (max-width: max-large)
+      @media (max-width: 1139px)
         position: absolute;
         top: 0;
         left: 0;
@@ -666,7 +699,7 @@
         background: black
         opacity: 0.7;
   .select-label-mobile
-    @media (max-width: max-large)
+    @media (max-width: 1139px)
       color: accent-dark
       font-size: 15px;
       font-weight: bold;
@@ -676,7 +709,6 @@
     @media (max-width: max-medium)
       font-size: 12px;
       letter-spacing: 0.02em;
-
 
 
 
@@ -766,20 +798,10 @@
     top: 9px;
     width: 4px;
     height: 10px; }
-  .custom-select-wrapper .select-dropdown__checkbox .select-dropdown--item:before {
-    height: 18px;
-    width: 18px; }
-  .custom-select-wrapper .select-dropdown__checkbox .select-dropdown--item:after {
-    left: 6px;
-    top: 1px;
-    width: 4px;
-    height: 10px; }
-  .custom-select-wrapper .select-dropdown__checkbox .select-dropdown--item:hover {
-    border: none;
-    background-color: transparent;
-    color: var(--gray-color); }
-  .custom-select-wrapper .select-dropdown__checkbox .select-dropdown--item.is-active:after {
-    content: " "; }
+  //.custom-select-wrapper .select-dropdown__checkbox .select-dropdown--item:before {
+  //  height: 18px;
+  //  width: 18px; }
+
 
 
 
@@ -834,9 +856,9 @@
   //  height: 30px; }
 
 
-  .custom-select-wrapper .select-overlay .select-dropdown--search-label {
-    margin: 10px 0 0 15px;
-    font-size: 11px; }
+  //.custom-select-wrapper .select-overlay .select-dropdown--search-label {
+  //  margin: 10px 0 0 15px;
+  //  font-size: 11px; }
   //.custom-select-wrapper .select-overlay.is-searching .select-dropdown--items__search-result {
   //  padding: 5px 15px; }
   .custom-select-wrapper .select-overlay .select-multiple-button {
@@ -869,8 +891,7 @@
 
 
 
-.custom-select-wrapper__brand .select-overlay .select-dropdown--search-label {
-  display: block; }
+
 
 //.custom-select-wrapper__auto-brand .select-button {
 //  width: 126px; }
@@ -951,17 +972,17 @@
   //.select-button
   //.custom-select-wrapper__auto-set .select-button {
   //  width: 135px; }
-  .custom-select-wrapper__brand .select-dropdown--items__all {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 0 13px 10px 13px; }
-  .custom-select-wrapper__brand .select-dropdown--items__all .select-dropdown__group-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
+  //.custom-select-wrapper__brand .select-dropdown--items__all {
+  //  display: grid;
+  //  grid-template-columns: 1fr;
+  //  padding: 0 13px 10px 13px; }
+  //.custom-select-wrapper__brand .select-dropdown--items__all .select-dropdown__group-items {
+  //  display: grid;
+  //  grid-template-columns: 1fr 1fr; }
   .custom-select-wrapper .select-dropdown .select-dropdown--items__groups {
     display: none; }
-  .custom-select-wrapper .select-dropdown__group-items {
-    padding: 0; }
+  //.custom-select-wrapper .select-dropdown__group-items {
+  //  padding: 0; }
   //.custom-select-wrapper .select-overlay.is-searching .select-dropdown--items__search-result {
   //  display: grid;
   //  grid-template-columns: 1fr 1fr; }
@@ -1061,7 +1082,7 @@
   display: flex;
   flex-wrap wrap
   margin-top: 11px;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     margin-top: 13px;
   @media (max-width: max-medium)
     margin-top: 11px;
@@ -1078,7 +1099,7 @@
     font-size: 12.75px;
     line-height: 150%;
     letter-spacing: 0.04em;
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       margin-right 12px
     @media (max-width: max-medium)
       margin-right 10px
@@ -1126,7 +1147,7 @@
 .spike-wrapper
   width: 30%;
   padding-left: 26px;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     width 58%
   @media (max-width: max-medium)
     width: 100%;
@@ -1139,7 +1160,7 @@
   &.spike-wrapper--gain-type
     width: 18%;
     padding-left: 26px;
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       width: 58%;
       margin-top: 13px;
     @media (max-width: max-medium)
@@ -1216,7 +1237,7 @@
   display: flex;
   justify-content: space-between;
   width: 29%;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     width: 42%;
   @media (max-width: max-medium)
     width 100%
@@ -1260,7 +1281,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   width 100%
   flex-wrap wrap
   margin: 13px 0 0;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     position: relative;
     flex-direction: column-reverse;
   @media (max-width: max-medium)
@@ -1271,7 +1292,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: flex;
     flex-wrap wrap
     width: 100%;
-    @media (max-width: max-extra-large)
+    @media (max-width: 1139px)
       padding: 17px 0 18px;
     @media (max-width: max-medium)
       padding: 10px 0;
@@ -1464,7 +1485,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   width: 33%;
   padding-right: 22px;
   padding-top: 2px;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     width: 100%;
     padding-right: 0;
     padding-top: 7px;
@@ -1482,7 +1503,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   flex-wrap wrap
   justify-content: space-between;
   width: 23%;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     width: 42%;
     margin-top: 13px;
   @media (max-width: max-medium)
@@ -1502,7 +1523,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .fc-selectors
   width: 80%;
   padding-right: 22px;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     width 100%
     padding 0
 .fc-selectors__aside--top {
@@ -1741,7 +1762,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: transparent;
   outline: 0;
   cursor: pointer;
-  @media (max-width: max-extra-large)
+  @media (max-width: 1139px)
     position: absolute;
     top: -39px;
   @media (max-width: max-medium)
