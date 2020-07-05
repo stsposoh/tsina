@@ -1,5 +1,4 @@
 $('.js-open-login-form').on('click', function () {
-
   $('#login-form').addClass('--open')
 });
 
@@ -7,9 +6,14 @@ $('.js-order-call').on('click', function () {
   $('#order-call').addClass('--open')
 });
 
-$('.js-open-type-filter').on('click', function () {
+$('.js-open-tire-filter').on('click', function () {
   $('body').css('overflow','hidden');
   $('#tire-filter').addClass('--open')
+});
+
+$('.js-open-disks-filter').on('click', function () {
+  $('body').css('overflow','hidden');
+  $('#disk-filter').addClass('--open')
 });
 
 $('.js-all-brands').on('click', function () {
