@@ -356,7 +356,6 @@
 
 .listing-grid
   &__header
-    background-color #ECEFF1
     &-controls
       display: flex;
       flex-wrap: wrap;
@@ -366,7 +365,36 @@
       @media (max-width: max-medium)
         flex-direction: column;
         text-align: center;
-        padding: 13px 0;
+        padding: 0;
+      &-mob
+        background-color #ECEFF1
+        display none
+        width 100%
+        padding: 4px 15px 2px;
+        justify-content: space-between;
+        @media (max-width: max-medium)
+          display flex
+        @media (max-width: max-sm)
+          width: calc(100% + 30px);
+          margin: 0 -15px;
+      &-mob-season
+        display none
+        border-bottom: 1px solid #ECEFF1;
+        width 100%
+        padding: 4px 15px 3px;
+        @media (max-width: max-medium)
+          display block
+          margin-bottom 13px
+        @media (max-width: max-sm)
+          width: calc(100% + 30px);
+          margin: 0 -15px 13px
+        .season-wrapper
+          margin-bottom 0 !important
+        .checkbox-wrapper
+          display: flex;
+          justify-content: space-between;
+          max-width: 290px;
+          margin: auto;
       &-left
         display: flex;
         flex-wrap: wrap;
@@ -395,18 +423,20 @@
         @media (max-width: max-medium)
           text-align: left;
           padding-right: 15px;
-          font-size: 14px;
-          line-height: 130%;
+          width 100%
         @media (max-width: max-sm)
+          font-size: 12px;
+          line-height: 130%;
           padding-right 0
           width: 100%;
-          text-align center
           margin-bottom: 16px;
       &-list
         width: 252px;
         text-align: left;
         @media (max-width: max-extra-large)
           width: 240px;
+        @media (max-width: max-medium)
+          display none
         .field
           margin-bottom 0
   &__main
@@ -416,7 +446,9 @@
     justify-content: space-between;
     @media (max-width: max-large)
       flex-direction: column-reverse;
-      padding: 21px 0 0
+      padding: 15px 0 0
+    @media (max-width: max-sm)
+      padding: 8px 0 0
   &__cards
     margin: 0 -15px;
     width: 856px;
@@ -564,8 +596,9 @@
       width: 100%;
       margin-bottom: 15px;
     @media (max-width: max-medium)
-      margin: 0 -15px 17px
-      width: calc(100% + 30px);
+      display none
+      //margin: 0 -15px 17px
+      //width: calc(100% + 30px);
   &__sticky
     position: sticky;
     top: 85px;
@@ -750,3 +783,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+.text-block
+  margin: 40px 0 60px;

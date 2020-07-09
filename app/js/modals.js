@@ -11,6 +11,11 @@ $('.js-open-tire-filter').on('click', function () {
   $('#tire-filter').addClass('--open')
 });
 
+$('.js-open-sort-modal').on('click', function () {
+  $('body').css('overflow','hidden');
+  $('#sort-modal').addClass('--open')
+});
+
 $('.js-open-disks-filter').on('click', function () {
   $('body').css('overflow','hidden');
   $('#disk-filter').addClass('--open')

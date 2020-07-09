@@ -212,6 +212,13 @@
     border-radius: 25px 25px 3px 25px;
   &.\--arrow-right
     border-radius: 25px 25px 25px 3px;
+  &.\--simple
+    padding 0
+    min-width 0
+    color accent-red
+    font-size: 12px;
+    svg
+      fill accent-red
   &__counter
     position absolute
     background-color accent-red
@@ -877,16 +884,6 @@
     line-height 0
     margin-right 7px
 
-.filter-btn
-  position fixed
-  bottom: 26%;
-  left: 100px;
-  z-index: 1;
-  @media (max-width: max-extra-large)
-    left: 0;
-    min-width: 0;
-    font-size: 0;
-    padding: 0 17px !important
 
 .bread-crumbs
   font-size: 11.75px;
@@ -935,6 +932,7 @@
     margin: 3px 0 15px;
   span
     color accent-red
+    white-space: nowrap;
 
 .type-icon
   display inline-block
