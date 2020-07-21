@@ -60,6 +60,17 @@
     width: 100px;
     display: flex;
     flex-direction column
+    @media (min-width: max-extra-large)
+      &::-webkit-scrollbar-track
+        background-color: transparent
+      &::-webkit-scrollbar
+        width 6px
+        border-radius 30px
+        background-color: transparent
+      &::-webkit-scrollbar-thumb
+        background-color: accent-red
+        width 6px
+        border-radius 30px
     @media (max-width: max-extra-large)
       order 4
       box-shadow none

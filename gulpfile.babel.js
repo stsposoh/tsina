@@ -99,6 +99,8 @@ export const libs = () => {
     'node_modules/es7-array.prototype.includes/index.js',
     'node_modules/inputmask/dist/jquery.inputmask.min.js',
     'node_modules/sumoselect/jquery.sumoselect.min.js',
+    'node_modules/flatpickr/dist/flatpickr.min.js',
+    'node_modules/flatpickr/dist/l10n/ru.js',
   ])
     .pipe(plumber({
       errorHandler: notify.onError(err => ({

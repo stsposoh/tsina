@@ -337,7 +337,7 @@
   &__btns
     margin: 0 -15px;
     .tire-center-btn
-      padding: 11px 19px;
+      //padding: 11px 19px;
       min-width: 194px;
 
 
@@ -786,3 +786,287 @@
 
 .text-block
   margin: 40px 0 60px;
+
+
+.sect-record
+  padding: 30px 0 34px;
+  border-bottom: 1px solid #ECEFF1;
+  &.\--hidden
+    display none
+  &__title
+    font-weight: 600;
+    font-size: 25.5px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    margin-bottom: 24px;
+  &__city
+    font-size: 20.25px;
+    line-height: 150%;
+    color accent-red
+    margin-left: 35px;
+  &__btn
+    &.\--bot
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      color white
+      display inline-flex
+      background-color accent-blue
+      box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
+      border-radius: 30px;
+      -webkit-appearance: none
+      border none
+      outline 0
+      padding: 10px 24px 10px 13px;
+      align-items: center;
+      svg
+        margin-right: 20px;
+  &__centers
+    margin 0 -15px
+    display: flex;
+    flex-wrap: wrap;
+  &__center
+    margin 0 15px 29px
+    width calc(100% / 3 - 30px)
+  .btn
+    margin-right 45px
+    padding 0 28px
+
+
+.record-datepicker
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__date
+    &:first-of-type
+      width: 32%;
+    &:last-of-type
+      width 65%
+    &.\--hidden
+      display none
+  &__label
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #768592;
+    margin-left: 29px;
+    margin-bottom: 19px;
+  &__picker
+    border: 3px solid #DFE2E9;
+    border-radius: 60px 10px;
+    padding: 15px 10px;
+    overflow hidden
+
+.timepicker
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px 9px 8px;
+  justify-content: space-between;
+  &__day
+    display: flex;
+    flex-wrap: wrap;
+    width 32%
+    flex-direction column
+    &-name
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      text-align: center;
+      margin-bottom: 6px;
+    &-times
+      display: flex;
+      flex-wrap: wrap;
+      justify-content space-between
+    &-time
+      width 30%
+      margin: 3px;
+      border-radius: 3px;
+      background-color: #ECEFF1;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      padding: 8px 5px;
+      text-align: center;
+      cursor pointer
+      &.\--disabled
+        opacity: .3;
+        pointer-events: none;
+      &.\--checked
+        background-color accent-red
+        color white
+
+.selected-center
+  background-color #ECEFF1
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  padding: 9px 0;
+  &.\--hidden
+    display none
+  &__content
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  &__label
+    font-weight bold
+    margin-right: 33px;
+  &__center,
+  &__date,
+  &__time
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 42px;
+    svg
+      margin-right: 6px;
+
+.record-order
+  background-image: url(/img/common/bg-2.png);
+  background-repeat: repeat;
+  padding: 30px 0;
+  &.\--hidden
+    display none
+  &__content
+    border: 3px solid #DFE2E9;
+    border-radius: 60px 10px;
+    background-color white
+    padding: 28px 28px 0
+  &__title
+    font-weight: 600;
+    font-size: 20.25px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+  &__storage
+    border: 3px solid #ECEFF1;
+    border-radius: 40px 5px;
+    width: 100%;
+    margin: 9px 0 0;
+    padding: 25px 17px 19px;
+    display: flex;
+    flex-wrap: wrap;
+    &-label
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      width: 23%;
+      padding-right: 20px;
+    &-info
+      width: 77%;
+      display: flex;
+      flex-wrap: wrap;
+    &-radio
+      padding-right: 29px;
+      input[type="radio"]
+        //display block
+        &:checked
+          & ~ label
+            &:after
+              opacity 1
+            .record-order__storage-radio-text
+              span
+                display block
+            .field
+              display block
+      &-label
+        position relative
+        padding-left: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        &:before,
+        &:after
+          content ''
+          display: block;
+          border-radius: 50%;
+          position: absolute;
+        &:before
+          width: 17px;
+          height: 17px;
+          border: 2px solid accent-red
+          left: 0;
+          top 0
+        &:after
+          width: 13px;
+          height: 13px;
+          background-color: accent-red
+          left: 4px;
+          top: 4px;
+          opacity 0
+          transition opacity .3s ease-in-out
+        .field
+          width: 219px;
+          margin-top: -11px;
+          display none
+      &-text
+        width: 200px;
+        display: block;
+        padding-right: 5px;
+        span
+          font-weight: 600;
+          font-size: 11.75px;
+          line-height: 135%;
+          letter-spacing: 0.04em;
+          color: #B0BAC9;
+          margin-top: 10px;
+          display: none
+    &-tip
+      background-color #ECEFF1
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 11.75px;
+      line-height: 135%;
+      letter-spacing: 0.04em;
+      margin-top: 17px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      &.\--hidden
+        display none
+      svg
+        margin-right: 5px;
+    &-footer
+      width 100%
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+      margin-top: 15px;
+      align-items: flex-start;
+      &.\--comment-open
+        align-items: flex-end;
+        .record-order__storage-footer-comment-title
+          &:before
+            content 'Скрыть комментарий'
+        .record-order__storage-footer-comment-sect
+          display block
+      &-comment
+        width: 48%;
+        &-title
+          font-weight: bold;
+          font-size: 12.75px;
+          line-height: 115%;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          color accent-red
+          -webkit-appearance: none
+          background-color transparent
+          border none
+          outline 0
+          cursor pointer
+          &:before
+            content 'Добавить комментарий к заказу'
+        &-sect
+          display none
+          margin-top: 6px;
+          .field
+            margin-bottom 0
+      &-btn
+        width: 24%;

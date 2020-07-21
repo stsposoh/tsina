@@ -1,0 +1,272 @@
+@@include('./_includes/_header.html')
+
+<main>
+  <div id="record-steps">
+    <div class="wrapper">
+      <div class="bread-crumbs">
+        <a href="#" class="bread-crumbs__item">Главная страница</a>
+        <span class="bread-crumbs__item">Запись на сервис</span>
+      </div>
+      <h1 class="shop-header">Запись на шиномнтаж</h1>
+    </div>
+
+    @@include('./_includes/_city-select.html')
+
+    <div class="sect-record" id="record-bot">
+      <div class="wrapper">
+        <div class="sect-record__title">Бот для записи на сервис:</div>
+        <button class="sect-record__btn --bot">
+          <svg viewBox="0 0 30 30" width="30"><use xlink:href="./img/svg/svg-sprite.svg#telegram-2"></use></svg>
+          @botservice
+        </button>
+      </div>
+    </div>
+
+    <div class="sect-record --hidden" id="record">
+      <div class="wrapper">
+        <div class="sect-record__title">Выбор направления</div>
+        <button class="btn --red-transparent js-record-by-time">Запись по времени</button>
+        <button class="btn --red-transparent js-record-by-center">Запись по шинному центру</button>
+      </div>
+    </div>
+
+    <div class="sect-record --hidden" id="record-date">
+      <div class="wrapper">
+        <div class="record-datepicker">
+          <div class="record-datepicker__date">
+            <div class="record-datepicker__label">Выберите дату записи:</div>
+            <div class="record-datepicker__picker">
+              <input type="text" id="basicDate">
+            </div>
+          </div>
+
+          <div class="record-datepicker__date --hidden" id="timepicker">
+            <div class="record-datepicker__label">Выберите время записи:</div>
+            <div class="record-datepicker__picker">
+              <div class="timepicker">
+                <div class="timepicker__day" data-date="2020-07-28">
+                  <div class="timepicker__day-name">28 июля</div>
+                  <div class="timepicker__day-times">
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                  </div>
+                </div>
+
+                <div class="timepicker__day" data-date="2020-07-31">
+                  <div class="timepicker__day-name">31 июля</div>
+                  <div class="timepicker__day-times">
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                  </div>
+                </div>
+
+                <div class="timepicker__day" data-date="2020-08-01">
+                  <div class="timepicker__day-name">1 августа</div>
+                  <div class="timepicker__day-times">
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time --disabled">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                    <div class="timepicker__day-time">08:20</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sect-record --hidden" id="tire-centers">
+      <div class="wrapper">
+        <div class="sect-record__title">
+          Выбор шинного центра
+          <span class="sect-record__city">г. Днепр</span>
+        </div>
+        <div class="sect-record__centers">
+          <div class="sect-record__center">
+            @@include('./_includes/_tire-center-card-small.html')
+          </div>
+          <div class="sect-record__center">
+            @@include('./_includes/_tire-center-card-small.html')
+          </div>
+          <div class="sect-record__center">
+            @@include('./_includes/_tire-center-card-small.html')
+          </div>
+          <div class="sect-record__center">
+            @@include('./_includes/_tire-center-card-small.html')
+          </div>
+          <div class="sect-record__center">
+            @@include('./_includes/_tire-center-card-small.html')
+          </div>
+          <div class="sect-record__center">
+            @@include('./_includes/_tire-center-card-small.html')
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="selected-center --hidden" id="selected-center">
+      <div class="wrapper">
+        <div class="selected-center__content">
+          <div class="selected-center__label">Ваш выбор:</div>
+          <div class="selected-center__center">
+            <svg viewBox="0 0 20 20" width="20"><use xlink:href="./img/svg/svg-sprite.svg#location-2"></use></svg>
+            <span class="js-selected-center"></span>
+          </div>
+          <div class="selected-center__date">
+            <svg viewBox="0 0 20 20" width="20"><use xlink:href="./img/svg/svg-sprite.svg#calendar"></use></svg>
+            <span class="js-selected-date"></span>
+          </div>
+          <div class="selected-center__time">
+            <svg viewBox="0 0 20 20" width="20"><use xlink:href="./img/svg/svg-sprite.svg#clock"></use></svg>
+            <span class="js-selected-time"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="record-order --hidden" id="record-order">
+      <div class="wrapper">
+        <div class="record-order__content">
+          <div class="record-order__title">Заполните заявку</div>
+
+          <form class="form-sect">
+            <div class="form-sect__col-4">
+              <div class="field">
+                <label class="field__label">Ваше имя</label>
+                <input name="user-name" required class="field__input" placeholder="Введите ваше имя" type="text">
+              </div>
+            </div>
+            <div class="form-sect__col-4">
+              <div class="field">
+                <label class="field__label">Ваш номер телефона</label>
+                <input name="user-phone" required class="field__input" placeholder="+380 (__) ___  __ __" type="tel">
+              </div>
+            </div>
+            <div class="form-sect__col-4">
+              <div class="field">
+                <label class="field__label">Ваш автомобиль</label>
+                <select name="user-auto" required class="js-sumo-select">
+                  <option disabled selected value="">Выберите</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Audi">Audi</option>
+                  <option value="Opel">Opel</option>
+                  <option value="Ford">Ford</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-sect__col-4">
+              <div class="field">
+                <label class="field__label">Номер авто</label>
+                <input name="car-number" required class="field__input" placeholder="Введите номер вашего авто" type="text">
+              </div>
+            </div>
+
+            <div class="record-order__storage">
+              <div class="record-order__storage-label">Хараните шины у нас?</div>
+              <div class="record-order__storage-info">
+                <div class="record-order__storage-radio">
+                  <input type="radio" name="tire-storage" id="tire-storage-yes" value="1">
+                  <label class="record-order__storage-radio-label" for="tire-storage-yes">
+                    <span class="record-order__storage-radio-text">
+                      <b>Да,</b> есть договор хранения
+                      <span>Если Вы храните шины у нас, то доставка Ваших шин со склада займет до 3-х дней</span>
+                    </span>
+                    <span class="field">
+                      <input name="contract-number" class="field__input" placeholder="Введите номер договора" type="text">
+                    </span>
+                  </label>
+                </div>
+                <div class="record-order__storage-radio">
+                  <input type="radio" name="tire-storage" id="tire-storage-no" value="0" checked>
+                  <label class="record-order__storage-radio-label" for="tire-storage-no">
+                    <b>Нет,</b> привезу с собой
+                  </label>
+                </div>
+                <div class="record-order__storage-tip --hidden">
+                  <svg viewBox="0 0 15 14" width="14"><use xlink:href="./img/svg/svg-sprite.svg#triangle"></use></svg>
+                  Доставка ваших шин со склада займёт некоторое время, пожалуйста, выберите другую дату записи
+                </div>
+              </div>
+            </div>
+
+            <div class="record-order__storage-footer">
+              <div class="record-order__storage-footer-comment">
+                <span class="record-order__storage-footer-comment-title js-record-order-comment"></span>
+                <div class="record-order__storage-footer-comment-sect">
+                  <div class="field">
+                    <label class="field__label">Комментарий</label>
+                    <textarea name="user-comment" class="field__textarea" placeholder="Введите комментарий"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="record-order__storage-footer-btn">
+                <button type="submit" class="btn --red --full-width">записаться</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="record-success" style="display: none;">
+    Success
+  </div>
+
+
+
+
+
+
+</main>
+
+@@include('./_includes/_footer.html')
+</body>
+</html>

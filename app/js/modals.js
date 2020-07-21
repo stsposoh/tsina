@@ -27,8 +27,9 @@ $('.js-all-brands').on('click', function () {
   $('#all-brands').addClass('--open')
 });
 
-$('.modal')
-  .on('click', '.js-close-modal', function () {
-    $('body').css('overflow','');
-    $(this).parents('.modal').removeClass('--open')
-  });
+$('.modal').on('click', '.js-close-modal', function () {
+  $('body').css('overflow','');
+  $(this).parents('.modal').removeClass('--open')
+});
+
+
