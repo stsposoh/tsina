@@ -83,6 +83,7 @@ const selectedTimeEl = $('.js-selected-time');
 const recordOrderCommentBtn = $('.js-record-order-comment');
 const recordOrderStorageTip = $('.record-order__storage-tip');
 const recordOrder = $('#record-order');
+const recordSuccessSect = $('#record-success');
 
 tireCenters.on('click', '.tire-center-btn', function () {
   record.tireStorage = null;
@@ -120,8 +121,11 @@ recordByTimeBtn.on('click', function () {
 recordByCenterBtn.on('click', function () {
   $(this).addClass('record-active');
   recordByTimeBtn.removeClass('record-active');
+  if(record.tireStorage === null) {
+    tireStorageModal.addClass('--open');
+  }
   recordDateSect.addClass('--hidden');
-  tireCentersSect.addClass('--hidden');
+  tireCentersSect.removeClass('--hidden');
   selectedCenterSect.addClass('--hidden');
 });
 
@@ -183,8 +187,13 @@ recordOrder.find("form").submit(function() {
 
   console.log(data);
 
+  recordSuccessSect.find('.js-user-name').text(data.userName);
+  recordSuccessSect.find('.js-chosen-center').text(data.selectedCenter);
+  recordSuccessSect.find('.js-chosen-date').text(data.selectedDate);
+  recordSuccessSect.find('.js-chosen-time').text(data.selectedTime);
+
   $('#record-steps').hide();
-  $('#record-success').show();
+  recordSuccessSect.show();
 
   return false;
 });

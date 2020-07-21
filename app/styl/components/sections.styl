@@ -1070,3 +1070,61 @@
             margin-bottom 0
       &-btn
         width: 24%;
+
+.record-success
+  background-image: url(/img/common/bg-2.png);
+  background-repeat: repeat;
+  padding: 31px 0;
+  display none
+  &__msg
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 145%;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    &:before
+      font-family: "fontello";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: '\e806';
+      width: 27px;
+      height: 27px;
+      margin-right: 11px;
+      border-radius: 50%;
+      background-color: #00c48c;
+      color: #fff;
+      font-size: 16px;
+      line-height: 27px;
+      text-align: center;
+  &__info
+    border: 3px solid #DFE2E9;
+    background-color white
+    border-radius: 60px 10px;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 21px 27px 8px
+    &-label
+      font-size: 12.75px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      color: #566069;
+      margin-bottom: 4px;
+    &-value
+      font-weight: 600;
+      font-size: 14.5px;
+      line-height: 150%;
+      letter-spacing: 0.02em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 14px;
+      svg
+        margin-right: 4px;
+    &-date,
+    &-time
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    &-date
+      margin-right: 53px;
