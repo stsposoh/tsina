@@ -1104,6 +1104,7 @@
     display: inline-block;
     margin-top: 25px;
     padding: 21px 27px 8px
+    min-width: 50%;
     &-label
       font-size: 12.75px;
       line-height: 150%;
@@ -1128,3 +1129,28 @@
       align-items: center;
     &-date
       margin-right: 53px;
+
+
+.record-steps
+  &.\--record-by-city
+    #record-date
+      order 5
+    #tire-centers
+      order 4
+  &__content
+    display: flex;
+    flex-direction: column;
+    .centers
+      order 1
+    #record-bot
+      order 2
+    #record
+      order 3
+    #record-date
+      order 4
+    #tire-centers
+      order 5
+    #selected-center
+      order 6
+    #record-order
+      order 7

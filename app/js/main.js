@@ -70,7 +70,7 @@ $('.center-gallery__previews-item').on('click', function (e) {
 //centers
 const tireCenters = $('.js-centers');
 const recordSect = $('#record');
-const recordByTimeBtn = $('.js-record-by-time');
+const recordByDate = $('.js-record-by-date');
 const recordByCenterBtn = $('.js-record-by-center');
 const recordDateSect = $('#record-date');
 const tireCentersSect = $('#tire-centers');
@@ -84,6 +84,7 @@ const recordOrderCommentBtn = $('.js-record-order-comment');
 const recordOrderStorageTip = $('.record-order__storage-tip');
 const recordOrder = $('#record-order');
 const recordSuccessSect = $('#record-success');
+const recordStepsSect = $('#record-steps');
 
 tireCenters.on('click', '.tire-center-btn', function () {
   record.tireStorage = null;
@@ -97,16 +98,19 @@ tireCenters.on('click', '.tire-center-btn', function () {
     $('#record-bot').addClass('--hidden');
     recordSect.removeClass('--hidden')
   } else {
-    recordByTimeBtn.removeClass('record-active');
+    recordByDate.removeClass('record-active');
     recordByCenterBtn.removeClass('record-active');
     recordDateSect.addClass('--hidden');
     tireCentersSect.addClass('--hidden');
     selectedCenterSect.addClass('--hidden');
   }
+  recordOrder.addClass('--hidden');
 });
 
-recordByTimeBtn.on('click', function () {
+recordByDate.on('click', function () {
+  record.recordMethod = 1;
   $(this).addClass('record-active');
+  recordStepsSect.removeClass('--record-by-city');
   recordByCenterBtn.removeClass('record-active');
   if(record.tireStorage === null) {
     tireStorageModal.addClass('--open');
@@ -115,18 +119,22 @@ recordByTimeBtn.on('click', function () {
   timepickerSect.addClass('--hidden');
   tireCentersSect.addClass('--hidden');
   selectedCenterSect.addClass('--hidden');
+  recordOrder.addClass('--hidden');
   record.initCalendar();
 });
 
 recordByCenterBtn.on('click', function () {
+  record.recordMethod = 2;
   $(this).addClass('record-active');
-  recordByTimeBtn.removeClass('record-active');
+  recordStepsSect.addClass('--record-by-city');
+  recordByDate.removeClass('record-active');
   if(record.tireStorage === null) {
     tireStorageModal.addClass('--open');
   }
   recordDateSect.addClass('--hidden');
   tireCentersSect.removeClass('--hidden');
   selectedCenterSect.addClass('--hidden');
+  recordOrder.addClass('--hidden');
 });
 
 $('.js-tire-storage').on('click', function () {
@@ -141,8 +149,13 @@ $('.timepicker').on('click', function (e) {
     $(e.target).addClass('--checked');
     record.selectedDate = $(e.target).parents('.timepicker__day').data('date');
     record.selectedTime = $(e.target).text();
-    record.calendar.setDate(new Date(record.selectedDate))
-    tireCentersSect.removeClass('--hidden');
+    record.calendar.setDate(new Date(record.selectedDate));
+
+    if(record.recordMethod === 1) {
+      tireCentersSect.removeClass('--hidden');
+    } else if (record.recordMethod === 2) {
+      record.setCheckedInfo();
+    }
   }
 });
 
@@ -152,7 +165,16 @@ tireCentersSect.on('click', '.js-check-tire-center', function () {
   });
   $(this).addClass('--checked');
   record.selectedCenter = $(this).parents('.tire-center-card-small').data('center');
-  record.setCheckedInfo();
+
+  if(record.recordMethod === 1) {
+    record.setCheckedInfo();
+  } else if (record.recordMethod === 2) {
+    recordDateSect.removeClass('--hidden');
+    timepickerSect.addClass('--hidden');
+    selectedCenterSect.addClass('--hidden');
+    recordOrder.addClass('--hidden');
+    record.initCalendar();
+  }
 });
 
 recordOrderCommentBtn.on('click', function () {
@@ -192,9 +214,9 @@ recordOrder.find("form").submit(function() {
   recordSuccessSect.find('.js-chosen-date').text(data.selectedDate);
   recordSuccessSect.find('.js-chosen-time').text(data.selectedTime);
 
-  $('#record-steps').hide();
+  recordStepsSect.hide();
   recordSuccessSect.show();
-
+  $('html, body').animate({scrollTop: '0px'}, 300);
   return false;
 });
 
@@ -205,6 +227,8 @@ const record = {
   selectedDate: '',
   selectedTime: '',
   calendar: null,
+  //1 - by date, 2 - by center
+  recordMethod: 1,
   initCalendar() {
     this.calendar = $("#basicDate").flatpickr({
       locale: "ru",
