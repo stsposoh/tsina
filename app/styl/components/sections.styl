@@ -358,6 +358,10 @@
 
 .tire-centers-list
   padding: 30px 0 0;
+  @media (max-width: max-extra-large)
+    padding: 25px 0 0;
+  @media (max-width: max-medium)
+    padding: 21px 0 0;
   &__city
     font-weight: 600;
     font-size: 25.5px;
@@ -365,7 +369,12 @@
     letter-spacing: 0.04em;
     color accent-dark
     margin-bottom: 26px;
-
+    @media (max-width: max-extra-large)
+      font-size: 21.25px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 20px;
 
 .listing-grid
   &__header

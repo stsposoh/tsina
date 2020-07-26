@@ -1022,6 +1022,21 @@
   border-radius: 60px 10px;
   padding: 14px;
   margin-bottom: 26px;
+  @media (max-width: max-extra-large)
+    height: 186px;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    flex-direction: column;
+    border-radius: 60px 10px 30px 10px;
+  @media (max-width: max-medium)
+    box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
+    border-radius: 40px 5px;
+    border: none;
+    height: auto;
+    padding: 15px 15px 20px;
+    margin-bottom: 23px;
+  @media (max-width: max-sm)
+    padding: 8px 8px 13px;
   &:last-of-type
     margin-bottom 10px
   &__img
@@ -1029,8 +1044,13 @@
     border-radius: 50px 5px 20px;
     font-size: 0;
     line-height: 0;
+    height: 100%;
     overflow: hidden;
     width: 31%;
+    @media (max-width: max-extra-large)
+      width: 50%;
+    @media (max-width: max-medium)
+      width 100%
     img
       width: 100%;
       height: 100%;
@@ -1042,13 +1062,23 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-  &__info
-    //
+    @media (max-width: max-extra-large)
+      padding: 0 0 0 17px;
+    @media (max-width: max-medium)
+      width 100%
+      padding: 11px 0 9px;
   &__name
     font-weight: bold;
     font-size: 18px;
     line-height: 145%;
     letter-spacing: 0.02em;
+    @media (max-width: max-extra-large)
+      font-size: 16.5px;
+      line-height: 145%;
+    @media (max-width: max-medium)
+      font-size: 15.5px;
+      line-height: 140%;
+      margin-bottom: 5px;
   &__address
     font-size: 16px;
     line-height: 150%;
@@ -1056,6 +1086,12 @@
     color #7f8d99
     position relative
     padding-left: 22px;
+    @media (max-width: max-extra-large)
+      font-size: 15px;
+      line-height: 150%;
+    @media (max-width: max-medium)
+      font-size: 15.5px;
+      line-height: 140%;
     &:before
       content ''
       background-image url("/img/svg/type-location.svg")
@@ -1076,10 +1112,31 @@
     border-radius: 5px;
     margin-bottom: 18px;
     padding: 4px 12px;
+    @media (max-width: max-extra-large)
+      font-size: 14px;
+      line-height: 150%;
+      margin-bottom: 0;
+      margin-top: 4px;
+      width: 100%;
+    @media (max-width: max-medium)
+      font-size: 12px;
+      line-height: 130%;
+      margin: 14px 0 0;
+      padding: 10px 12px;
+      width: 100%;
     &-label
       font-size: 12.75px;
       letter-spacing: 0.04em;
       color: #768592
+      @media (max-width: max-extra-large)
+        width: 100%;
+        display: block;
+      @media (max-width: max-medium)
+        width: 100%;
+        display: block;
+        font-size: 12px;
+        line-height: 130%;
+        margin-bottom: 4px;
   &__btns
     align-items: flex-end;
     width: 19%;
@@ -1087,10 +1144,32 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 10px 6px 4px;
-    .btn.--red-transparent
-      margin-bottom: 16px;
-      height: 36px;
-      min-width: 165px;
+    @media (max-width: max-extra-large)
+      width: 50%;
+      flex-direction: row;
+      padding: 0 0 0 17px;
+      justify-content: space-between;
+    @media (max-width: max-medium)
+      width 100%
+      padding: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    .btn
+      @media (max-width: max-extra-large)
+        width: 47%;
+      @media (max-width: max-medium)
+        width: 48%;
+      &.\--red-transparent
+        margin-bottom: 16px;
+        height: 36px;
+        min-width: 165px;
+        @media (max-width: max-extra-large)
+          margin-bottom: 0;
+          min-width: 148px;
+        @media (max-width: max-medium)
+          margin-bottom: 0
+          min-width: 0;
 
 .tire-center-card-small
   border: 3px solid #DFE2E9;
