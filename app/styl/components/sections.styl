@@ -629,11 +629,22 @@
 
 .center-gallery
   margin: 27px 0 20px
+  @media (max-width: max-large)
+    margin: 27px 0 3px
+  @media (max-width: max-medium)
+    margin: 27px 0 20px
   &__main-img
     border-radius: 60px 5px;
     height: 370px;
     overflow hidden
     margin-bottom: 17px;
+    @media (max-width: max-large)
+      height: 244px;
+      margin-bottom: 14px;
+    @media (max-width: max-medium)
+      height: 30vw;
+      border-radius: 15px 2px 15px 5px;
+      margin-bottom: 7px;
     &-photo
       width 100%
       height 100%
@@ -642,6 +653,10 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -10px;
+    @media (max-width: max-large)
+      margin: 0 -5px;
+    @media (max-width: max-medium)
+      margin: 0
     &-item
       display block
       position relative
@@ -651,6 +666,24 @@
       font-size: 0;
       line-height: 0;
       overflow: hidden;
+      @media (max-width: max-large)
+        width: calc(100% / 8);
+        margin: 0 6px 10px;
+      @media (max-width: max-medium)
+        border-radius: 6px 2px;
+        height: 8vw;
+        width: calc(100% / 4 - 6px);
+        margin: 0 3px 3px;
+      &:hover
+        &:after
+          background-color transparent
+      &.\--active
+        &:after
+          background-color transparent
+      img
+        width 100%
+        height 100%
+        object-fit cover
       &:after
         content ''
         position absolute
@@ -658,7 +691,8 @@
         left: 0;
         bottom: 0;
         right: 0;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        transition background-color .3s ease-in-out
+        background-color: rgba(0, 0, 0, 0.36);
 
 .center-info
   border: 1px solid #dfe2e9;
@@ -671,6 +705,10 @@
     padding: 12px 18px;
     border-bottom: 1px solid #dfe2e9;
     width 100%
+    @media (max-width: max-large)
+      justify-content: space-between;
+    @media (max-width: max-medium)
+      padding: 9px 12px;
   &__address
     font-weight: 600;
     font-size: 16px;
@@ -679,6 +717,15 @@
     position relative
     padding-left: 27px;
     margin-right: 33px;
+    @media (max-width: max-large)
+      font-size: 15px;
+      line-height: 150%;
+    @media (max-width: max-medium)
+      padding-left: 24px;
+      margin-right: 0;
+      font-size: 14px;
+      line-height: 140%;
+      margin-bottom: 15px;
     &:before
       content ''
       background-image url("/img/svg/type-location.svg")
@@ -691,6 +738,9 @@
       position: absolute;
       left: 0;
       top: 3px;
+      @media (max-width: max-medium)
+        width: 18px;
+        height: 17px;
   &__map-btn
     font-weight: bold;
     font-size: 12.75px;
@@ -703,39 +753,86 @@
     border: none;
     outline: 0;
     padding: 0;
+    @media (max-width: max-medium)
+      font-size: 12px;
+      line-height: 130%;
+      margin-left: 25px;
   &__schedule,
   &__phone,
   &__email,
   &__further
     border-right: 1px solid #dfe2e9;
     padding: 17px 10px;
+    @media (max-width: max-extra-large)
+      padding: 6px 10px;
+      border-bottom: 1px solid #dfe2e9;
+    @media (max-width: max-medium)
+      border-right none
+      padding: 6px 14px 8px;
   &__schedule
     width: 27%;
+    @media (max-width: max-extra-large)
+      width: 28%;
+    @media (max-width: max-medium)
+      width: 100%;
   &__phone
     width: 13%;
+    @media (max-width: max-extra-large)
+      width: 18%;
+    @media (max-width: max-medium)
+      width: 100%;
   &__email
     width: 13%;
+    @media (max-width: max-extra-large)
+      width: 21%;
+    @media (max-width: max-medium)
+      width: 100%;
   &__further
     width: 24%;
+    @media (max-width: max-extra-large)
+      width: 33%;
+    @media (max-width: max-medium)
+      width: 100%;
   &__btn
     width: 23%;
     padding: 12px 32px;
+    @media (max-width: max-extra-large)
+      padding: 12px 360px;
+      width: 100%;
+    @media (max-width: max-large)
+      padding: 12px 258px;
+    @media (max-width: max-medium)
+      width: 100%;
+      padding: 14px 56px;
   &__label
     font-weight: 600;
     font-size: 12.75px;
     line-height: 150%;
     letter-spacing: 0.04em;
     color: #566069;
+    @media (max-width: max-large)
+      font-size: 12px;
+    @media (max-width: max-medium)
+      font-size: 11px;
+      line-height: 150%;
   &__content
     font-size: 14.5px;
     line-height: 150%;
     letter-spacing: 0.02em;
     color accent-dark
+    @media (max-width: max-large)
+      font-size: 13px;
+    @media (max-width: max-medium)
+      line-height: 135%;
 
 .center-services
   margin: 38px 0 18px
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: max-large)
+    margin: 62px 0 18px;
+  @media (max-width: max-medium)
+    margin: 44px 0 23px;
   &__title
     font-weight: 600;
     font-size: 25.5px;
@@ -743,12 +840,26 @@
     letter-spacing: 0.04em;
     width 100%
     margin-bottom: 36px;
+    @media (max-width: max-large)
+      font-size: 21.25px;
+      margin-bottom: 30px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 22px;
   &__item
     width 33.33%
     padding-right: 20px;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 24px;
+    @media (max-width: max-large)
+      width 50%
+      margin-bottom: 16px;
+    @media (max-width: max-medium)
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 11px;
     &-icon
       width: 29px;
       height: 29px;
@@ -761,17 +872,30 @@
     &-content
       width: calc(100% - 29px);
       padding-left: 8px;
+      @media (max-width: max-medium)
+        padding-left: 11px;
     &-title
       font-weight: 600;
       font-size: 16px;
       line-height: 150%;
       letter-spacing: 0.02em;
       margin-bottom: 6px;
+      @media (max-width: max-large)
+        font-size: 15px;
+      @media (max-width: max-medium)
+        font-size: 14px;
+        line-height: 140%;
+        margin-bottom: 10px;
     &-text
       font-size: 12.75px;
       line-height: 150%;
       letter-spacing: 0.04em;
       color: #768592;
+      @media (max-width: max-large)
+        font-size: 12.5px;
+      @media (max-width: max-medium)
+        font-size: 12px;
+        line-height: 130%;
 
 .center-director
   background-color: #768592;
@@ -785,10 +909,19 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: max-large)
+    padding: 23px 0 31px;
+  @media (max-width: max-medium)
+    padding: 22px 0;
   &__content
     width: 350px;
     transform: translateX(-51px);
     text-align: center;
+    @media (max-width: max-large)
+      width: 300px;
+      transform: translateX(0);
+    @media (max-width: max-medium)
+      width: 252px;
   &__photo
     width: 150px;
     height: 150px;
@@ -799,6 +932,13 @@
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 15px;
+    @media (max-width: max-large)
+      width: 120px;
+      height: 120px;
+      margin-bottom: 18px;
+    @media (max-width: max-medium)
+      width: 100px;
+      height: 100px;
     img
       width: 100%;
       height: 100%;

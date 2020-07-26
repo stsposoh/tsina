@@ -62,8 +62,12 @@ const centerGallery = {
 
 centerGallery.setConnectionWithElements();
 
-$('.center-gallery__previews-item').on('click', function (e) {
+$('.center-gallery').on('click', '.center-gallery__previews-item', function (e) {
   e.preventDefault();
+  $('.center-gallery').find('.center-gallery__previews-item').each(function () {
+    $(this).removeClass('--active');
+  });
+  $(this).addClass('--active');
   centerGallery.showMainPhoto($(this))
 });
 
