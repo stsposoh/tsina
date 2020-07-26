@@ -327,6 +327,17 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #768592;
+  &.\--hidden
+    @media (max-width: max-large)
+      display none
+  &__desktop
+    @media (max-width: max-large)
+      display none
+  &__mob
+    display none
+    max-width: 300px;
+    @media (max-width: max-large)
+      display block
   &__title
     font-weight: 600;
     font-size: 25.5px;
@@ -334,10 +345,14 @@
     letter-spacing: 0.04em;
     color white
     margin-bottom: 14px;
+    @media (max-width: max-large)
+      font-size: 21.25px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 120%;
   &__btns
     margin: 0 -15px;
     .tire-center-btn
-      //padding: 11px 19px;
       min-width: 194px;
 
 
@@ -350,8 +365,6 @@
     letter-spacing: 0.04em;
     color accent-dark
     margin-bottom: 26px;
-  &__list
-    //
 
 
 .listing-grid
@@ -597,8 +610,6 @@
       margin-bottom: 15px;
     @media (max-width: max-medium)
       display none
-      //margin: 0 -15px 17px
-      //width: calc(100% + 30px);
   &__sticky
     position: sticky;
     top: 85px;
@@ -791,6 +802,11 @@
 .sect-record
   padding: 30px 0 34px;
   border-bottom: 1px solid #ECEFF1;
+  @media (max-width: max-large)
+    padding: 24px 0 29px;
+  @media (max-width: max-medium)
+    text-align center
+    padding: 18px 0 25px;
   &.\--hidden
     display none
   &__title
@@ -799,6 +815,13 @@
     line-height: 110%;
     letter-spacing: 0.04em;
     margin-bottom: 24px;
+    @media (max-width: max-large)
+      font-size: 21.25px
+      margin-bottom: 16px;
+    @media (max-width: max-medium)
+      font-size: 19px;
+      line-height: 120%;
+      margin-bottom 11px
   &__city
     font-size: 20.25px;
     line-height: 150%;
@@ -820,8 +843,18 @@
       outline 0
       padding: 10px 24px 10px 13px;
       align-items: center;
+      @media (max-width: max-large)
+        font-size: 16.5px;
+      @media (max-width: max-medium)
+        font-weight: 500;
+        font-size: 15.5px;
+        line-height: 140%;
       svg
         margin-right: 20px;
+        @media (max-width: max-large)
+          margin-right: 10px;
+        @media (max-width: max-medium)
+          width: 25px;
   &__centers
     margin 0 -15px
     display: flex;
@@ -829,10 +862,30 @@
   &__center
     margin 0 15px 29px
     width calc(100% / 3 - 30px)
+    @media (max-width: max-large)
+      width: 100%;
+      margin: 0 17px 16px;
+    @media (max-width: max-sm)
+      margin 0 15px 12px
+  &__back
+    margin 6px 0 20px
+    text-align left
+    @media (max-width: max-sm)
+      margin-bottom: 0 0 15px;
+    button.btn
+      font-size: 12px;
+      padding: 0 50px;
+      height: 30px;
+      margin-right 0
   .btn
     margin-right 45px
     padding 0 28px
 
+
+#tire-centers
+  .sect-record__title
+    @media (max-width: max-large)
+      display none
 
 .record-datepicker
   display: flex;
@@ -863,11 +916,15 @@
   flex-wrap: wrap;
   padding: 2px 9px 8px;
   justify-content: space-between;
+  @media (max-width: max-large)
+    padding: 0;
   &__day
     display: flex;
     flex-wrap: wrap;
     width 32%
     flex-direction column
+    @media (max-width: max-large)
+      width: 100%;
     &-name
       font-weight: 600;
       font-size: 18px;
@@ -879,8 +936,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content space-between
+      @media (max-width: max-large)
+        justify-content: flex-start;
     &-time
-      width 30%
+      width 29%
       margin: 3px;
       border-radius: 3px;
       background-color: #ECEFF1;
@@ -890,6 +949,8 @@
       padding: 8px 5px;
       text-align: center;
       cursor pointer
+      @media (max-width: max-large)
+        width: calc(100% / 4 - 6px);
       &.\--disabled
         opacity: .3;
         pointer-events: none;
@@ -926,6 +987,11 @@
   background-image: url(/img/common/bg-2.png);
   background-repeat: repeat;
   padding: 30px 0;
+  @media (max-width: max-large)
+    background-image none
+    padding: 42px 0 0
+  @media (max-width: max-medium)
+    padding: 30px 0;
   &.\--hidden
     display none
   &__content
@@ -933,6 +999,10 @@
     border-radius: 60px 10px;
     background-color white
     padding: 28px 28px 0
+    @media (max-width: max-large)
+      border: none;
+      border-radius: 0;
+      padding: 0;
   &__title
     font-weight: 600;
     font-size: 20.25px;
@@ -944,6 +1014,15 @@
     border: none;
     outline: 0;
     cursor: pointer;
+    @media (max-width: max-large)
+      font-size: 21.25px;
+      line-height: 110%;
+      text-align: center;
+      margin-bottom: 11px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 120%;
+      margin-bottom: 12px;
   &__storage
     border: 3px solid #ECEFF1;
     border-radius: 40px 5px;
@@ -952,6 +1031,14 @@
     padding: 25px 17px 19px;
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: max-large)
+      margin: 10px 0 0;
+      padding: 11px 17px 13px;
+      border-bottom: none;
+      border-radius: 40px 5px 0 0;
+    @media (max-width: max-medium)
+      margin: 13px 0 0;
+      padding: 15px 13px 19px;
     &-label
       font-weight: 600;
       font-size: 16px;
@@ -959,12 +1046,32 @@
       letter-spacing: 0.02em;
       width: 23%;
       padding-right: 20px;
+      @media (max-width: max-extra-large)
+        font-size: 15px;
+        line-height: 150%;
+        padding-right: 0;
+      @media (max-width: max-large)
+        width: 100%;
+        margin-bottom: 18px;
+      @media (max-width: max-medium)
+        text-align: center;
+        margin-bottom: 0
     &-info
       width: 77%;
       display: flex;
       flex-wrap: wrap;
+      @media (max-width: max-large)
+        width: 100%;
+        padding-right: 0;
+        margin: 0;
+      @media (max-width: max-medium)
+        text-align: center;
     &-radio
       padding-right: 29px;
+      @media (max-width: max-medium)
+        padding-right: 0
+        width 100%
+        margin-top: 21px;
       input[type="radio"]
         //display block
         &:checked
@@ -982,6 +1089,14 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        @media (max-width: max-large)
+          font-size: 12.5px;
+          line-height: 135%;
+        @media (max-width: max-medium)
+          font-size: 12px;
+          line-height: 130%;
+          text-align: left;
+          padding-left: 28px;
         &:before,
         &:after
           content ''
@@ -994,6 +1109,10 @@
           border: 2px solid accent-red
           left: 0;
           top 0
+          @media (max-width: max-large)
+            top: -4px;
+          @media (max-width: max-medium)
+            top: -3px;
         &:after
           width: 13px;
           height: 13px;
@@ -1002,14 +1121,33 @@
           top: 4px;
           opacity 0
           transition opacity .3s ease-in-out
+          @media (max-width: max-large)
+            top: 0px;
+          @media (max-width: max-medium)
+            top: 1px;
         .field
           width: 219px;
           margin-top: -11px;
           display none
+          @media (max-width: max-extra-large)
+            width: 179px;
+          @media (max-width: max-large)
+            width: 200px;
+            margin-top: -15px;
+          @media (max-width: max-medium)
+            width: 100%;
+            margin-top: 8px;
       &-text
         width: 200px;
         display: block;
         padding-right: 5px;
+        @media (max-width: max-large)
+          font-size: 12.5px;
+          line-height: 135%;
+          width 185px
+        @media (max-width: max-medium)
+          width: 100%;
+          padding-right: 0;
         span
           font-weight: 600;
           font-size: 11.75px;
@@ -1018,6 +1156,10 @@
           color: #B0BAC9;
           margin-top: 10px;
           display: none
+          @media (max-width: max-extra-large)
+            margin-top: 4px;
+            font-size: 11px;
+            line-height: 115%;
     &-tip
       background-color #ECEFF1
       border-radius: 4px;
@@ -1029,10 +1171,24 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      @media (max-width: max-extra-large)
+        font-size: 11.3px;
+        line-height: 130%;
+        margin-top: 9px;
+      @media (max-width: max-medium)
+        font-size: 11.54px;
+        text-align left
+        position relative
+        padding-left: 27px;
       &.\--hidden
         display none
       svg
         margin-right: 5px;
+        @media (max-width: max-medium)
+          margin-right 0
+          top: 9px;
+          left: 9px;
+          position: absolute;
     &-footer
       width 100%
       display flex
@@ -1040,6 +1196,12 @@
       justify-content space-between
       margin-top: 15px;
       align-items: flex-start;
+      @media (max-width: max-large)
+        margin-top: 0;
+        border: 3px solid #ECEFF1;
+        border-top: 0;
+        border-radius: 0 0 40px 5px;
+        padding: 0 17px 16px;
       &.\--comment-open
         align-items: flex-end;
         .record-order__storage-footer-comment-title
@@ -1049,6 +1211,9 @@
           display block
       &-comment
         width: 48%;
+        @media (max-width: max-medium)
+          width: 100%;
+          text-align: center;
         &-title
           font-weight: bold;
           font-size: 12.75px;
@@ -1061,28 +1226,56 @@
           border none
           outline 0
           cursor pointer
+          @media (max-width: max-medium)
+            font-size: 12px;
+            line-height: 130%;
           &:before
             content 'Добавить комментарий к заказу'
         &-sect
           display none
           margin-top: 6px;
+          @media (max-width: max-medium)
+            margin-top: 12px;
           .field
             margin-bottom 0
       &-btn
         width: 24%;
+        @media (max-width: max-large)
+          width: 30%;
+        @media (max-width: max-medium)
+          width: 100%;
+          margin-top: 20px;
+          text-align center
+        .btn
+          @media (max-width: max-large)
+            height: 40px;
+          @media (max-width: max-medium)
+            max-width 200px
 
 .record-success
   background-image: url(/img/common/bg-2.png);
   background-repeat: repeat;
   padding: 31px 0;
   display none
+  @media (max-width: max-large)
+    padding: 23px 0;
+  @media (max-width: max-medium)
+    background-image none
+    padding: 12px 0;
   &__msg
     font-weight: bold;
     font-size: 18px;
     line-height: 145%;
     letter-spacing: 0.02em;
-    display: flex;
-    align-items: center;
+    position: relative;
+    padding-left: 33px;
+    @media (max-width: max-large)
+      font-size: 16.5px;
+      padding-left: 25px;
+    @media (max-width: max-medium)
+      font-size: 15.5px;
+      line-height: 140%;
+      padding-left: 26px;
     &:before
       font-family: "fontello";
       -webkit-font-smoothing: antialiased;
@@ -1090,13 +1283,28 @@
       content: '\e806';
       width: 27px;
       height: 27px;
+      position: absolute;
+      left: 0;
+      top: 0;
       margin-right: 11px;
       border-radius: 50%;
+      display: inline-block;
       background-color: #00c48c;
       color: #fff;
       font-size: 16px;
       line-height: 27px;
       text-align: center;
+      @media (max-width: max-large)
+        width: 21px;
+        height: 21px;
+        font-size: 13px;
+        line-height: 21px;
+      @media (max-width: max-medium)
+        width: 20px;
+        height: 20px;
+        top: 1px;
+        font-size: 12px;
+        line-height: 20px;
   &__info
     border: 3px solid #DFE2E9;
     background-color white
@@ -1105,12 +1313,25 @@
     margin-top: 25px;
     padding: 21px 27px 8px
     min-width: 50%;
+    @media (max-width: max-large)
+      margin-top: 11px;
+      border-radius: 30px 10px;
+      padding: 18px 22px 0
+      width: 100%;
+    @media (max-width: max-medium)
+      padding: 7px 22px 8px;
+      margin-top: 17px;
+      border-radius: 30px 5px;
+      width 100%
     &-label
       font-size: 12.75px;
       line-height: 150%;
       letter-spacing: 0.04em;
       color: #566069;
       margin-bottom: 4px;
+      @media (max-width: max-large)
+        font-size: 12.5px;
+        line-height: 135%;
     &-value
       font-weight: 600;
       font-size: 14.5px;
@@ -1120,6 +1341,20 @@
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 14px;
+      @media (max-width: max-large)
+        margin-bottom: 22px;
+      @media (max-width: max-medium)
+        font-size: 13px;
+        line-height: 135%;
+      &.\--location
+        position relative
+        padding-left: 22px;
+        svg
+          @media (max-width: max-large)
+            position: absolute;
+            left: 0;
+            top: 1px;
+            margin-right: 0;
       svg
         margin-right: 4px;
     &-date,
@@ -1140,6 +1375,9 @@
   &__content
     display: flex;
     flex-direction: column;
+    &.\--hidden
+      @media (max-width: max-medium)
+        display none
     .centers
       order 1
     #record-bot
@@ -1152,5 +1390,20 @@
       order 5
     #selected-center
       order 6
-    #record-order
+    #record-info-mob
       order 7
+    #record-order
+      order 8
+
+
+#record-info-mob
+  display none
+  @media (max-width: max-large)
+    display block
+  &.\--hidden
+    display none
+
+#timepicker-modal,
+#datepicker-modal
+  @media (min-width: max-large)
+    display none

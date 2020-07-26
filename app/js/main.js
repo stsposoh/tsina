@@ -86,6 +86,71 @@ const recordOrder = $('#record-order');
 const recordSuccessSect = $('#record-success');
 const recordStepsSect = $('#record-steps');
 
+//mobile
+const datePickerModal = $('#datepicker-modal');
+const timePickerModal = $('#timepicker-modal');
+const recordInfoMob = $('#record-info-mob');
+
+$('[name="selected-city"]').on('change', function () {
+  record.tireStorage = 0;
+  record.selectedCity = $(this).val().toLowerCase();
+
+  if(recordSect.hasClass('--hidden')) {
+    $('#record-bot').addClass('--hidden');
+  }
+  tireCentersSect.removeClass('--hidden');
+});
+
+$('.js-show-datepicker-modal').on('click', function () {
+  datePickerModal.addClass('--open');
+  record.initCalendarMob();
+});
+
+tireCentersSect.on('click', '.tire-center-card-small__mob-time', function () {
+  tireCentersSect.find('.js-select-center').each(function () {
+    $(this).addClass('--disabled');
+  });
+
+  tireCentersSect.find('.tire-center-card-small__mob-time').each(function () {
+    $(this).removeClass('--checked');
+  });
+  $(this).addClass('--checked');
+  $(this).parents('.tire-center-card-small').find('.js-select-center').removeClass('--disabled');
+  record.selectedTime = $(this).text();
+});
+
+$('.js-show-timepicker-modal').on('click', function () {
+  timePickerModal.addClass('--open');
+});
+
+timePickerModal.find('.timepicker').on('click', function (e) {
+  if($(e.target).hasClass('timepicker__day-time')) {
+    record.selectedTime = $(e.target).text();
+    timePickerModal.removeClass('--open');
+  }
+});
+
+$('.js-select-center').on('click', function () {
+  record.selectedCenter = $(this).parents('.tire-center-card-small').data('center');
+  recordInfoMob.find('.js-chosen-center').text(record.selectedCenter);
+  recordInfoMob.find('.js-chosen-date').text(record.selectedDate);
+  recordInfoMob.find('.js-chosen-time').text(record.selectedTime);
+
+  tireCenters.addClass('--hidden');
+  tireCentersSect.addClass('--hidden');
+  recordInfoMob.removeClass('--hidden');
+  recordOrder.removeClass('--hidden');
+  $('html, body').animate({scrollTop: '0px'}, 300);
+});
+
+$('.js-record-back').on('click', function () {
+  recordOrder.addClass('--hidden');
+  recordInfoMob.addClass('--hidden');
+  tireCenters.removeClass('--hidden');
+  $('#record-bot').removeClass('--hidden');
+});
+
+//desktop
 tireCenters.on('click', '.tire-center-btn', function () {
   record.tireStorage = null;
   tireCenters.find('.tire-center-btn').each(function () {
@@ -141,7 +206,7 @@ $('.js-tire-storage').on('click', function () {
   record.tireStorage = $(this).data('storage');
 });
 
-$('.timepicker').on('click', function (e) {
+recordDateSect.find('.timepicker').on('click', function (e) {
   if($(e.target).hasClass('timepicker__day-time')) {
     $('.timepicker__day-time').each(function () {
       $(this).removeClass('--checked');
@@ -224,25 +289,43 @@ const record = {
   selectedCity: null,
   selectedCenter: '',
   tireStorage: null,
-  selectedDate: '',
+  selectedDate: (new Date()).toLocaleDateString('ru-RU'),
   selectedTime: '',
   calendar: null,
   //1 - by date, 2 - by center
   recordMethod: 1,
   initCalendar() {
-    this.calendar = $("#basicDate").flatpickr({
+    this.calendar = $("#basic-date").flatpickr({
       locale: "ru",
       inline: true,
       enableTime: false,
       dateFormat: "Y-m-d",
       minDate: "today",
-      maxDate: new Date().fp_incr(40),
+      //maxDate: new Date().fp_incr(40),
       disable: ["2020-07-30", "2020-07-29"],
       onChange: function(selectedDates, dateStr, instance) {
         if(record.tireStorage === null) {
           tireStorageModal.addClass('--open');
         }
         record.getTimesbyDate(dateStr);
+      },
+    });
+  },
+  initCalendarMob() {
+    this.calendar = $("#basic-date-mob").flatpickr({
+      locale: "ru",
+      inline: true,
+      enableTime: false,
+      dateFormat: "Y-m-d",
+      minDate: "today",
+      //maxDate: new Date().fp_incr(40),
+      disable: ["2020-07-30", "2020-07-29"],
+      onChange: function(selectedDates, dateStr, instance) {
+        record.selectedDate = dateStr;
+        datePickerModal.removeClass('--open');
+        $('.tire-center-card-small__mob-date').each(function () {
+          $(this).text(dateStr)
+        });
       },
     });
   },

@@ -37,7 +37,7 @@
             <div class="record-datepicker__date">
               <div class="record-datepicker__label">Выберите дату записи:</div>
               <div class="record-datepicker__picker">
-                <input type="text" id="basicDate">
+                <input type="text" id="basic-date">
               </div>
             </div>
 
@@ -172,6 +172,54 @@
         </div>
       </div>
 
+      <div class="sect-record --hidden" id="record-info-mob">
+        <div class="wrapper">
+          <div class="sect-record__back">
+            <button class="btn --red-transparent js-record-back">Назад</button>
+          </div>
+          <div class="tire-center-card-small">
+            <div class="tire-center-card-small__address js-chosen-center"></div>
+            <button class="tire-center-card-small__btn btn --red-transparent --middle js-check-tire-center"></button>
+            <div class="tire-center-card-small__info-wrap">
+              <div class="tire-center-card-small__info">
+                <div class="tire-center-card-small__info-label">Время работы:</div>
+                <div class="tire-center-card-small__info-value">Пн. - Вс., 8:00 - 20:00.  Без перерыва</div>
+              </div>
+              <div class="tire-center-card-small__info">
+                <div class="tire-center-card-small__info-label">Телефон:</div>
+                <a href="tel:0671303603" class="tire-center-card-small__info-value">(067) 130-36-03</a>
+              </div>
+              <div class="tire-center-card-small__info">
+                <div class="tire-center-card-small__info-label">Автомойка RiM Detailing Car Wash:</div>
+                <a href="tel:0671303603" class="tire-center-card-small__info-value">(067) 130-36-03</a>
+              </div>
+            </div>
+            <div class="tire-center-card-small__mob">
+              <div class="tire-center-card-small__mob-date-sect">
+                <div class="tire-center-card-small__mob-label">Выбранная дата записи:</div>
+                <div class="tire-center-card-small__mob-date-block">
+                  <span class="tire-center-card-small__mob-date">
+                    <svg viewBox="0 0 20 20" width="20"><use xlink:href="./img/svg/svg-sprite.svg#calendar"></use></svg>
+                    <span class="js-chosen-date"></span>
+                  </span>
+                  <button class="btn --red-transparent js-show-datepicker-modal">изменить дату</button>
+                </div>
+              </div>
+              <div class="tire-center-card-small__mob-time-sect">
+                <div class="tire-center-card-small__mob-label">Выбранное время записи:</div>
+                <div class="tire-center-card-small__mob-date-block">
+                  <span class="tire-center-card-small__mob-date">
+                    <svg viewBox="0 0 20 20" width="20"><use xlink:href="./img/svg/svg-sprite.svg#clock"></use></svg>
+                    <span class="js-chosen-time"></span>
+                  </span>
+                  <button class="btn --red-transparent js-show-timepicker-modal">выбрать другое время</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="record-order --hidden" id="record-order">
         <div class="wrapper">
           <div class="record-order__content">
@@ -263,7 +311,7 @@
       <div class="record-success__msg"><span class="js-user-name"></span>, вы записались на шиномонтаж</div>
       <div class="record-success__info">
         <div class="record-success__info-label">Ждем вас по адресу:</div>
-        <div class="record-success__info-value">
+        <div class="record-success__info-value --location">
           <svg viewBox="0 0 20 20" width="20"><use xlink:href="./img/svg/svg-sprite.svg#location-2"></use></svg>
           <span class="js-chosen-center"></span>
         </div>

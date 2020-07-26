@@ -1123,6 +1123,11 @@
     display none
   .numInputWrapper
     pointer-events none
+    @media (max-width: max-large)
+      font-size: 17px;
+  .flatpickr-current-month
+    @media (max-width: max-medium)
+      padding-top 0
   .flatpickr-current-month input.cur-year[disabled],
   .flatpickr-monthDropdown-months
     font-weight: 600;
@@ -1131,11 +1136,19 @@
     color accent-dark
     letter-spacing: 0.04em;
     padding-left 0
+    @media (max-width: max-large)
+      font-size: 15px;
   .flatpickr-months
     margin-bottom: 30px;
+    @media (max-width: max-medium)
+      margin-bottom: 0
     .flatpickr-next-month,
     .flatpickr-prev-month
       top: 3px;
+      @media (max-width: max-large)
+        //top: -7px;
+      @media (max-width: max-medium)
+        top -7px
   .flatpickr-weekday
     font-size: 16px;
     line-height: 150%;
@@ -1150,13 +1163,18 @@
       max-width: 100%;
       justify-content: flex-start;
   .flatpickr-day
-    width: 35px;
+    width: 32px;
     display: inline-block;
-    flex-basis: 35px;
+    flex-basis: 32px;
     max-width: 100%;
-    margin: 0 6px;
-    height: 35px;
-    line-height: 35px;
+    margin: 2px 6px;
+    height: 32px;
+    line-height: 32px;
+    @media (max-width: max-medium)
+      width: 28px;
+      flex-basis: 28px;
+      height: 28px;
+      line-height: 28px;
     &.today
       border-color #ECEFF1
     &.selected
@@ -1164,13 +1182,14 @@
       color white
       border-color accent-red
     &.flatpickr-disabled
-      font-size: 14.5px;
-      line-height: 270%;
+      //font-size: 14.5px;
+      //line-height: 270%;
       color: #DFE2E9;
       pointer-events none
       cursor default
 
-#basicDate
+#basic-date
+#basic-date-mob
   display none
 
 
