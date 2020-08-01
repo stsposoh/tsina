@@ -567,7 +567,7 @@
       @media (max-width: max-medium)
         font-size: 14px;
         line-height: 130%;
-        margin-bottom: 4px;
+        margin-bottom: 9px;
         margin-left: 14px
     &-icon
       margin-right: 6px;
@@ -593,8 +593,6 @@
     &-btn
       display: block;
       padding: 7px 0 0;
-      @media (max-width: max-medium)
-        padding: 16px 0 0;
     .phone-modal__icon
       margin-top: 17px;
       width: 32px;
@@ -615,11 +613,13 @@
       &:after
         display none
     .phone-modal__tip
-      margin-left: 33px !important
+      margin-left: 40px !important
       white-space nowrap
       transform: translateY(-13px);
+      @media (max-width: max-large)
+        margin-left: 33px !important;
       @media (max-width: max-medium)
-        margin-left: 0 !important
+        margin-left: 6px !important
         transform: translateY(-3px);
         margin-bottom: 10px;
 
