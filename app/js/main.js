@@ -1,10 +1,40 @@
 $(window).on('resize', function() {
-  if ($(window).width() < 768) {
+  if (mywindow.width() < 768) {
     $('.listing-grid__cards').removeClass('--horizontal-cards');
     $('.toggle-view__btn[data-listing-view="list"]').removeClass('--active');
     $('.toggle-view__btn[data-listing-view="tile"]').addClass('--active');
   }
+
+  if ($(window).width() < 992) {
+    $(window).on('scroll', toggleHeader);
+  } else {
+    $(window).off('scroll', toggleHeader)
+  }
 });
+
+//fixed header for mob
+if($(window).width() < 992) {
+  $(window).on('scroll', toggleHeader);
+}
+
+var mywindow = $(window);
+var mypos = mywindow.scrollTop();
+var up = false;
+var newscroll;
+
+function toggleHeader () {
+  newscroll = mywindow.scrollTop();
+
+  if (newscroll > mypos && !up) {
+    console.log(1111)
+    $('.header').addClass('--hide-controls');
+    up = !up;
+  } else if(newscroll < mypos && up) {
+    $('.header').removeClass('--hide-controls');
+    up = !up;
+  }
+  mypos = newscroll;
+}
 
 
 $('.js-tabs').on('click', '[data-tab]', function () {

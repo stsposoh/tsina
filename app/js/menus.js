@@ -1,6 +1,13 @@
 $('.js-toggle-mob-menu').on('click', function (e) {
   e.stopPropagation();
-  $(this).toggleClass('--active');
+  if($(this).hasClass('--active')) {
+    $(this).removeClass('--active');
+    $('body').css('overflow', '');
+  } else {
+    $(this).addClass('--active');
+    $('body').css('overflow', 'hidden');
+  }
+
   $(this).find('.burger').toggleClass('--open');
   $('.mob-menu').toggleClass('--open');
   $('.js-help-links').removeClass('--active');
@@ -20,6 +27,7 @@ $(document).on('click', function (e){
     mobMenu.removeClass('--open');
     $('.js-toggle-mob-menu').removeClass('--active');
     $('.burger').removeClass('--open');
+    $('body').css('overflow', '');
   }
 
   const helpLinks = $(".js-help-links");

@@ -14,6 +14,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+  &.\--hide-controls
+    .header__aside
+      @media (max-width: max-large)
+        display: none;
   &.\--narrow
     .header__content
       padding-bottom: 7px;
