@@ -682,6 +682,10 @@
     flex-flow: row wrap;
     justify-content: flex-start
     padding: 15px 13px 0;
+    @media (max-width: max-medium)
+      overflow-x: auto;
+      white-space: nowrap;
+      display: block;
     &-letter
       position relative
       font-size: 16px;
@@ -709,42 +713,6 @@
         width: 37px;
       &:first-of-type:before
         border-radius: 20px 0 0 20px !important
-      &:nth-of-type(7n)
-        @media (max-width: max-sm)
-          border-radius: 20px
-        &:before
-          @media (max-width: max-sm)
-            border-radius: 0 20px 20px 0 !important;
-      &:nth-of-type(7n+1)
-        &:before
-          @media (max-width: max-sm)
-            border-radius: 20px 0 0 20px;
-      &:nth-of-type(9n)
-        @media (max-width: max-medium)
-          border-radius: 20px
-        @media (max-width: max-sm)
-          border-radius: 25px 25px 3px 25px;
-        &:before
-          @media (max-width: max-medium)
-            border-radius: 0 20px 20px 0;
-          @media (max-width: max-sm)
-            border-radius: 0
-      &:nth-of-type(9n+1)
-        &:before
-          @media (max-width: max-medium)
-            border-radius: 20px 0 0 20px;
-          @media (max-width: max-sm)
-            border-radius: 0
-      &:nth-of-type(16n)
-        &:before
-          @media (max-width: max-medium)
-            border-radius: 0
-      &:nth-of-type(16n+1)
-        &:before
-          @media (max-width: max-medium)
-            border-radius: 20px 0 0 20px;
-          @media (max-width: max-sm)
-            border-radius: 0
       &:nth-of-type(17)
         border-radius: 20px
         @media (max-width: max-medium)
@@ -756,8 +724,6 @@
       &:nth-of-type(18):before
         border-radius: 20px 0 0 20px;
         @media (max-width: max-medium)
-          border-radius: 0 20px 20px 0;
-        @media (max-width: max-sm)
           border-radius: 0
       &:last-of-type
         border-radius: 20px
