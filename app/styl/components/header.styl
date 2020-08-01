@@ -25,6 +25,16 @@
         padding: 0 15px;
     .header__phone
       width auto
+    .phone-modal__modal
+      @media (max-width: max-sm)
+        left: -15px;
+      @media (max-width: 459px)
+        left: -80px;
+    .header__logo
+      @media (max-width: max-medium)
+        width: calc(100% - 200px);
+      @media (max-width: 459px)
+        width: calc(100% - 140px);
     .phone-list__main
       display: flex;
       align-items: center;
@@ -42,11 +52,17 @@
       display block
       @media (max-width: max-medium)
         margin-left: 9px;
+      @media (max-width: 459px)
+        //display none
     .header__schedule
       span
         margin-left: 3px;
     .header__info
       padding-bottom 0
+      @media (max-width: max-medium)
+        width: 160px;
+      @media (max-width: 459px)
+        width: 100px;
   &__aside
     overflow-x: hidden;
     overflow-y: auto;
@@ -88,6 +104,9 @@
       padding-left: 0
       height: 40px;
       width: 510px;
+      margin-top: 5px;
+      order 5
+    @media (max-width: max-sm)
       margin-top: 0
     &:before
       content ''
@@ -102,7 +121,9 @@
         background-color: #DFE2E9;
         z-index: 2;
       @media (max-width: max-medium)
-        top: 59px;
+        top: 53px;
+      @media (max-width: max-sm)
+        top: 49px;
     &-stub
       box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
       height: 65px;
@@ -121,6 +142,8 @@
         border-top: none;
         border-bottom: none;
         margin-bottom 0
+      @media (max-width: max-medium)
+        width: calc(100% / 6 + 1px);
       &.\--burger
         height: 100%;
         overflow: hidden;
@@ -131,6 +154,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
+        @media (max-width: max-medium)
+          display none
       &.\--active
         @media (max-width: max-extra-large)
           background-color accent-red
@@ -233,11 +258,12 @@
         right: calc((100% - 688px) / 2);
         top: 116px;
       @media (max-width: max-medium)
-        top: 100px;
+        top: 95px;
         width: 289px;
         right: calc((100% - 510px) / 2);
       @media (max-width: max-sm)
         right 15px
+        top: 90px;
       &-title
         font-weight: bold;
         font-size: 18px;
@@ -262,6 +288,14 @@
             line-height: 135%;
           &:hover
             color accent-red
+  &__burger
+    display none
+    @media (max-width: max-medium)
+      order 1
+      display block
+      width 35px
+    @media (max-width: max-sm)
+      width 30px
   &__logo
     position absolute
     top: 0;
@@ -274,7 +308,10 @@
       left: calc((100% - 695px) / 2);
     @media (max-width: max-medium)
       position static
-      width 54px
+      width: calc(100% - 276px);
+      order 2
+    @media (max-width: max-sm)
+      width: calc(100% - 153px);
   &__content
     display: flex;
     flex-wrap: wrap;
@@ -282,6 +319,7 @@
     align-items: center;
     padding-top: 8px;
     padding-bottom: 7px;
+    width: 100%;
     @media (max-width: max-extra-large)
       justify-content: flex-end;
       padding-bottom 0
@@ -304,12 +342,15 @@
       width: calc(100% - 457px) !important
     @media (max-width: max-medium)
       margin-left: 0
+      order 3
+      width: 40px !important
+      padding: 0 8px;
       transform: translateY(-3px);
-      width: calc(100% - 250px) !important
-    @media (max-width: 459px)
-      width: calc(100% - 189px) !important
-    @media (max-width: 399px)
-      width: calc(100% - 159px) !important
+      //width: calc(53% - 30px) !important;
+    //@media (max-width: 459px)
+    //  width: calc(100% - 189px) !important
+    //@media (max-width: 399px)
+    //  width: calc(100% - 159px) !important
     .phone-list__icon
       @media (max-width: max-medium)
         display none
@@ -330,16 +371,20 @@
       justify-content: flex-end;
       padding-bottom: 5px;
     @media (max-width: max-medium)
-      //padding-left: 8px;
-      width: auto;
+      order 4
+      width: 200px;
+      flex-grow: 0;
       padding-bottom: 0
+    @media (max-width: max-sm)
+      width: 83px;
     button
       @media (max-width: max-extra-large)
         height: 38px;
+      @media (max-width: max-medium)
+        padding: 0 6px;
       @media (max-width: max-sm)
         font-size: 0;
         margin-right: 0;
-        padding: 0 8px;
         box-shadow: none !important;
         border: none !important;
       &:first-of-type
@@ -358,7 +403,7 @@
     @media (max-width: max-medium)
       display: flex;
       align-items: flex-end;
-    @media (max-width: 399px)
+    @media (max-width: 459px)
       flex-direction: column;
     span
       &:first-of-type

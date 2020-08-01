@@ -297,7 +297,7 @@
   @media (max-width: max-medium)
     box-shadow: none;
     border-radius: 0;
-    width: 52px;
+    width: 100%
     padding: 9px 0 10px;
   &.\--style-2
     width: auto
@@ -333,6 +333,9 @@
       width: 140px;
       @media (max-width: max-large)
         width: 129px;
+      @media (max-width: max-medium)
+        width: 96px;
+        margin-left: 6px;
     .block-logo__text
       width: 193px;
       margin-top: 8px;
@@ -342,12 +345,13 @@
     @media (max-width: max-large)
       width: 33px;
     @media (max-width: max-medium)
-      width: 38px;
+      width: 28px;
   &__name
     margin-left: 10px;
     width: 131px;
     @media (max-width: max-medium)
-      display none
+      width: 96px;
+      margin-left: 6px;
   &__text
     width: 182px;
     @media (max-width: max-large)
@@ -441,7 +445,7 @@
         width: 26px;
         padding-right: 5px;
       @media (max-width: max-medium)
-        display none
+        padding: 0;
     .phone-modal__main
       width: calc(100% - 36px);
       @media (max-width: max-medium)
@@ -481,12 +485,16 @@
       width: 48px;
       margin-top: 11px;
     @media (max-width: max-medium)
-      display none
+      padding: 0;
+      width: 100%;
+      text-align: center;
     svg
       width 100%
   &__main
     position: relative;
     z-index 1
+    @media (max-width: max-medium)
+      display none
     &-phone
       font-weight: 600;
       font-size: 20.25px;
@@ -551,10 +559,12 @@
     transition opacity .3s, transform .3s ease-in-out
     @media (max-width: max-medium)
       top: 0
-      left: -12px;
+      left: -16px;
       width: 220px;
       border-radius: 40px 5px;
       padding: 5px 20px 24px;
+    @media (max-width: max-sm)
+      left: -97px;
     &-item
       display: flex;
       align-items: center;
