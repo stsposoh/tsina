@@ -1497,7 +1497,8 @@
         line-height: 135%;
       &.\--location
         position relative
-        padding-left: 22px;
+        @media (max-width: max-large)
+          padding-left: 22px;
         svg
           @media (max-width: max-large)
             position: absolute;

@@ -115,14 +115,10 @@ export const libs = () => {
 
 export const js = () => {
   return src([
-    'app/js/account.js',
-    'app/js/animations.js',
     'app/js/sliders.js',
     'app/js/menus.js',
-    'app/js/cart.js',
     'app/js/modals.js',
     'app/js/forms.js',
-    'app/js/product.js',
     'app/js/filters.js',
     'app/js/main.js',
   ])

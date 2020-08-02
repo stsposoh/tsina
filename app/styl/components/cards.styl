@@ -1271,6 +1271,8 @@
       display: inline-block;
       letter-spacing: 0.04em;
       color: #566069
+      @media (max-width: max-medium)
+        color accent-dark
     a.tire-center-card-small__info-value
       white-space nowrap
   &__btn
@@ -1307,13 +1309,12 @@
         content 'Выбрано'
         color accent-green
   &__mob
-    margin: 15px -10px 0;
-    border-top: 1px solid #ECEFF1;
     display none
+    border-top: 1px solid #ECEFF1;
+    margin: 12px -13px 0;
+    padding: 0 6px;
     @media (max-width: max-large)
       display block
-      margin: 12px -13px 0;
-      padding: 0
     &-label
       font-size: 11px;
       line-height: 115%;
@@ -1391,8 +1392,6 @@
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          //padding: 0 13px 7px;
-          //border-bottom: 1px solid #ECEFF1;
           padding: 16px 13px 15px;
           border-bottom: none;
         @media (max-width: max-sm)
@@ -1413,25 +1412,10 @@
           width 100%
     &-btn
       background-color #ECEFF1
-      padding: 13px;
+      border-top: 1px solid #ECEFF1;
+      margin: 0 -13px
       text-align: center;
+      padding: 15px;
       .btn
         margin-right: 0;
-        min-width: 200px;
-        @media (max-width: max-large)
-          height: 39px;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        height: 34px;

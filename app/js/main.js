@@ -26,7 +26,6 @@ function toggleHeader () {
   newscroll = mywindow.scrollTop();
 
   if (newscroll > mypos && !up) {
-    console.log(1111)
     $('.header').addClass('--hide-controls');
     up = !up;
   } else if(newscroll < mypos && up) {
@@ -138,19 +137,11 @@ $('[name="selected-city"]').on('change', function () {
 $('.js-show-datepicker-modal').on('click', function () {
   datePickerModal.addClass('--open');
   record.initCalendarMob();
+  record.selectedCenter = $(this).parents('.tire-center-card-small').data('center');
 });
 
-tireCentersSect.on('click', '.tire-center-card-small__mob-time', function () {
-  tireCentersSect.find('.js-select-center').each(function () {
-    $(this).addClass('--disabled');
-  });
-
-  tireCentersSect.find('.tire-center-card-small__mob-time').each(function () {
-    $(this).removeClass('--checked');
-  });
-  $(this).addClass('--checked');
-  $(this).parents('.tire-center-card-small').find('.js-select-center').removeClass('--disabled');
-  record.selectedTime = $(this).text();
+$('.js-show-change-date-modal').on('click', function () {
+  datePickerModal.addClass('--open');
 });
 
 $('.js-show-timepicker-modal').on('click', function () {
@@ -160,21 +151,21 @@ $('.js-show-timepicker-modal').on('click', function () {
 timePickerModal.find('.timepicker').on('click', function (e) {
   if($(e.target).hasClass('timepicker__day-time')) {
     record.selectedTime = $(e.target).text();
+    timePickerModal.find('.timepicker__day-time').each(function () {
+      $(this).removeClass('--checked');
+    });
+    $(e.target).addClass('--checked');
     timePickerModal.removeClass('--open');
+
+    recordInfoMob.find('.js-chosen-center').text(record.selectedCenter);
+    recordInfoMob.find('.js-chosen-date').text(record.selectedDate);
+    recordInfoMob.find('.js-chosen-time').text(record.selectedTime);
+    tireCenters.addClass('--hidden');
+    tireCentersSect.addClass('--hidden');
+    recordInfoMob.removeClass('--hidden');
+    recordOrder.removeClass('--hidden');
+    $('html, body').animate({scrollTop: '0px'}, 300);
   }
-});
-
-$('.js-select-center').on('click', function () {
-  record.selectedCenter = $(this).parents('.tire-center-card-small').data('center');
-  recordInfoMob.find('.js-chosen-center').text(record.selectedCenter);
-  recordInfoMob.find('.js-chosen-date').text(record.selectedDate);
-  recordInfoMob.find('.js-chosen-time').text(record.selectedTime);
-
-  tireCenters.addClass('--hidden');
-  tireCentersSect.addClass('--hidden');
-  recordInfoMob.removeClass('--hidden');
-  recordOrder.removeClass('--hidden');
-  $('html, body').animate({scrollTop: '0px'}, 300);
 });
 
 $('.js-record-back').on('click', function () {
@@ -357,11 +348,11 @@ const record = {
       onChange: function(selectedDates, dateStr, instance) {
         record.selectedDate = dateStr;
         datePickerModal.removeClass('--open');
-        $('.tire-center-card-small__mob-date').each(function () {
-          $(this).text(dateStr)
-        });
+        timePickerModal.addClass('--open');
       },
     });
+
+    record.calendar.setDate(new Date(record.selectedDate));
   },
   getTimesbyDate(dateStr) {
     //console.log(dateStr);
