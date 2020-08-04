@@ -129,12 +129,17 @@
         width: 18%;
     .advantage__img
       height: 63px;
+      @media (max-width: max-medium)
+        height: auto;
     .advantages__content
       @media (max-width: max-medium)
         flex-direction: row;
-    .advantage__img
-      @media (max-width: max-medium)
-        height: auto;
+    .advantage__text
+      font-size: 11.75px;
+      line-height: 135%;
+      padding: 5px
+      @media (max-width: max-large)
+        display none
   &__content
     display: flex;
     flex-wrap: wrap;

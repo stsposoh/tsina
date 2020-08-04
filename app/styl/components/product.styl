@@ -179,45 +179,37 @@
     .product-table__header-col,
     .product-table__col
       &.\--article
+        width: 11%;
         @media (max-width: max-extra-large)
-          width: 10%;
-          order 1
+          width: 15%;
         @media (max-width: max-medium)
           width: 18%;
       &.\--size
+        width: 18%;
         @media (max-width: max-extra-large)
-          //width: 18%;
-          order 2
+          width: 23%;
         @media (max-width: max-medium)
-          //width: 14%;
+          width 27%
           border-bottom 1px solid #DFE2E9
-      &.\--indices
+      &.\--country
+        width: 22%;
         @media (max-width: max-extra-large)
-          order 6
+          width: 29%;
+        @media (max-width: max-medium)
+          width 27%
+          border-right 1px solid #DFE2E9
+      &.\--spikes
+        width: 22%;
+        @media (max-width: max-extra-large)
+          width 33%
+        @media (max-width: max-medium)
+          width 28%
+      &.\--indices
+        width: 27%;
+        @media (max-width: max-extra-large)
+          width: 42%;
         @media (max-width: max-medium)
           width 100%
-      &.\--country
-        @media (max-width: max-extra-large)
-          order 3
-        @media (max-width: max-medium)
-          //
-      &.\--year
-        @media (max-width: max-extra-large)
-          order 4
-        @media (max-width: max-medium)
-          //
-      &.\--amount
-        @media (max-width: max-extra-large)
-          order 5
-          //width: 11%;
-        @media (max-width: max-medium)
-          //width: 9%;
-          border-bottom 1px solid #DFE2E9
-      &.\--price
-        @media (max-width: max-extra-large)
-          order 7
-        @media (max-width: max-medium)
-          //
   &__header,
   &__body
     border: 4px solid #DFE2E9;
@@ -236,23 +228,19 @@
       font-size: 11.75px;
       line-height: 135%;
       border-right 1px solid white
-      padding: 16px 8px;
-      white-space: nowrap;
+      padding: 17px 8px 13px;
+      display flex
+      align-items center
+      justify-content center
       @media (max-width: max-extra-large)
-        text-overflow: ellipsis;
-        overflow: hidden;
         font-size: 11.54px;
         padding: 16px 4px;
         line-height: 130%;
       @media (max-width: max-medium)
         font-size: 11px;
         line-height: 115%;
-        padding: 15px 5px;
-      &.\--indices,
-      &.\--price
-        @media (max-width: max-medium)
-          display none
-      &.\--price
+        padding: 12px 10px 14px;
+      &.\--indices
         @media (max-width: max-extra-large)
           display none
   &__body
@@ -270,57 +258,42 @@
       letter-spacing: 0.04em;
       text-align center
       &.\--article
-        width: 11%;
-        @media (max-width: max-medium)
-          width: 18%;
-          border-bottom 1px solid #DFE2E9
-      &.\--country
-        width 13%
+        width: 16%;
         @media (max-width: max-extra-large)
-          width 14%
-        @media (max-width: max-medium)
-          width: 20%;
-          border-bottom 1px solid #DFE2E9
-      &.\--year
-        width 7%
-        @media (max-width: max-extra-large)
-          width 8%
-        @media (max-width: max-medium)
-          width: 16%;
-          border-bottom 1px solid #DFE2E9
-      &.\--spikes
-        width 11%
-        @media (max-width: max-extra-large)
-          width 16%
-        @media (max-width: max-medium)
-          width: 27%;
-          border-bottom 1px solid #DFE2E9
-      &.\--gain
-        width 12%
+          width 23%
         @media (max-width: max-medium)
           width: 19%;
-          border-right none
           border-bottom 1px solid #DFE2E9
-      &.\--indices
-        width 26%
+      &.\--country
+        width 25%
+        @media (max-width: max-extra-large)
+          width 38%
+        @media (max-width: max-medium)
+          width: 35%;
+          border-bottom 1px solid #DFE2E9
+      &.\--spikes
+        width 24%
         @media (max-width: max-extra-large)
           width 39%
-          border-right none
+          border-right: none
         @media (max-width: max-medium)
-          width 100%
-          justify-content: flex-end;
-          padding: 7px 9px;
+          width: 46%;
           border-bottom 1px solid #DFE2E9
-      &.\--price
-        width 20%
+      &.\--indices
+        width 35%
         border-right none
         @media (max-width: max-extra-large)
-          width 100%
-          padding: 10px;
-          background-color #ECEFF1
+          width 42%
+          border-top: 3px solid #eceff1;
+          border-bottom: 3px solid #eceff1;
+          border-right none
+          padding: 7px 2px;
         @media (max-width: max-medium)
-          border-bottom: none;
-          padding: 7px 10px;
+          width 100%
+          border-top: none
+          border-bottom: none
+          justify-content: flex-end;
+          padding: 7px 9px;
       &.\--size
         width: 14%;
         @media (max-width: max-extra-large)
@@ -335,13 +308,9 @@
           width: 16%;
           border-right none
   &__row
-    border-bottom 1px solid #DFE2E9
     &:last-of-type
-      border-bottom none
-      .product-table__col
-        &:last-of-type
-          @media (max-width: max-extra-large)
-            border-radius: 0px 0px 34px 1px;
+      .product-table__order
+        border-radius: 0px 0px 34px 1px;
   &__col
     border-right 1px solid #DFE2E9
     color: #0C0033;
@@ -353,11 +322,11 @@
     font-size: 12.75px;
     line-height: 150%;
     @media (max-width: max-extra-large)
-      padding: 11px 2px;
+      padding: 15px 2px;
     @media (max-width: max-medium)
       font-size: 12px;
       line-height: 130%;
-      padding: 17px 5px;
+      padding: 15px 5px 9px;
       text-overflow: ellipsis;
       overflow: hidden;
     &.\--size
@@ -365,35 +334,112 @@
       color accent-red
     &:last-of-type
       justify-content: flex-end;
+  &__order
+    background-color #ECEFF1
+    width 100%
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 5px 15px 9px
+    align-items: center;
+    @media (max-width: max-extra-large)
+      width: 58%;
+      padding: 11px 8px 9px;
+    @media (max-width: max-medium)
+      padding: 5px 10px 9px;
+      width 100%
+    &-price-wrap
+      display: flex;
+      flex-direction: column;
+      justify-content: inherit;
+      align-items: flex-end;
+      padding-right: 20px;
+      text-align right
+      @media (max-width: max-extra-large)
+        padding-right: 17px;
+      @media (max-width: max-medium)
+        padding-right: 23px;
     &-price
       font-weight: bold;
-      font-size: 22px;
-      line-height: 1
-      color accent-red
+      font-size: 26px;
+      line-height: 130%;
+      color: #f44336;
       letter-spacing: 0.04em;
+      white-space: nowrap;
       display: flex;
-      align-items: end;
-      margin-bottom: 5px;
+      align-items: flex-start;
+      justify-content: flex-end;
+      margin-bottom: -3px;
       @media (max-width: max-extra-large)
-        font-size: 20px
-        margin-right: 20px;
-        margin-bottom 0
-      @media (max-width: max-medium)
-        font-size: 16px;
+        font-size: 20px;
         line-height: 150%;
-        margin-right: 14px;
+      @media (max-width: max-medium)
+        margin-bottom: -4px;
+        font-size: 20px;
+        line-height: 143%;
+      &.\--old
+        font-size: 14.5px;
+        line-height: 150%
+        letter-spacing: 0.02em;
+        color: #566069;
+        position: relative;
+        display: inline-flex;
+        margin-bottom: -4px;
+        &:before
+          content: '';
+          background-color: #f44336;
+          position: absolute;
+          z-index: 1;
+          height: 1px;
+          width: 100%;
+          transform: rotateZ(8deg) translateY(9px);
+        span
+          font-size: 11.75px;
+          line-height: 135%;
+          margin-left: 2px;
       span
-        font-weight normal
+        font-weight: normal;
         font-size: 11.75px;
-        line-height: 135%;
+        line-height: 24px;
         letter-spacing: 0.04em;
+    &-profit
+      font-size: 11.75px;
+      line-height: 135%;
+      letter-spacing: 0.04em;
+      color: #666;
+      width: 100%;
+      span
+        font-weight: 600;
+        font-size: 14.5px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: #f44336;
+        border-bottom: 1px dashed #f44336;
+    &-btn
+      text-align: center;
+      width: 25%;
+      @media (max-width: max-extra-large)
+        width: 46%;
+      @media (max-width: max-medium)
+        width 138px
+      &-amount
+        font-size: 12.75px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
         @media (max-width: max-extra-large)
-          font-size: 12.5px;
-        @media (max-width: max-medium)
-          font-size: 10px;
+          font-size: 11.54px;
           line-height: 130%;
+          letter-spacing: 0.02em;
+          margin-bottom: 12px;
+        @media (max-width: max-medium)
+          margin: 4px 0 8px;
+          font-size: 12px;
+          line-height: 130%;
+          letter-spacing: 0.02em;
+      .btn
+        height: 40px;
   .type-icon
-    width 48%
     line-height: 1;
     height: auto;
     @media (max-width: max-extra-large)
@@ -405,6 +451,10 @@
       i
         @media (max-width: max-medium)
           display none
+  .type-icons
+    margin-top: 5px;
+    @media (max-width: max-medium)
+      margin-top: 0
   .btn
     @media (max-width: max-extra-large)
       height: 34px;
