@@ -348,21 +348,25 @@
     @media (max-width: max-medium)
       padding: 5px 10px 9px;
       width 100%
+    &-stickers
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      @media (max-width: max-extra-large)
+        display none
     &-price-wrap
       display: flex;
-      flex-direction: column;
-      justify-content: inherit;
-      align-items: flex-end;
+      align-items: center
       padding-right: 20px;
-      text-align right
       @media (max-width: max-extra-large)
         padding-right: 17px;
-      @media (max-width: max-medium)
-        padding-right: 23px;
+      @media (max-width: max-large)
+        padding-right: 15px;
+        flex-direction: column;
     &-price
       font-weight: bold;
       font-size: 26px;
-      line-height: 130%;
+      line-height: 105%;
       color: #f44336;
       letter-spacing: 0.04em;
       white-space: nowrap;
@@ -384,7 +388,9 @@
         color: #566069;
         position: relative;
         display: inline-flex;
-        margin-bottom: -4px;
+        margin-right: 15px;
+        @media (max-width: max-extra-large)
+          margin-right: 10px;
         &:before
           content: '';
           background-color: #f44336;
@@ -415,30 +421,53 @@
         letter-spacing: 0.02em;
         color: #f44336;
         border-bottom: 1px dashed #f44336;
-    &-btn
-      text-align: center;
-      width: 25%;
-      @media (max-width: max-extra-large)
-        width: 46%;
+    &-btn-sect
+      display: flex;
+      align-items: center;
+      @media (max-width: max-large)
+        flex-direction: column;
+        align-items: flex-end;
       @media (max-width: max-medium)
-        width 138px
+        flex-direction: row;
+        align-items: center
+    &-btn
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f44336;
+      box-shadow: 0px 2px 4px rgba(8,35,48,0.24);
+      border: none;
+      outline: 0;
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      cursor pointer
+      transition background-color .3s ease-in-out
+      &:hover
+        background-color accent-dark
+      svg
+        fill: #fff;
+        width: 22px;
       &-amount
+        margin-right: 15px;
         font-size: 12.75px;
         line-height: 150%;
         letter-spacing: 0.04em;
-        margin-bottom: 8px;
         @media (max-width: max-extra-large)
           font-size: 11.54px;
           line-height: 130%;
           letter-spacing: 0.02em;
-          margin-bottom: 12px;
+          margin-right: 7px;
+        @media (max-width: max-large)
+          margin-right: 0;
+          margin-bottom: 6px;
         @media (max-width: max-medium)
-          margin: 4px 0 8px;
+          margin-right: 10px;
           font-size: 12px;
           line-height: 130%;
           letter-spacing: 0.02em;
-      .btn
-        height: 40px;
+          margin-bottom: 0
   .type-icon
     line-height: 1;
     height: auto;
@@ -452,15 +481,20 @@
         @media (max-width: max-medium)
           display none
   .type-icons
-    margin-top: 5px;
+    border-color: white;
     @media (max-width: max-medium)
-      margin-top: 0
+      border-color: #eceff1
   .btn
     @media (max-width: max-extra-large)
       height: 34px;
       font-size: 12px;
       line-height: 130%;
       min-width: 113px;
+  .block-mob
+    display none
+    @media (max-width: max-extra-large)
+      display block
+
 
 .brand-block
   height: 150px;
