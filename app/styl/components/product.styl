@@ -228,7 +228,7 @@
       font-size: 11.75px;
       line-height: 135%;
       border-right 1px solid white
-      padding: 17px 8px 13px;
+      padding: 15px 8px 11px;
       display flex
       align-items center
       justify-content center
@@ -239,7 +239,9 @@
       @media (max-width: max-medium)
         font-size: 11px;
         line-height: 115%;
-        padding: 12px 10px 14px;
+        padding: 16px 10px 12px;
+      @media (max-width: max-sm)
+        padding: 19px 10px 16px;
       &.\--indices
         @media (max-width: max-extra-large)
           display none
@@ -293,7 +295,9 @@
           border-top: none
           border-bottom: none
           justify-content: flex-end;
-          padding: 7px 9px;
+          padding: 5px 9px;
+        @media (max-width: max-sm)
+          padding: 8px 9px;
       &.\--size
         width: 14%;
         @media (max-width: max-extra-large)
@@ -318,7 +322,7 @@
     flex-wrap wrap
     align-items: center;
     justify-content: center;
-    padding: 14px 7px;
+    padding: 9px 7px;
     font-size: 12.75px;
     line-height: 150%;
     @media (max-width: max-extra-large)
@@ -326,9 +330,11 @@
     @media (max-width: max-medium)
       font-size: 12px;
       line-height: 130%;
-      padding: 15px 5px 9px;
+      padding: 15px 5px 10px;
       text-overflow: ellipsis;
       overflow: hidden;
+    @media (max-width: max-sm)
+      padding: 17px 5px 14px;
     &.\--size
       font-weight: 600;
       color accent-red
