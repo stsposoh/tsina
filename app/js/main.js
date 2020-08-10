@@ -314,7 +314,7 @@ const record = {
   selectedCity: null,
   selectedCenter: '',
   tireStorage: null,
-  selectedDate: (new Date()).toLocaleDateString('ru-RU'),
+  selectedDate: (new Date()),
   selectedTime: '',
   calendar: null,
   //1 - by date, 2 - by center
@@ -352,7 +352,7 @@ const record = {
       },
     });
 
-    record.calendar.setDate(new Date(record.selectedDate));
+    record.calendar.setDate(record.selectedDate);
   },
   getTimesbyDate(dateStr) {
     //console.log(dateStr);
