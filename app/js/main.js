@@ -1,5 +1,5 @@
 $(window).on('resize', function() {
-  if (mywindow.width() < 768) {
+  if ($(window).width() < 768) {
     $('.listing-grid__cards').removeClass('--horizontal-cards');
     $('.toggle-view__btn[data-listing-view="list"]').removeClass('--active');
     $('.toggle-view__btn[data-listing-view="tile"]').addClass('--active');
@@ -17,22 +17,21 @@ if($(window).width() < 992) {
   $(window).on('scroll', toggleHeader);
 }
 
-var mywindow = $(window);
-var mypos = mywindow.scrollTop();
+var pos = $(window).scrollTop();
 var up = false;
 var newscroll;
 
 function toggleHeader () {
-  newscroll = mywindow.scrollTop();
-
-  if (newscroll > mypos && !up) {
+  newscroll = $(window).scrollTop();
+  
+  if (pos > 100 && newscroll > pos && !up) {
     $('.header').addClass('--hide-controls');
     up = !up;
-  } else if(newscroll < mypos && up) {
+  } else if(pos > 100 && newscroll < pos && up) {
     $('.header').removeClass('--hide-controls');
     up = !up;
   }
-  mypos = newscroll;
+  pos = newscroll;
 }
 
 
