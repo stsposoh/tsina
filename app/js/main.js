@@ -23,7 +23,7 @@ var newscroll;
 
 function toggleHeader () {
   newscroll = $(window).scrollTop();
-  
+
   if (pos > 100 && newscroll > pos && !up) {
     $('.header').addClass('--hide-controls');
     up = !up;
