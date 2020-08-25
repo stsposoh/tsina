@@ -1,0 +1,526 @@
+@import "nib"
+@import "vars"
+@import "mixins"
+
+.order
+  background-color #ECEFF1
+  padding: 35px 0
+  @media (max-width: max-medium)
+    padding: 28px 0
+  &__content
+    display: flex;
+    flex-wrap: wrap;
+    justify-content space-between
+    @media (max-width: max-medium)
+      flex-direction column
+  &__title
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+    margin-bottom: 36px;
+    width 100%
+    @media (max-width: max-large)
+      font-size: 21px;
+      margin-bottom: 10px;
+    @media (max-width: max-medium)
+      order 1
+  &__main
+    width: 66%;
+    @media (max-width: max-medium)
+      width 100%
+      order 3
+  &__aside
+    width: 32%;
+    @media (max-width: max-medium)
+      width 100%
+      order 2
+      margin-bottom: 17px;
+  &__block
+    background-color: white;
+    padding: 44px 95px
+    margin-bottom: 4px;
+    @media (max-width: max-large)
+      padding: 25px 35px;
+    @media (max-width: max-medium)
+      padding: 20px 25px;
+    &.\--garanty
+      background-color #e8f5e9
+      padding: 2px 95px 2px;
+      @media (max-width: max-large)
+        padding: 2px 36px 2px;
+      @media (max-width: max-medium)
+        padding: 2px 27px 2px;
+    &.\--submit
+      background-image: url(/img/common/bg-2.png);
+      background-repeat: repeat;
+      padding: 40px 165px 63px;
+      text-align: center;
+      @media (max-width: max-large)
+        padding: 40px 57px 46px;
+      @media (max-width: max-medium)
+        padding: 32px 30px;
+    &-title
+      font-weight: 600;
+      font-size: 25.5px;
+      line-height: 110%;
+      letter-spacing: 0.04em;
+      margin-left: -32px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 23px;
+      @media (max-width: max-extra-large)
+        font-size: 21.5px;
+      @media (max-width: max-large)
+        font-size: 15.5px;
+        margin-left: -20px;
+        margin-bottom: 4px;
+      @media (max-width: max-medium)
+        font-size: 17px;
+        margin-left: -13px;
+        margin-bottom: 7px;
+    &-tip
+      font-weight: normal;
+      font-size: 11.75px;
+      line-height: 135%;
+      letter-spacing: 0.04em;
+      color: #768592;
+      i
+        color accent-red
+        font-style normal
+    &-btn
+      width: 210px;
+      margin: 33px auto 0
+      @media (max-width: max-large)
+        margin: 14px auto 0
+    &-text
+      font-size: 18px;
+      line-height: 145%;
+      letter-spacing: 0.02em;
+      margin: 39px 0 17px;
+      @media (max-width: max-large)
+        font-size: 14px;
+        margin: 28px 0 3px;
+      @media (max-width: max-medium)
+        font-size: 12px;
+        margin: 32px 0 8px;
+    &-list
+      margin: 42px 0 12px;
+      display none
+      &-title
+        font-size: 18px;
+        line-height: 145%;
+        letter-spacing: 0.02em;
+        margin-bottom: 33px;
+  &__radio
+    padding: 23px 0 11px;
+    position: relative;
+    @media (max-width: max-large)
+      padding: 14px 0 11px;
+    @media (max-width: max-medium)
+      padding: 10px 0;
+    &:after
+      content: '';
+      background-color: #eceff1;
+      position: absolute;
+      left: 32px;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+    input[type="radio"]
+      &:checked
+        & ~ label
+          &:after
+            opacity 1
+          .order__radio-label-text
+            font-weight bold
+    &-label
+      position relative
+      padding-left: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: max-large)
+        font-size: 12.5px;
+        line-height: 135%;
+      @media (max-width: max-medium)
+        font-size: 12px;
+        line-height: 130%;
+        text-align: left;
+        padding-left: 28px;
+      &:before,
+      &:after
+        content ''
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+      &:before
+        width: 17px;
+        height: 17px;
+        border: 2px solid accent-red
+        left: 0;
+        top 0
+      &:after
+        width: 13px;
+        height: 13px;
+        background-color: accent-red
+        left: 4px;
+        top: 4px;
+        opacity 0
+        transition opacity .3s ease-in-out
+      &-img
+        font-size 0
+        line-height 0
+        @media (max-width: max-large)
+          height: 20px;
+        @media (max-width: max-medium)
+          height: 18px;
+        img
+          height: 100%;
+      &-tip
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @media (max-width: max-large)
+          font-size: 14px;
+        @media (max-width: max-medium)
+          font-size: 13px;
+        &.\--green
+          color accent-green
+        &.\--red
+          color accent-red
+        img
+          margin-left: 5px;
+      &-text
+        font-size: 14.5px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        @media (max-width: max-large)
+          font-size: 12.5px;
+        @media (max-width: max-medium)
+          font-size: 12.5px;
+        &.\--bordered
+          text-decoration: underline;
+          text-decoration-style: dashed;
+    &-tip
+      font-size: 11.75px;
+      line-height: 135%;
+      letter-spacing: 0.04em;
+      color: #768592;
+      margin-top: 13px;
+      margin-left: 35px;
+      @media (max-width: max-large)
+        margin-top: 2px;
+      @media (max-width: max-medium)
+        font-size: 10.75px;
+        margin-top: 5px;
+        margin-left: 29px;
+      &.\--green
+        font-weight: bold;
+        font-size: 12.75px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: accent-green
+        margin-top: 4px;
+        @media (max-width: max-large)
+          font-size: 11.75px;
+        @media (max-width: max-medium)
+          font-size: 9.75px;
+          line-height: 132%;
+  &__comment
+    margin-bottom 15px
+    &-title
+      margin-bottom: 15px;
+      display: inline-block
+      font-weight: bold;
+      font-size: 12.75px;
+      line-height: 115%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: accent-red
+      background-color: transparent;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+    &-sect
+      display none
+      margin-bottom: 32px;
+  &__submit
+    margin: 34px 0 0;
+  .form-sect
+    margin-bottom 0
+  .field__label
+    color #B0BAC9
+    i
+      color accent-red
+      font-style normal
+  .text-red
+    color accent-red
+
+.orders
+  background-color white
+  position: sticky;
+  top: 60px;
+  @media (max-width: max-medium)
+    position static
+  &__cards
+    max-height: calc(100vh - 135px);
+    overflow-y: auto;
+    .order-card:only-child
+      .order-card__remove
+        display none
+  &__sum
+    display flex
+    flex-wrap wrap
+    align-items: center;
+    padding: 14px 18px;
+    border-top: 3px solid #eceff1;
+    margin-top: -1px;
+    @media (max-width: max-medium)
+      padding: 14px;
+    &-label
+      font-weight: bold;
+      font-size: 12.75px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      color: #566069
+      width: 68%;
+      @media (max-width: max-large)
+        width: 50%;
+      @media (max-width: max-medium)
+        width: 58%;
+    &-total
+      color accent-red
+      width: 32%;
+      white-space: nowrap;
+      @media (max-width: max-large)
+        width: 50%;
+      @media (max-width: max-medium)
+        width: 42%;
+      b
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+      sup
+        font-size: 11.75px;
+        line-height: 135%;
+
+.checkbox-element
+  cursor: pointer;
+  user-select: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12.75px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  @media (max-width: max-medium)
+    font-size: 10.75px;
+    line-height: 137%;
+  input[type="checkbox"]
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0
+    &:checked
+      & ~ .checkbox-element__checkmark
+        color red
+        &:after
+          opacity: 1;
+          filter: none;
+          display: block;
+  &__checkmark
+    display: block;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #dfe2e9;
+    box-shadow: inset 0px 2px 3px rgba(0,0,0,0.16);
+    border-radius: 4px;
+    margin-right: 7px;
+    transition: background-color 0.3s, border-color 0.3s ease-in-out;
+    &:after
+      font-family: "fontello";
+      content: '\e806';
+      text-align: center;
+      line-height: 23px;
+      opacity: 0;
+      color: accent-red
+      font-size: 16px;
+      transition: opacity 0.3s ease-in-out;
+  &__label
+    width: calc(100% - 42px);
+    text-align: left;
+
+.order-card
+  position: relative;
+  &__remove
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    cursor: pointer;
+  &__main
+    border-bottom: 3px solid #eceff1;
+    display flex
+    flex-wrap wrap
+    justify-content: space-between;
+    @media (max-width: max-medium)
+      flex-wrap nowrap
+  &__left
+    display: block;
+    width: 40%;
+    position: relative;
+    min-height: 163px;
+    overflow: hidden;
+    padding: 18px 12px 0;
+    @media (max-width: max-large)
+      width: 100%;
+      height: 174px;
+    @media (max-width: max-medium)
+      padding: 10px 9px 0;
+      max-width 160px
+      height auto
+  &__brand
+    height: 17px;
+    display: block;
+    img
+      height 100%
+  &__label
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-left: 5px;
+    &.\--sun
+      background-image: url(/img/svg/sun.svg);
+  &__image
+    position: absolute;
+    left: 3px;
+    top: 77px;
+    @media (max-width: max-large)
+      top: 39px;
+    @media (max-width: max-medium)
+      top: 58px;
+  &__right
+    width: 58%;
+    padding: 17px 21px 12px 0;
+    @media (max-width: max-large)
+      width: 100%;
+      padding: 13px 15px;
+    @media (max-width: max-medium)
+      padding: 22px 10px 10px 0;
+      width calc(100% - 160px)
+    @media (max-width: 429px)
+      width: 58%;
+  &__title
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    display: inline-block;
+  &__size
+    font-size: 12.75px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    margin-bottom: 7px;
+  &__info
+    font-size: 11.75px;
+    line-height: 135%;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+    &-label
+      color: #666666;
+  &__counter
+    display flex
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 7px;
+    &-label
+      color: #666666;
+      font-size: 11.75px;
+      line-height: 135%;
+      letter-spacing: 0.04em;
+      margin-right: 10px;
+  &__qty
+    position relative
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 7px 20px;
+    @media (max-width: max-large)
+      padding: 7px 15px;
+    @media (max-width: max-medium)
+      padding: 7px 20px;
+    &:after
+      content ''
+      position: absolute;
+      height: 1px;
+      background-color: #eceff1;
+      left: 20px;
+      right: 19px;
+      bottom: 0;
+    &-label
+      font-size: 11.75px;
+      line-height: 135%;
+      letter-spacing: 0.04em;
+      color: #566069;
+      width: 68%;
+      @media (max-width: max-large)
+        width: 50%;
+      @media (max-width: max-medium)
+        width: 59%;
+    &-value
+      letter-spacing: 0.02em;
+      b
+        font-size: 18px;
+        line-height: 150%;
+      sup
+        font-size: 11.75px;
+        line-height: 135%;
+
+.input-counter
+  background-color: #ECEFF1;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 84px;
+  height: 32px;
+  padding 3px
+  &__btn
+    width: 25px;
+    height: 25px;
+    background-color white
+    border-radius 50%
+    border none
+    outline 0
+    font-weight: bold;
+    font-size: 19px;
+    cursor: pointer;
+  &__field
+    width: 27px;
+    text-align: center;
+    background-color: #eceff1;
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none;
+
+input[type="number"]
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  border none
+  outline 0
+

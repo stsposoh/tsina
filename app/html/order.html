@@ -1,0 +1,333 @@
+@@include('./_includes/_header-intro.html')
+
+<main>
+  <form class="order" id="order-form">
+    <input class="js-products-total" type="hidden" name="products-total" value="">
+
+    <div class="order__content wrapper">
+      <div class="order__title">Оформление заказа</div>
+
+      <div class="order__main">
+        <div class="order__block">
+          <div class="order__block-title">
+            1. Контактны данные
+            <span class="order__block-tip"><i>*</i> необходимая информация</span>
+          </div>
+          <div class="form-sect">
+            <div class="form-sect__col-6">
+              <div class="field">
+                <label class="field__label">Ваше имя <i>*</i></label>
+                <input name="first-name" required class="field__input" type="text">
+              </div>
+            </div>
+            <div class="form-sect__col-6">
+              <div class="field">
+                <label class="field__label">Ваша фамилия <i>*</i></label>
+                <input name="last-name" required class="field__input" type="text">
+              </div>
+            </div>
+            <div class="form-sect__col-12">
+              <div class="field">
+                <label class="field__label">Телефон <i>*</i></label>
+                <input name="phone" required class="field__input" type="tel">
+              </div>
+            </div>
+            <div class="form-sect__col-12">
+              <div class="field">
+                <label class="field__label">Город <i>*</i></label>
+                <input name="city" required class="field__input" type="text">
+              </div>
+            </div>
+            <div class="form-sect__col-12">
+              <div class="field">
+                <label class="field__label">E-mail <i>*</i></label>
+                <input name="email" required class="field__input" type="email">
+              </div>
+            </div>
+
+            <div class="order__block-btn">
+              <button class="btn --red --full-width">Button</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="order__block">
+          <div class="order__block-title">2. Способ доставки</div>
+          <div class="order__radio">
+            <input type="radio" name="delivery" id="delivery-pickup" value="pickup" checked required>
+            <label class="order__radio-label" for="delivery-pickup">
+              <span class="order__radio-label-img">
+                <img src="./img/common/delivery-pickup.png" alt="">
+              </span>
+              <span class="order__radio-label-tip --green">Бесплатно</span>
+            </label>
+            <div class="order__radio-tip">Самовывоз из шинного центра "Твоя шина" (при наличии товара)</div>
+          </div>
+          <div class="order__radio">
+            <input type="radio" name="delivery" id="delivery-new-post" value="new-post">
+            <label class="order__radio-label" for="delivery-new-post">
+              <span class="order__radio-label-img">
+                <img src="./img/common/new-post.png" alt="">
+              </span>
+              <span class="order__radio-label-tip --red"><b>288</b><sup>₴</sup></span>
+            </label>
+            <div class="order__radio-tip"></div>
+          </div>
+
+          <div class="order__block-pickup js-pickup-sect">
+            <div class="order__block-text">Из какого шинного центра забрать</div>
+
+            <div class="order__radio">
+              <input type="radio" name="tire-center" id="tire-center-1" value="г. Днепр, ж/м Победа-6, пер. Добровольцев, 1д" checked>
+              <label class="order__radio-label" for="tire-center-1">
+                <span class="order__radio-label-text">г. Днепр, ж/м Победа-6, пер. Добровольцев, 1д</span>
+              </label>
+              <div class="order__radio-tip --green">Бесплатная доставка до 5 рабочих дней</div>
+            </div>
+            <div class="order__radio">
+              <input type="radio" name="tire-center" id="tire-center-2" value="г. Днепр, просп. Слобожанский (просп. Правды), 26а">
+              <label class="order__radio-label" for="tire-center-2">
+                <span class="order__radio-label-text">г. Днепр, просп. Слобожанский (просп. Правды), 26а</span>
+              </label>
+              <div class="order__radio-tip --green">Бесплатная доставка до 5 рабочих дней</div>
+            </div>
+
+            <div class="order__radio">
+              <input type="radio" name="tire-center" id="tire-center-3" value="г. Днепр, Запорожское шоссе, 55к">
+              <label class="order__radio-label" for="tire-center-3">
+                <span class="order__radio-label-text">г. Днепр, Запорожское шоссе, 55к</span>
+              </label>
+              <div class="order__radio-tip --green">Бесплатная доставка до 5 рабочих дней</div>
+            </div>
+
+            <div class="order__radio">
+              <input type="radio" name="tire-center" id="tire-center-4" value="г. Днепр, Донецкое шоссе, 69">
+              <label class="order__radio-label" for="tire-center-4">
+                <span class="order__radio-label-text">г. Днепр, Донецкое шоссе, 69</span>
+              </label>
+              <div class="order__radio-tip --green">Бесплатная доставка до 5 рабочих дней</div>
+            </div>
+
+            <div class="order__radio">
+              <input type="radio" name="tire-center" id="tire-center-5" value="г. Днепр, ул. Княгини Ольги, 24а (Речпорт)">
+              <label class="order__radio-label" for="tire-center-5">
+                <span class="order__radio-label-text">г. Днепр, ул. Княгини Ольги, 24а (Речпорт)</span>
+              </label>
+              <div class="order__radio-tip --green">Бесплатная доставка до 5 рабочих дней</div>
+            </div>
+          </div>
+
+          <div class="order__block-list js-new-post-sect">
+            <div class="order__block-list-title">Введите адрес доставки</div>
+            <div class="field">
+              <label class="field__label">Город<i>*</i></label>
+              <select class="js-sumo-select js-pickup-address" name="pickup-address">
+                <option disabled selected value="">Выберите</option>
+                <option value="Отделение №5 (до 30 кг): ул. Европейская, 20а">Отделение №5 (до 30 кг): ул. Европейская, 20а</option>
+                <option value="ТОтделение №5 (до 30 кг): ул. Европейская, 20а">Отделение №5 (до 30 кг): ул. Европейская, 20а</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="order__block">
+          <div class="order__block-title">3. Способ оплаты</div>
+          <div class="order__radio">
+            <input type="radio" name="payment" id="delivery-visa" value="visa" checked required>
+            <label class="order__radio-label" for="delivery-visa">
+              <span class="order__radio-label-text">Visa/Mastercard</span>
+            </label>
+            <div class="order__radio-tip"></div>
+          </div>
+          <div class="order__radio">
+            <input type="radio" name="payment" id="delivery-cod" value="C.O.D">
+            <label class="order__radio-label" for="delivery-cod">
+              <span class="order__radio-label-text">Наложенный платеж</span>
+              <span class="order__radio-label-tip">
+                Вернем
+                <b class="text-red">&nbsp;35<sup>₴&nbsp;</sup></b> на карту
+                <img src="./img/common/fishka.png" alt="">
+              </span>
+            </label>
+            <div class="order__radio-tip"></div>
+          </div>
+          <div class="order__radio">
+            <input type="radio" name="payment" id="delivery-monobank" value="monobank">
+            <label class="order__radio-label" for="delivery-monobank">
+              <span class="order__radio-label-img">
+                <img src="./img/common/monobank.png" alt="">
+              </span>
+            </label>
+            <div class="order__radio-tip">Покупка частями монобанк</div>
+          </div>
+          <div class="order__radio">
+            <input type="radio" name="payment" id="delivery-privat-1" value="Payment by parts Privatbank">
+            <label class="order__radio-label" for="delivery-privat-1">
+              <span class="order__radio-label-img">
+                <img src="./img/common/oplata-chastyami.png" alt="">
+              </span>
+            </label>
+            <div class="order__radio-tip">Оплата частями приватбанк </div>
+          </div>
+
+          <div class="order__radio">
+            <input type="radio" name="payment" id="delivery-privat-2" value="Installment Privatbank">
+            <label class="order__radio-label" for="delivery-privat-2">
+              <span class="order__radio-label-img">
+                <img src="./img/common/Installment-PB.png" alt="">
+              </span>
+            </label>
+            <div class="order__radio-tip">Мгновенная рассрочка приват банк</div>
+          </div>
+        </div>
+
+        <div class="order__block --garanty">
+          <div class="order__radio">
+            <input type="radio" name="garanty" id="delivery-garanty" value="garanty" checked>
+            <label class="order__radio-label" for="delivery-garanty">
+              <span class="order__radio-label-text --bordered">Расширенная гарантия</span>
+              <span class="order__radio-label-tip --red"><b>288</b><sup>₴</sup></span>
+            </label>
+            <div class="order__radio-tip">Оплата частями приватбанк </div>
+          </div>
+        </div>
+
+        <div class="order__block --submit">
+          <div class="order__comment">
+            <span class="order__comment-title js-add-order-comment">Добавить комментарий к заказу</span>
+            <div class="order__comment-sect">
+              <div class="field">
+                <label class="field__label">Комментарий</label>
+                <textarea name="comment" class="field__textarea" placeholder="Введите комментарий"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <label class="checkbox-element">
+            <input type="checkbox" name="no-call-me-back">
+            <span class="checkbox-element__checkmark"></span>
+            <span class="checkbox-element__label">Не перезванивать мне для подтверждения заказа</span>
+          </label>
+
+          <div class="order__submit">
+            <button type="submit" class="btn --red --full-width">Button</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="order__aside">
+        <div class="orders">
+          <div class="orders__cards">
+            <div class="order-card">
+              <input class="js-product-name" type="hidden" name="product-name-1" value="">
+              <input class="js-product-cost" type="hidden" name="product-cost-1" value="">
+              <input class="js-product-delivery" type="hidden" name="product-delivery-1" value="">
+
+              <div class="order-card__remove">
+                <svg viewBox="0 0 16 16" width="16"><use xlink:href="./img/svg/svg-sprite.svg#remove"></use></svg>
+              </div>
+              <div class="order-card__main">
+                <a href="/product.html" class="order-card__left">
+                  <span class="order-card__brand">
+                    <img src="./img/common/card-brand-1.png" alt="">
+                  </span>
+                  <span class="order-card__label --sun"></span>
+                  <img class="order-card__image" src="/img/common/wheel.png" alt="">
+                </a>
+
+                <div class="order-card__right">
+                  <a href="/product.html" class="order-card__title">Bridgestone Potenza Adrenalin RE003</a>
+                  <div class="order-card__size">165/55 R16</div>
+                  <div class="order-card__info">
+                    <span class="order-card__info-label">Артикул:</span>
+                    <span class="order-card__info-value">25698</span>
+                  </div>
+                  <div class="order-card__info">
+                    <span class="order-card__info-label">Страна/Год:</span>
+                    <span class="order-card__info-value">Китай/2019</span>
+                  </div>
+                  <div class="order-card__counter">
+                    <div class="order-card__counter-label">Количество:</div>
+                    <div class="input-counter">
+                      <input type="button" value="-" class="input-counter__btn js-input-minus" readonly>
+                      <input type="number" step="1" max="" min="1" value="1" name="product-1-quantity" class="input-counter__field">
+                      <input type="button" value="+" class="input-counter__btn js-input-plus">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-card__qty">
+                <div class="order-card__qty-label">Стоимость товара:</div>
+                <div class="order-card__qty-value"><b class="js-product-cost">3 753</b><sup>₴/шт.</sup></div>
+              </div>
+              <div class="order-card__qty">
+                <div class="order-card__qty-label">Стоимость доставки:</div>
+                <div class="order-card__qty-value"><b class="js-delivery">288</b><sup>₴</sup></div>
+              </div>
+            </div>
+            <div class="order-card">
+              <input class="js-product-name" type="hidden" name="product-name-2" value="">
+              <input class="js-product-cost" type="hidden" name="product-cost-2" value="">
+              <input class="js-product-delivery" type="hidden" name="product-delivery-2" value="">
+
+              <div class="order-card__remove">
+                <svg viewBox="0 0 16 16" width="16"><use xlink:href="./img/svg/svg-sprite.svg#remove"></use></svg>
+              </div>
+              <div class="order-card__main">
+                <a href="/product.html" class="order-card__left">
+                  <span class="order-card__brand">
+                    <img src="./img/common/card-brand-1.png" alt="">
+                  </span>
+                  <span class="order-card__label --sun"></span>
+                  <img class="order-card__image" src="/img/common/wheel.png" alt="">
+                </a>
+
+                <div class="order-card__right">
+                  <a href="/product.html" class="order-card__title">Bridgestone Potenza Adrenalin RE003</a>
+                  <div class="order-card__size">165/55 R16</div>
+                  <div class="order-card__info">
+                    <span class="order-card__info-label">Артикул:</span>
+                    <span class="order-card__info-value">25698</span>
+                  </div>
+                  <div class="order-card__info">
+                    <span class="order-card__info-label">Страна/Год:</span>
+                    <span class="order-card__info-value">Китай/2019</span>
+                  </div>
+                  <div class="order-card__counter">
+                    <div class="order-card__counter-label">Количество:</div>
+                    <div class="input-counter">
+                      <input type="button" value="-" class="input-counter__btn js-input-minus" readonly>
+                      <input type="number" step="1" max="" min="1" value="1" name="product-2-quantity" class="input-counter__field">
+                      <input type="button" value="+" class="input-counter__btn js-input-plus">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-card__qty">
+                <div class="order-card__qty-label">Стоимость товара:</div>
+                <div class="order-card__qty-value"><b class="js-product-cost">3 753</b><sup>₴/шт.</sup></div>
+              </div>
+              <div class="order-card__qty">
+                <div class="order-card__qty-label">Стоимость доставки:</div>
+                <div class="order-card__qty-value"><b class="js-delivery">288</b><sup>₴</sup></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="orders__sum">
+            <div class="orders__sum-label">ИТОГО:</div>
+            <div class="orders__sum-total"><b class="js-sum-total"></b><sup>₴</sup></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+</main>
+
+@@include('./_includes/_footer.html')
+</body>
+</html>
