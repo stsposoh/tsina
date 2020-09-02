@@ -7,17 +7,17 @@ $('.js-order-call').on('click', function () {
 });
 
 $('.js-open-tire-filter').on('click', function () {
-  $('body').css('overflow','hidden');
+  $('html').css('overflow','hidden');
   $('#tire-filter').addClass('--open')
 });
 
 $('.js-open-sort-modal').on('click', function () {
-  $('body').css('overflow','hidden');
+  $('html').css('overflow','hidden');
   $('#sort-modal').addClass('--open')
 });
 
 $('.js-open-disks-filter').on('click', function () {
-  $('body').css('overflow','hidden');
+  $('html').css('overflow','hidden');
   $('#disk-filter').addClass('--open')
 });
 
@@ -28,7 +28,7 @@ $('.js-all-brands').on('click', function () {
 });
 
 $('.modal').on('click', '.js-close-modal', function () {
-  $('body').css('overflow','');
+  $('html').css('overflow','');
   $(this).parents('.modal').removeClass('--open')
 });
 

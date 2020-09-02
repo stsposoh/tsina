@@ -121,6 +121,7 @@ export const js = () => {
     'app/js/forms.js',
     'app/js/filters.js',
     'app/js/order.js',
+    'app/js/cart.js',
     'app/js/main.js',
   ])
     .pipe(plumber({
