@@ -59,15 +59,6 @@ $('#order-form').on('submit', function () {
 
 
 
-
-
-
-
-
-
-
-
-
 $('.js-add-order-comment').on('click', function () {
   $(this).parents('.order__comment').find('.order__comment-sect').slideToggle();
 });
@@ -89,7 +80,31 @@ $('input[name="delivery"]').on('change', function () {
   }
 });
 
+$('input[name="payment"]').on('change', function () {
+  $('.order__radio-payment-pats').each(function () {
+    $(this).removeClass('--visible');
+  });
+
+  if($(this).val() === 'monobank' || $(this).val() === 'Payment by parts Privatbank') {
+    $(this).parents('.order__radio').find('.order__radio-payment-pats').addClass('--visible');
+  }
+});
+
+$('.js-num-of-month').on('change', function () {
+  let amount = parseInt( $(this).val() );
+
+  $('.js-num-of-payments').text( amount + ' ' + declOfNum(amount,['платеж','платежа','платежей']) );
+  $('.js-num-of-month-text').text( declOfNum(amount,['месяц','месяца','месяцев']) );
+});
+
 $('.order-card__remove').on('click', function () {
   $(this).parents('.order-card').remove();
   calcSum();
 });
+
+
+//declension of numbers
+function declOfNum(number, titles) {
+  var cases = [2, 0, 1, 1, 1, 2];
+  return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+}

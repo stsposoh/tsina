@@ -32,12 +32,8 @@ function countProductsInMiniCart() {
     total += totalPrice;
   });
 
-  productCounter.text( declOfNum(amount,['товар','товара','товаров']) );
+  productCounter.text( amount + ' ' + declOfNum(amount,['товар','товара','товаров']) );
   productTotal.text(total);
 }
 
-//declension of numbers
-function declOfNum(number, titles) {
-  var cases = [2, 0, 1, 1, 1, 2];
-  return number + ' ' + titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
-}
+
