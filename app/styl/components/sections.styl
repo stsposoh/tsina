@@ -1562,3 +1562,310 @@
 #datepicker-modal
   @media (min-width: max-large)
     display none
+
+
+.tabs-block
+  margin: 10px 0 0
+  padding-bottom: 145px;
+  @media (max-width: max-extra-large)
+    margin: 4px 0 0
+  @media (max-width: max-medium)
+    margin: 3px 0 0
+    padding-bottom: 30px;
+  &__title
+    margin: 12px 0 0;
+    font-size: 36px;
+    max-width: 735px;
+    @media (max-width: max-large)
+      font-size: 25px;
+      max-width: 65%;
+    @media (max-width: max-medium)
+      font-size: 21px;
+      margin-top: 20px;
+      line-height: 1.3;
+    @media (max-width: max-sm)
+      margin-top: 8px;
+  &__header
+    display: flex;
+    flex-wrap: wrap;
+    position relative
+    &:before
+      content ''
+      background-image url("/img/svg/dashed-line.svg")
+      position: absolute;
+      left: 0;
+      top: 33%;
+      bottom: 0;
+      right: 60%;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media (max-width: max-extra-large)
+        top: 26%;
+      @media (max-width: max-medium)
+        top: 18%;
+    &:after
+      content ''
+      background-image url("/img/svg/dashed-line-2.svg")
+      position: absolute;
+      right: 0;
+      bottom: -73px;
+      left: 60%;
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 77px;
+      @media (max-width: max-large)
+        bottom: -62px;
+        height: 62px;
+      @media (max-width: max-medium)
+        bottom: -40px;
+        height: 45px;
+    &-info
+      width: 57%;
+      padding-top: 154px;
+      padding-left: 37px;
+      padding-bottom: 117px
+      @media (max-width: max-extra-large)
+        padding-top: 95px;
+        padding-bottom: 77px;
+      @media (max-width: max-large)
+        padding-top: 74px;
+        padding-left: 25px;
+        padding-bottom: 85px;
+      @media (max-width: max-medium)
+        width: 100%;
+        padding-top: 40px;
+        padding-left: 15px;
+        position: relative;
+        padding-bottom: 80px;
+        z-index: 1;
+      @media (max-width: max-sm)
+        padding-top: 32px;
+    &-text
+      font-size: 26px;
+      line-height: 1.3;
+      max-width: 510px;
+      @media (max-width: max-large)
+        font-size: 23px;
+      @media (max-width: max-medium)
+        font-size: 16px;
+        max-width: 60%;
+      @media (max-width: max-sm)
+        font-size: 14px;
+        max-width 100%
+    &-icons
+      margin: 110px 0 0;
+      display: flex;
+      @media (max-width: max-large)
+        margin: 55px 0 0;
+      @media (max-width: max-medium)
+        margin: 40px 0 0;
+        flex-wrap wrap
+      @media (max-width: max-sm)
+        margin: 23px 0 0;
+      &-item
+        text-align: center;
+        max-width 246px
+        @media (max-width: max-medium)
+          text-align: left;
+          display: flex;
+          align-items: center;
+          margin-bottom: 6px;
+          max-width: 69%;
+      &-icon
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        font-size: 0;
+        line-height: 0;
+        margin-bottom: 18px;
+        @media (max-width: max-large)
+          width: 55px;
+          height: 55px;
+        @media (max-width: max-medium)
+          width: 40px;
+          height: 40px;
+          margin-bottom: 0;
+          flex-shrink 0
+        @media (max-width: max-sm)
+          width: 36px;
+          height: 36px;
+        &.\--style-1
+          background-color: rgba(226, 89, 139, 0.05);
+        &.\--style-2
+          background-color: rgba(77, 18, 238, 0.05);
+        &.\--style-3
+          background-color: rgba(96, 225, 203, 0.12);
+        img
+          @media (max-width: max-large)
+            width: 20px;
+          @media (max-width: max-medium)
+            width: 15px;
+          @media (max-width: max-sm)
+            width: 12px;
+      &-label
+        color: #535063;
+        font-size: 14px;
+        padding: 0 10px;
+        line-height: 1.4;
+        @media (max-width: max-medium)
+          font-size: 15px;
+          padding-left: 12px;
+        @media (max-width: max-sm)
+          font-size: 12px;
+          padding-left: 5px;
+    &-img
+      width: 43%;
+      font-size 0
+      line-height 0
+      background-image url("/img/common/bg-9.png")
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      @media (max-width: max-medium)
+        position: absolute;
+        right: 0;
+        top: 68px;
+        width: 202px;
+      @media (max-width: max-sm)
+        top: 100px;
+        width: 130px;
+  &__tabs
+    display: flex;
+    justify-content: center;
+    position relative
+    margin-top: -26px;
+    padding-bottom: 35px;
+    @media (max-width: max-large)
+      padding-bottom: 18px;
+    @media (max-width: max-medium)
+      padding-bottom: 15px;
+  &__btns
+    border: 0.5px solid #e3e3e3;
+    border-radius: 22px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    &-item
+      border: none
+      border-radius: 22px;
+      padding: 14px 34px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 11.5px;
+      line-height: 16px;
+      -webkit-appearance: none;
+      color #848199
+      background-color: white;
+      cursor: pointer;
+      text-transform uppercase
+      transition background-color .3s, color .3s, box-shadow .3s ease-in-out
+      &.\--active
+        background-color accent-red
+        color white
+        box-shadow: 0 7px 6px rgba(255, 165, 166, 0.4);
+  &__content
+    display none
+    &.\--active
+      display block
+  &__accordion-blocks
+    margin-top: 58px;
+  &__info-card
+    position relative
+    box-shadow: 15px 40px 40px rgba(222, 222, 222, 0.12);
+    border-radius: 26px;
+    background-color: white;
+    overflow: hidden;
+    padding: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 29px;
+    @media (max-width: max-medium)
+      border-radius: 20px;
+      padding: 27px;
+      margin-bottom: 16px;
+      box-shadow: 15px 40px 40px rgba(162, 162, 162, 0.12);
+    &:last-of-type
+      margin-bottom: 54px;
+    &:before
+      content ''
+      position absolute
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #E0EAFC 0%, #CFDEF3 100%);
+    &-icon
+      width: 70px;
+      @media (max-width: max-medium)
+        width: 40px;
+    &-main
+      width: calc(100% - 70px);
+      padding-left: 10px;
+      padding-top: 15px;
+      @media (max-width: max-medium)
+        width: calc(100% - 40px);
+        padding-left: 15px;
+        padding-top: 14px;
+    &-title
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 33px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: max-medium)
+        font-size: 16px;
+        margin-bottom: 15px;
+    &-brand
+      @media (max-width: max-medium)
+        display none
+    &-list
+      normalize_list()
+      @media (max-width: max-sm)
+        margin-left: -43px;
+      &-item
+        position: relative;
+        font-size: 15px;
+        padding-left: 28px;
+        color: #535063;
+        margin-bottom: 25px;
+        @media (max-width: max-sm)
+          font-size: 13px;
+          padding-left: 25px;
+          margin-bottom: 20px;
+        &:before
+          content ''
+          background-image url("/img/svg/icon-check.svg")
+          width: 20px;
+          height: 20px;
+          display: block;
+          left: -7px;
+          top: 1px;
+          position: absolute;
+          @media (max-width: max-sm)
+            top: -2px;
+  &__text
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 16px;
+    @media (max-width: max-medium)
+      font-size: 13px;
+  #np-tracking.np-widget-hz
+    @media (max-width: max-medium)
+      max-width: 100%;
+    @media (max-width: max-sm)
+      max-width: calc(100% + 85px);
+      margin-left: -70px;
+    #np-input-container
+      @media (max-width: max-sm)
+        width: calc(100% - 127px);
+    #np-user-input
+      @media (max-width: max-sm)
+        padding: 11px 11px 12px 9px;
+

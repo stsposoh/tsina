@@ -1,4 +1,6 @@
 function initPriceSlider(opt) {
+  if (!opt.sliderEl) return false;
+
   let options = {
     sliderEl: opt.sliderEl, lowInputEl: opt.lowInputEl, highInputEl: opt.highInputEl,
     connect: true,

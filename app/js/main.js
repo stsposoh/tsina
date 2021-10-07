@@ -376,3 +376,20 @@ const record = {
     recordOrder.removeClass('--hidden');
   }
 };
+
+// tabs
+$('.tabs-block')
+  .on('click', '.tabs-block__btns-item', function () {
+    $('.tabs-block__btns-item').removeClass('--active');
+    $(this).addClass('--active');
+
+    let tabIndex = $(this).data('tab-block');
+    let tabContentBlock = $(`.tabs-block__content[data-tab-block-content="${tabIndex}"]`);
+
+    if (!tabContentBlock.is(':visible')) {
+      $('.tabs-block__content').removeClass('--active').fadeOut();
+      tabContentBlock.fadeIn();
+    }
+  })
+
+
