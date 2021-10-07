@@ -392,4 +392,9 @@ $('.tabs-block')
     }
   })
 
+  $('.accordion-block__header').on('click', function () {
+    const parent = $(this).parents('.accordion-block');
+    parent.toggleClass('--opened');
+    parent.find('.accordion-block__content').slideToggle('fast');
+  })
 

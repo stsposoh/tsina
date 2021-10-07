@@ -1662,6 +1662,7 @@
       @media (max-width: max-medium)
         margin: 40px 0 0;
         flex-wrap wrap
+        flex-direction: column;
       @media (max-width: max-sm)
         margin: 23px 0 0;
       &-item
@@ -1765,6 +1766,11 @@
       cursor: pointer;
       text-transform uppercase
       transition background-color .3s, color .3s, box-shadow .3s ease-in-out
+      @media (max-width: max-sm)
+        padding: 14px 13px;
+      @media (max-width: 399px)
+        padding: 11px 9px;
+        font-size: 9.5px;
       &.\--active
         background-color accent-red
         color white
@@ -1775,6 +1781,8 @@
       display block
   &__accordion-blocks
     margin-top: 58px;
+    @media (max-width: max-medium)
+      margin-top: 30px;
   &__info-card
     position relative
     box-shadow: 15px 40px 40px rgba(222, 222, 222, 0.12);
