@@ -1,0 +1,125 @@
+@@include('./_includes/_header.html')
+
+<main class="checkout-success">
+  <div class="wrapper">
+    <div class="bread-crumbs">
+      <a href="#" class="bread-crumbs__item">Главная</a>
+      <span class="bread-crumbs__item">Программа Лояльности Fishka</span>
+    </div>
+
+    <div class="checkout-success__title">
+      <img src="./img/svg/icon-checked-green.svg" alt="">
+      Владимир, Ваш заказ <span>&#8470;29066</span> оформлен!</div>
+    <div class="checkout-success__tip">
+      <svg viewBox="0 0 20 20" width="20"><use xlink:href="./img/svg/svg-sprite.svg#phone"></use></svg>
+      После подтверждения заказа в приложении ожидайте звонок оператора
+    </div>
+
+    <div class="checkout-success__reg">
+      <div class="checkout-success__reg-title">Онлайн-запись на шиномонтаж</div>
+      <div class="checkout-success__reg-date">
+        <span class="checkout-success__reg-date-icon">
+          <img src="./img/svg/icon-calendar.svg" alt="">
+        </span>
+        <div>Ожидаемая дата доставки товара:</div>
+        <strong>2021.11.05 - 2021.11.06</strong>
+      </div>
+      <div class="checkout-success__reg-cols">
+        <div class="checkout-success__reg-by-site">
+          <div class="checkout-success__reg-col-title">Через сайт:</div>
+          <a href="#" class="checkout-success__btn">Запись на шиномонтаж</a>
+          <span class="checkout-success__reg-arrow">
+            <img src="./img/svg/arrow.svg" alt="">
+          </span>
+        </div>
+        <div class="checkout-success__reg-by-services">
+          <div class="checkout-success__reg-col-title">Или воспользуйтесь  ботом :</div>
+          <div class="checkout-success__reg-btns">
+            <a href="#" class="bot-btn --viber">
+              <span class="bot-btn__icon">
+                <svg viewBox="0 0 24 26" width="24"><use xlink:href="./img/svg/svg-sprite.svg#viber"></use></svg>
+              </span>
+              Viber Bot
+            </a>
+            <a href="#" class="bot-btn --telegram">
+              <span class="bot-btn__icon">
+                <svg viewBox="0 0 24 22" width="24"><use xlink:href="./img/svg/svg-sprite.svg#telegram-3"></use></svg>
+              </span>
+              Telegram Bot
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="checkout-success__info">
+      <div class="checkout-success__banner">
+        <picture>
+          <source srcset="./img/common/banner-mob.jpg" media="(max-width: 767px)">
+          <img srcset="./img/common/banner.jpg" alt="…">
+        </picture>
+      </div>
+      <div class="checkout-success__info-cols">
+        <div class="checkout-success__info-col">
+          <div class="checkout-success__info-title">Товары:</div>
+          <div class="checkout-success__product">
+            <div class="checkout-success__product-img">
+              <img src="./img/common/product-1.png" alt="">
+              <div class="checkout-success__product-labels">
+                <div class="checkout-success__product-brand --toyo-tires"></div>
+                <div class="checkout-success__product-label --sun"></div>
+              </div>
+            </div>
+            <div class="checkout-success__product-main">
+              <a href="#" class="checkout-success__product-title">Шина Bridgestone Blizzak W995 205/65 R16C 107/105R</a>
+              <div class="checkout-success__product-table">
+                <div class="checkout-success__product-table-col">
+                  <div class="checkout-success__product-table-header">Цена:</div>
+                  <div class="checkout-success__product-table-content"><b>2 994</b> ₴/шт</div>
+                </div>
+                <div class="checkout-success__product-table-col">
+                  <div class="checkout-success__product-table-header">Кол-во:</div>
+                  <div class="checkout-success__product-table-content"><b>4</b> шт</div>
+                </div>
+                <div class="checkout-success__product-table-col --price">
+                  <div class="checkout-success__product-table-header">Стоимость:</div>
+                  <div class="checkout-success__product-table-content"><b>11 976</b> ₴</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-success__info-col">
+          <div class="checkout-success__info-title">Оплата и доставка:</div>
+          <div class="checkout-success__order-info">
+            <div class="checkout-success__order-info-item">
+              <img class="checkout-success__order-info-icon" src="./img/svg/oplata.svg" alt="">
+              <div class="checkout-success__order-info-label">Способ оплаты:</div>
+              <strong class="checkout-success__order-info-text">Оплата на кассе</strong>
+              <div class="checkout-success__order-info-arrow"></div>
+              <div class="checkout-success__order-info-text-red">30 250 ₴</div>
+            </div>
+            <div class="checkout-success__order-info-item">
+              <img class="checkout-success__order-info-icon" src="./img/svg/dostavka.svg" alt="">
+              <div class="checkout-success__order-info-label">Способ доставки:</div>
+              <strong class="checkout-success__order-info-text">Самовывоз</strong>
+              <div class="checkout-success__order-info-arrow"></div>
+              <div class="checkout-success__order-info-text-red">бесплатно</div>
+            </div>
+            <div class="checkout-success__order-info-item --address">
+              <img class="checkout-success__order-info-icon" src="./img/svg/address.svg" alt="">
+              <div class="checkout-success__order-info-label">Адрес доставки:</div>
+              <div class="checkout-success__order-info-text">Шинный центр «Твоя Шина Bridgestone Pole Position»
+                г. Киев, Харьковское шоссе,165</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+@@include('./_includes/_footer.html')
+</body>
+</html>
