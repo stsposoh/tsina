@@ -1572,6 +1572,112 @@
   @media (max-width: max-medium)
     margin: 3px 0 0
     padding-bottom: 30px;
+  &.\--purchase-returns
+    margin-top 16px
+    padding-bottom: 0;
+    overflow: hidden;
+    @media (max-width: max-medium)
+      margin-top 11px
+    .tabs-block__title
+      max-width: 100%;
+      line-height: 1.5;
+    .tabs-block__tabs
+      padding-top: 37px;
+      margin-top: 0;
+      @media (max-width: max-medium)
+        padding-top: 27px;
+        padding-left: 8px;
+        padding-right: 8px;
+      &:before
+        content ''
+        position: absolute;
+        background-image url("/img/svg/dashed-line-3.svg")
+        left: 0;
+        right: 60%;
+        top: 50%;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+        @media (max-width: max-medium)
+          right: 0;
+          bottom: -21px;
+        @media (max-width: max-sm)
+          right 15%
+      &:after
+        content ''
+        position: absolute;
+        background-image url("/img/svg/dashed-line-3.svg")
+        left: 60%;
+        right: 0;
+        transform: rotateY(180deg) rotateX(180deg);
+        top: 0;
+        bottom: 50%;
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;
+        @media (max-width: max-medium)
+          left: 0;
+          top: -21px;
+          background-position: left;
+        @media (max-width: max-sm)
+          left: 15%;
+    .tabs-block__btns
+      border-radius: 30px;
+    .tabs-block__btns-item
+      padding: 17px 30px 16px;
+      font-size: 15px;
+      line-height: 1.4;
+      border-radius: 30px;
+      height: 58px;
+      vertical-align: middle;
+      @media (max-width: max-medium)
+        padding: 7px 25px 7px;
+        font-size: 12px;
+        height: 45px;
+      @media (max-width: max-sm)
+        padding: 7px 12px 7px;
+        font-size: 10px;
+      b
+        font-weight: bold;
+        font-size: 17px;
+        @media (max-width: max-sm)
+          font-size: 16display ;
+    .tabs-block__info-card
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0;
+      margin-bottom: 20px;
+      @media (max-width: max-medium)
+        margin-bottom: 0;
+      &:before
+        display none
+    .tabs-block__info-card-icon
+      width: 90px;
+      padding-top: 6px;
+      @media (max-width: max-medium)
+        width: 61px;
+        padding-right: 16px;
+    .tabs-block__info-card-main
+      width: calc(100% - 90px);
+      padding-left: 0;
+      padding-top: 0
+      font-size: 15px;
+      line-height: 1.5;
+      @media (max-width: max-medium)
+        width: calc(100% - 62px);
+        font-size: 13px;
+      p
+        margin-bottom: 25px;
+        @media (max-width: max-medium)
+          margin-bottom: 23px;
+    .tabs-block__info-card-title
+      color: #535063;
+      margin-bottom: 17px;
+      font-size: 24px;
+      @media (max-width: max-large)
+        font-size: 18px;
+        margin-bottom: 15px;
   &__title
     margin: 12px 0 0;
     font-size: 36px;
@@ -1779,6 +1885,19 @@
     display none
     &.\--active
       display block
+    &-title
+      font-size: 32px;
+      margin: 62px 0 48px;
+      @media (max-width: max-large)
+        font-size: 23px;
+        margin: 40px 0 35px;
+      @media (max-width: max-medium)
+        font-size: 22px;
+        margin: 30px 0 18px;
+        max-width: 270px;
+        line-height: 1.5;
+      span
+        color accent-red
   &__accordion-blocks
     margin-top: 58px;
     @media (max-width: max-medium)
@@ -1876,4 +1995,228 @@
     #np-user-input
       @media (max-width: max-sm)
         padding: 11px 11px 12px 9px;
+
+
+.purchase-returns
+  padding: 64px 0 58px;
+  margin-top: 64px;
+  margin-bottom: 88px;
+  background: linear-gradient(135deg, rgb(236, 243, 252) 37%, rgb(255, 236, 242) 100%);
+  @media (max-width: max-medium)
+    padding: 36px 0 39px;
+    margin-top: 0
+    margin-bottom: 35px;
+  &__title
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 71px;
+    @media (max-width: max-large)
+      font-size: 25px;
+      margin-bottom: 42px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      max-width: 275px;
+      margin: 0 auto 29px;
+      line-height: 1.5;
+  &__sub-title
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 36px;
+    line-height: 1.5;
+    @media (max-width: max-medium)
+      font-size: 18px;
+      margin: 0 auto 26px;
+    span
+      color accent-red
+  &__tip
+    text-align: center;
+    font-size: 16px;
+    @media (max-width: max-medium)
+      font-size: 14px;
+      line-height: 1.4;
+    strong
+      font-size: 20px;
+      color accent-red
+      @media (max-width: max-medium)
+        font-size: 16px;
+
+
+.purchase-returns-info
+  background: linear-gradient(135deg, rgb(250, 242, 243) 19%, rgb(248, 244, 250) 59%);
+  border-radius: 26px;
+  margin-bottom: 60px;
+  @media (max-width: max-medium)
+    margin: 0 -15px;
+  &__wrap
+    padding-top: 50px;
+    padding-bottom: 55px;
+    background-image url("/img/purchase-returns/bg-1.png")
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: auto;
+    @media (max-width: max-medium)
+      padding-top: 35px;
+      background-image: none;
+      padding-bottom: 12px;
+  &__title
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    max-width: 67%;
+    margin: auto;
+    line-height: 1.5;
+    @media (max-width: max-large)
+      font-size: 20px;
+      max-width: 86%;
+  &__cols
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 54px 53px 0;
+    @media (max-width: max-medium)
+      padding: 22px 18px 0;
+  &__col
+    width: 49%;
+    @media (max-width: max-medium)
+      width: 100%;
+  &__logo
+    font-size: 0;
+    line-height: 0;
+    img
+      max-height: 31px;
+  &__card
+    background-color: white;
+    box-shadow: 0px 10px 60px rgba(38, 45, 118, 0.1);
+    border-radius: 26px;
+    margin-top: 26px;
+    padding: 36px 41px;
+    @media (max-width: max-medium)
+      margin-top: 14px;
+      padding: 18px 19px 10px;
+      margin-bottom: 31px;
+    &-title
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 21px;
+      @media (max-width: max-medium)
+        font-size: 16px;
+        margin-bottom: 19px;
+    &-list
+      margin: 0;
+      padding-left: 14px;
+      font-size: 15px;
+      @media (max-width: max-medium)
+        padding-left: 18px;
+        font-size: 13px
+      &-item
+        margin-bottom: 14px;
+        @media (max-width: max-medium)
+          margin-bottom: 11px;
+
+
+.purchase-returns-info-block
+  padding: 16px 0 0;
+  font-size: 15px;
+  position relative
+  @media (max-width: max-medium)
+    padding: 16px 15px 33px;
+    overflow: hidden;
+    margin: 0 -15px;
+  &__title
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 39px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      margin-bottom: 21px;
+      line-height: 1.5;
+  p
+    @media (max-width: max-medium)
+      font-size: 13px;
+      line-height: 1.6;
+  &__list
+    normalize_list()
+    margin: 37px 0 40px;
+    @media (max-width: max-medium)
+      margin: 19px 0 24px;
+      max-width: 53%;
+    &.\--bold
+      max-width: 80%;
+      font-weight: bold;
+      @media (max-width: max-medium)
+        max-width: 100%;
+    &-item
+      position: relative;
+      font-size: 15px;
+      padding-left: 43px;
+      color: #535063;
+      margin-bottom: 23px;
+      @media (max-width: max-medium)
+        font-size: 13px;
+        padding-left: 35px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      &.\--dash
+        &:before
+          background-image url("/img/svg/icon-dash.svg")
+      &:before
+        content ''
+        background-image url("/img/svg/icon-check.svg")
+        width: 20px;
+        height: 20px;
+        display: block;
+        left: -1px;
+        top: 1px;
+        position: absolute;
+        @media (max-width: max-sm)
+          top: -2px;
+  &__desc
+    max-width: 67%;
+    line-height: 1.7;
+    margin-bottom: 52px;
+    @media (max-width: max-medium)
+      max-width: 100%;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 26px;
+  &__sub-title
+    font-weight: bold;
+    color: #535063;
+    font-size: 24px;
+    @media (max-width: max-medium)
+      font-size: 20px;
+      line-height: 1.4;
+  &__bg
+    position: absolute;
+    bottom: -68px;
+    right: -330px;
+    z-index: -1;
+    @media (max-width: max-large)
+      width: 690px;
+      bottom: -115px;
+      right: -297px;
+    @media (max-width: max-medium)
+      bottom: -44px;
+      right: -135px;
+      width: 383px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

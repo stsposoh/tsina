@@ -1419,3 +1419,204 @@
       .btn
         margin-right: 0;
         height: 34px;
+
+
+.purchase-returns-card
+  background-color: white;
+  box-shadow: 0px 10px 60px rgba(38, 45, 118, 0.1);
+  border-radius: 26px;
+  padding: 22px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  @media (max-width: max-medium)
+    padding: 15px 16px;
+    margin-bottom: 43px;
+  &.\--simple
+    margin-bottom: 50px;
+    @media (max-width: max-large)
+      padding: 10px 0 6px;
+      margin-bottom: 25px;
+    .purchase-returns-card__main
+      background-color: transparent;
+      border-radius: 0;
+      width: 100%;
+      padding: 8px 13px;
+    .purchase-returns-card__list
+      background-color: rgba(245,245,250,0.8);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 18px;
+      padding: 17px 27px;
+      @media (max-width: max-large)
+        padding: 22px 25px;
+    .purchase-returns-card__list-item
+      margin-bottom: 0;
+      display inline-block
+      @media (max-width: max-large)
+        margin-bottom: 9px;
+      &:last-of-type
+        margin-bottom 0
+    .purchase-returns-card__list-item-icon
+      width: 34px
+      @media (max-width: max-large)
+        width: 26px
+    .purchase-returns-card__tip
+      @media (max-width: max-large)
+        margin-left: 15px;
+        margin-top: 3px;
+        margin-bottom: 0;
+  &__tip
+    width: 100%;
+    font-weight: bold;
+    color: #9D9EB3;
+    margin-left: 11px;
+    margin-bottom: 12px;
+    @media (max-width: max-medium)
+      margin-left: 0;
+  &__main
+    background-color: rgba(245, 245, 250, 0.8);
+    border-radius: 20px;
+    width: 32%;
+    padding: 23px 26px;
+    @media (max-width: max-large)
+      padding: 20px
+    @media (max-width: max-medium)
+      background-color: white;
+      border-radius: 0;
+      width: 100%;
+      padding: 0;
+    &-title
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 29px;
+      @media (max-width: max-large)
+        font-size: 16px;
+      @media (max-width: max-medium)
+        margin-bottom: 8px;
+  &__list
+    normalize_list()
+    font-size: 15px;
+    @media (max-width: max-large)
+      font-size: 13px;
+    @media (max-width: max-medium)
+      padding: 25px 21px 17px;
+      background-color: rgba(245,245,250,0.8);
+      border-radius: 20px;
+    &-item
+      display flex
+      flex-wrap nowrap
+      margin-bottom: 23px;
+      @media (max-width: max-large)
+        width 100%
+        margin-bottom: 12px;
+      &:last-of-type
+        margin-bottom 0
+      &-icon
+        font-size: 0;
+        line-height: 0;
+        display: inline-block;
+        width: 15%;
+        vertical-align: middle;
+        @media (max-width: max-large)
+          width: 10%;
+          min-width: 30px;
+      &-text
+        width 85%
+        vertical-align: middle;
+        @media (max-width: max-large)
+          width: 90%;
+  &__info
+    width: 68%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 34px;
+    @media (max-width: max-medium)
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 8px;
+    &-col
+      width: 33.33%;
+      position: relative;
+      padding-left: 44px;
+      text-align: center;
+      @media (max-width: max-large)
+        padding-left 18px
+      @media (max-width: max-medium)
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        padding-left: 0;
+        text-align: left;
+      &:last-of-type
+        margin-bottom 0
+      &:before
+        content '+'
+        color: #c7bcd6;
+        position: absolute;
+        left: 29px;
+        font-weight: bold;
+        font-size: 25px;
+        top: 75px;
+        @media (max-width: max-large)
+          left: 2px;
+          font-size: 22px;
+        @media (max-width: max-medium)
+          left: 46%;
+          font-size: 22px;
+          top: -20px;
+    &-img
+      font-size: 0;
+      line-height: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 130px;
+      height: 130px;
+      margin: auto;
+      @media (max-width: max-large)
+        width: 100px;
+        height: 100px;
+      @media (max-width: max-medium)
+        width: 60px;
+        height: 60px;
+        margin: 0;
+    &-desc
+      padding: 31px 10px 0;
+      @media (max-width: max-large)
+        padding: 26px 0 0;
+      @media (max-width: max-medium)
+        padding: 0;
+        width: calc(100% - 81px);
+        line-height: 1.6;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
