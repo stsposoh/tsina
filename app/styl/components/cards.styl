@@ -1596,27 +1596,130 @@
         line-height: 1.6;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.credit-info-card
+  box-shadow: 0 10px 60px rgba(38, 45, 118, 0.1);
+  border-radius: 26px;
+  background-color: #FFFFFF;
+  width: 49%;
+  padding: 34px 36px;
+  @media (max-width: max-large)
+    padding: 34px 23px 23px;
+    margin-bottom: 60px;
+  @media (max-width: max-medium)
+    width: 100%;
+  &__icon
+    text-align: center;
+    margin-top: -75px;
+    font-size: 0;
+    line-height: 0;
+    @media (max-width: max-large)
+      margin-top: -55px;
+    img
+      height: 87px;
+      @media (max-width: max-large)
+        height: 57px;
+  &__title
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 36px 0 26px;
+    color #10AF0E
+    @media (max-width: max-large)
+      font-size: 22px;
+      margin: 23px 0 15px;
+  &__text
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 30px;
+    @media (max-width: max-large)
+      margin-bottom: 10px;
+      font-size: 13px;
+      line-height: 1.6;
+  &__tip
+    color: #535063;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.7;
+    margin: 0 auto 20px;
+    font-size: 16px;
+    max-width: 296px;
+    @media (max-width: max-large)
+      margin: 0 auto 11px;
+      font-size: 15px;
+  &__amount
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 17px 0;
+    @media (max-width: max-large)
+      padding: 12px 0;
+    &-item
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 4px 25px;
+      @media (max-width: max-large)
+        padding: 4px 17px;
+    &-num
+      color #10AF0E
+      font-weight: bold;
+      font-size: 34px;
+      line-height: 1.5;
+      flex-shrink: 0;
+      width: 68px;
+      text-align: right;
+      @media (max-width: max-large)
+        width: 52px;
+        font-size: 27px;
+      @media (max-width: max-sm)
+        width: 42px;
+        font-size: 20px;
+    &-symbol
+      color #10AF0E
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 6px;
+      display: inline-block;
+      @media (max-width: max-large)
+        font-size: 16px;
+    &-period
+      color #10AF0E
+      font-size: 15px;
+      font-weight: bold;
+      position relative
+      padding-left: 14px;
+      @media (max-width: max-large)
+        font-size: 13px;
+      &:before
+        content ''
+        position absolute
+        background-color rgba(83, 80, 99, 0.2);
+        width: 1px;
+        height: 40px;
+        transform: rotateZ(34deg);
+        top: -13px;
+        left: 4px;
+        @media (max-width: max-large)
+          height: 33px;
+          top: -10px;
+      & + div
+        @media (max-width: max-extra-large)
+          width: calc(100% - 180px);
+        @media (max-width: max-large)
+          width: calc(100% - 151px);
+          padding-left: 8px;
+        @media (max-width: max-medium)
+          padding-left: 15px;
+          width: calc(100% - 155px);
+        @media (max-width: 399px)
+          width: 100%;
+    &-desc
+      width: 54%;
+      padding-left: 17px;
+      @media (max-width: max-extra-large)
+        width: calc(100% - 100px);
+      @media (max-width: max-large)
+        width: calc(100% - 80px);
+        padding-left: 7px;
+      @media (max-width: max-sm)
+        width: calc(100% - 70px);
