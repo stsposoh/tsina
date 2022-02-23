@@ -32,4 +32,12 @@ $('.modal').on('click', '.js-close-modal', function () {
   $(this).parents('.modal').removeClass('--open')
 });
 
+$('.js-open-compare').on('click', function () {
+  $('html').css('overflow','hidden');
+  $('.compare-list').addClass('--open')
+});
 
+$('.js-close-compare').on('click', function () {
+  $('html').css('overflow','');
+  $('.compare-list').removeClass('--open')
+});

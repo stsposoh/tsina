@@ -155,3 +155,91 @@
       width: calc(100% - 20px);
       padding-left: 10px;
 
+
+.compare-list
+  display none
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 35px 0;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow auto
+  @media (max-width: max-sm)
+    padding: 35px 15px;
+  &.\--open
+    display: flex;
+  &__hider
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.37);
+  &__content
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    box-shadow: 0px 24px 32px rgba(8, 35, 48, 0.24);
+    border-radius: 26px;
+    padding: 20px 30px 17px
+  &__close
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+    font-size: 28px;
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 31px;
+    text-align center
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #d8d8d8;
+    transition color .3s ease-in-out
+    &:hover
+      color accent-red
+  &__title
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 30px;
+    @media (max-width: max-sm)
+      font-size: 18px;
+  &__links
+    normalize_list()
+    font-weight: 600;
+    font-size: 16px;
+  &__item
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    &:nth-of-type(2)
+      border-top: 1px solid #EFF0F6;
+  &__link
+    color: #007AFF;
+    span
+      color: initial;
+      font-weight: 500;
+  &__remove
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 14px;
+    display: inline-block;
+    cursor pointer
+    transition color .3s ease-in-out
+    &:hover
+      color accent-red
+  &__empty
+    display none
+    margin-bottom: 15px;

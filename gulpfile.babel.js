@@ -123,6 +123,7 @@ export const js = () => {
     'app/js/order.js',
     'app/js/cart.js',
     'app/js/main.js',
+    'app/js/compare.js',
   ])
     .pipe(plumber({
       errorHandler: notify.onError(err => ({

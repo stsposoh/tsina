@@ -5,34 +5,34 @@ $(window).on('resize', function() {
     $('.toggle-view__btn[data-listing-view="tile"]').addClass('--active');
   }
 
-  if ($(window).width() < 992) {
-    $(window).on('scroll', toggleHeader);
-  } else {
-    $(window).off('scroll', toggleHeader)
-  }
+  // if ($(window).width() < 992) {
+  //   $(window).on('scroll', toggleHeader);
+  // } else {
+  //   $(window).off('scroll', toggleHeader)
+  // }
 });
 
 //fixed header for mob
-if($(window).width() < 992) {
-  $(window).on('scroll', toggleHeader);
-}
+// if($(window).width() < 992) {
+//   $(window).on('scroll', toggleHeader);
+// }
 
-var pos = $(window).scrollTop();
-var up = false;
-var newscroll;
+// var pos = $(window).scrollTop();
+// var up = false;
+// var newscroll;
 
-function toggleHeader () {
-  newscroll = $(window).scrollTop();
-
-  if (pos > 100 && newscroll > pos && !up) {
-    $('.header').addClass('--hide-controls');
-    up = !up;
-  } else if(pos > 100 && newscroll < pos && up) {
-    $('.header').removeClass('--hide-controls');
-    up = !up;
-  }
-  pos = newscroll;
-}
+// function toggleHeader () {
+//   newscroll = $(window).scrollTop();
+//
+//   if (pos > 100 && newscroll > pos && !up) {
+//     $('.header').addClass('--hide-controls');
+//     up = !up;
+//   } else if(pos > 100 && newscroll < pos && up) {
+//     $('.header').removeClass('--hide-controls');
+//     up = !up;
+//   }
+//   pos = newscroll;
+// }
 
 
 $('.js-tabs').on('click', '[data-tab]', function () {

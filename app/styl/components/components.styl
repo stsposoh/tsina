@@ -1285,3 +1285,38 @@
   a
     font-weight bold
 
+
+.info-tip
+  display inline-block
+  position relative
+  background-image url("/img/svg/question-mark.svg")
+  border: 0.5px solid #000000;
+  border-radius 50%
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  &:hover
+    .info-tip__modal
+      opacity 1
+      visibility visible
+      transform: translate(-50%, 0);
+  &__modal
+    opacity 0
+    visibility hidden
+    background-color: white;
+    bottom: 170%;
+    z-index: 30;
+    left: 50%;
+    width: max-content;
+    max-width: 200px;
+    border-radius: 8px;
+    padding: 7px;
+    font-size: 10px;
+    line-height: 1.4;
+    box-shadow: 0 2px 4px rgba(8, 35, 48, 0.24);
+    position: absolute;
+    transform: translate(-50%, -15px);
+    transition all .3s ease-in-out
+

@@ -484,6 +484,32 @@
         z-index: 7;
         width: auto;
         left: auto;
+  &__compare
+    position absolute
+    background-image: url(/img/svg/scales-black.svg)
+    border: 1px solid #dfe2e9;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(8,33,46,0.23);
+    background-color: white;
+    z-index: 5;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 15px;
+    bottom: 16px;
+    @media (max-width: max-medium)
+      right: 21px;
+      bottom: 6px;
+      width: 34px;
+      height: 34px;
+      background-size: 19px;
+    &.--active
+      background-color #5690FF
+      box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
+      border-color #4b7fe9
+      background-image: url(/img/svg/scales-white.svg)
   &__brand
     display: block;
     margin: 15px 0 6px;
